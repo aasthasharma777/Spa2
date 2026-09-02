@@ -71,10 +71,26 @@ project there:
 | Potli massage | magnific.com/app/creation/lJ6zLNsgv9 · magnific.com/app/creation/gOinsicSXO |
 | Korean scrub | magnific.com/app/creation/WD8Cnf3cXe · magnific.com/app/creation/XmukekQBfo |
 
-They could not be pulled into this repo automatically: the image CDN
-(`pikaso.cdnpk.net`) is blocked by the network egress policy in the environment
-they were generated from, and the MCP channel returns metadata only. Download
-the picks from Magnific and save them under the names above.
+### If Magnific downloads are blocked
+
+A Claude Code cloud session can only fetch the rendered images if its
+environment allows the Magnific asset CDN. On the default **Trusted** network
+access level it doesn't, and downloads fail with a proxy 403 — the Magnific MCP
+calls still work, because MCP traffic bypasses the allowlist, but the asset
+fetch doesn't.
+
+To fix it: claude.ai/code -> the cloud icon above the message box -> hover the
+environment -> gear -> **Network access: Custom**, with these in **Allowed
+domains**, and **"Also include default list of common package managers"**
+checked so npm, `raw.githubusercontent.com` and Google Fonts keep working:
+
+```
+pikaso.cdnpk.net
+*.cdnpk.net
+```
+
+The policy is fixed when a session's VM starts, so it applies to new sessions,
+not one already running.
 
 Until then every banner falls back to an on-theme wall gradient, so the type and
 copy can still be reviewed.

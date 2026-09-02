@@ -121,7 +121,16 @@ and an apricot-clay sat so close to the scrub's blush that the two banners
 read as the same room. Honey-gold separates cleanly from both the teal and
 the pink.
 
-**Light does the work the scrim used to do.** In every shot the light rakes
+**Where the scrim is unavoidable.** Cream type on a brightly-lit pale wall
+cannot reach 3:1 on its own — measured across every candidate shot, the best
+bright-room frame tops out around 2.9:1 for cupping and 1.5-2:1 for the blush
+scrub. Bright rooms and an invisible scrim are in direct tension, and one of
+three things has to give: the wall goes deeper (iteration 3), the scrim goes
+up, or the type sits slightly under the legibility line. Iteration 1 takes the
+minimum scrim that clears 3:1 everywhere except the scrub's `HEAD TO TOE`,
+which sits at 2.8:1.
+
+**Otherwise light does the work the scrim used to do.** In every shot the light rakes
 in low so the wall is brightest down near the bed and falls off into soft
 shadow toward the top of the frame. That puts the headline on a naturally
 darker wall, which is why the scrim can sit low enough to be invisible.
@@ -139,20 +148,51 @@ Therapist enters from the right on all three, and the window sits right on all
 three. That, plus the identical bed, is what holds the set together — more
 than the cream or the grain does.
 
-### The photography
+### The photography — three iterations
 
-Generated in Magnific with Seedream 5 Pro at 3:4, **with
-`reference/massage-bed-reference.jpg` passed as an image reference on every
-shot** so the bed is identical across the set, then composited under each
-hierarchy and judged as a finished banner rather than as a loose photograph.
-The chosen three are committed in `assets/`, so no CDN fetch is needed to
-render.
+Three complete sets exist for the same three layouts. The layouts, copy and
+type never change; only the photography and the per-photograph scrim do.
 
-| Service | Chosen | Notes |
+```
+assets/                     iteration 1 — the primary set
+assets/iteration-2/         iteration 2
+assets/iteration-3/         iteration 3
+out/                        iteration 1 renders
+out/iteration-2/            "
+out/iteration-3/            "
+```
+
+**Iteration 1 — the house style.** Bright, airy, muted mid-tone pastels;
+therapist and treatment shot side-on at bed height. Sage-teal / honey-gold /
+blush. Window left on cupping, off-frame on potli, right and set back on
+scrub, so the three rooms don't read as one room.
+
+**Iteration 2 — same house style, re-blocked.** Every banner changes room
+feature, client orientation and camera angle: cupping puts the window
+*behind* the bed and shoots a three-quarter from the head end; potli drops
+the camera below bed height with the head at the right; scrub loses the
+window for a doorway edge and shoots from high above.
+
+**Iteration 3 — the experiment, and the most interesting result here.**
+Colour-drenched rooms — wall, skirting and reveal all one deep tone — plus a
+different camera language per service:
+
+| | Room | Camera |
 |---|---|---|
-| Cupping therapy | `5337590514` | Desaturated sage-teal, and the curtain finally sits clear of the centred headline. Best light falloff of the batch. |
-| Herbal potli massage | `5337599253` | Round poultice with a proper twisted handle. Honey-gold reads clearly apart from the blush. |
-| Korean body scrub | `5337643915` | Took a dedicated round for the gesture alone: cream banked up against the leading edge of the hand, drag furrows raked behind it, fingers dug in, second hand bracing the shoulder. Also the darkest wall of its batch behind the type, which is why it needs the least scrim. Hair in a bun. |
+| Cupping | deep petrol teal | from the **head end**, looking down the length of the body in one-point perspective, cups marching away along the spine |
+| Potli | deep terracotta-rust | **near-macro**, the gripping fist and the turmeric ball filling the frame, muslin weave and string sharp, wall melting to a field of colour |
+| Korean scrub | deep mauve-plum | **wide and environmental**, bed at 45° in the room, floor and corner and window all visible, light pooling on the tile |
+
+Iteration 3 also solves a problem the others can't. Cream type on a deep
+wall measures **6.4–13.9:1**; on a bright pale wall the same type cannot
+reach 3:1 without a scrim you can see. Deep colour is the honest fix for
+that, not more overlay.
+
+| Service | It. 1 | It. 2 | It. 3 |
+|---|---|---|---|
+| Cupping | `5337772094` | `5337814671` | `5337833620` |
+| Potli | `5337777711` | `5337900748` | `5337832948` |
+| Scrub | `5337782552` | `5337825121` | `5337836754` |
 
 If the photographs are ever missing, each banner falls back to an on-theme wall
 gradient so the type and copy can still be reviewed. Generating or re-fetching
@@ -166,6 +206,8 @@ environment's **Network access: Custom** allowed-domains list; on the default
 npm install playwright        # once
 node render.mjs               # -> out/cupping.png, out/potli.png, out/scrub.png
 node render.mjs cupping       # just one
+ITERATION=2 node render.mjs   # -> out/iteration-2/
+ITERATION=3 node render.mjs   # -> out/iteration-3/
 ```
 
 Exports at `deviceScaleFactor: 2`, so 2000 × 2744 PNGs.

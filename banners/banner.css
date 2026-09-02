@@ -43,12 +43,13 @@
    If type on a future photograph reads weak, relight the shot before
    reaching for these numbers.                                          */
 
-.banner[data-theme='cupping'] { --scrim-a: .13; --scrim-h: 780px;  --scrim-hold: 46%; }
-.banner[data-theme='potli']   { --scrim-a: .14; --scrim-h: 780px;  --scrim-hold: 46%; }
+.banner[data-theme='cupping'] { --scrim-a: .14; --scrim-h: 780px;  --scrim-hold: 46%; }
+.banner[data-theme='potli']   { --scrim-a: .20; --scrim-h: 780px;  --scrim-hold: 46%; }
 /* Blush is the lightest wall in the set and the 336px hairline script is
    the thinnest type, so this is the one banner where relighting alone
-   does not get there. Still low enough not to read as a veil. */
-.banner[data-theme='scrub']   { --scrim-a: .22; --scrim-h: 800px;  --scrim-hold: 50%; }
+   cannot get there. This value is visible if you look for it — the honest
+   fix is a deeper wall, which is what iteration 3 does. */
+.banner[data-theme='scrub']   { --scrim-a: .30; --scrim-h: 800px;  --scrim-hold: 50%; }
 
 /* --- canvas --------------------------------------------------------- */
 

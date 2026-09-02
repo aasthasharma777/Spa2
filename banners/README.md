@@ -54,7 +54,7 @@ are **not** interchangeable:
 | Banner | Composition the photo must have |
 |---|---|
 | Cupping | bed, subject and hands entirely in the **bottom 45%**; clear wall across the **top 50%** |
-| Potli | treatment low and to the **right**; clear wall across the **left two thirds** down to **60%**, and **no window or grille** in that region |
+| Potli | poultice, hand **and the steam** all inside the **right third**; clear wall across the **left two thirds** down to **60%**, and **no window or curtain** in that region |
 | Korean scrub | bed and subject in the **bottom 55%**; clear wall across the **top 42%** |
 
 Type must never cross the treatment itself. The numbers above are the
@@ -65,62 +65,77 @@ the canvas — so that photo has to keep more than half the frame clear.
 All three share a brief: an **Indian home**, and an Urban Company therapist
 who has carried the bed in with them.
 
-**The bed is the same on every banner, for every service.** A portable folding
-massage table with a black padded top and an attached black face-cradle
-headrest. Two separate disposable paper sheets go over it — one on the table,
-one on the headrest pad. The paper is thin, matte, lightly crinkled non-woven
-stock, porous enough to be slightly translucent, so the black padding reads
-through it as soft irregular dark patches, darker where the paper is pressed
-flat and paler where it lifts. The cut edges hang loose over the sides and the
-black upholstery edge and frame show beneath. That mottling is the detail that
-makes the bed look like the real thing rather than a spa couch, so it needs to
-be visible in every shot.
+**The bed is the same on every banner, for every service, and it is LOCKED.**
 
-**The room does the work of saying "home", because the bed cannot.** A
-hand-plastered distemper wall with real patina, water-marks and chalky bloom —
-not the flat European limewash that reads as spa. A wooden window with small
-panes and a black-painted iron grille, light raking through it. A narrow sliver
-of red-oxide or kota-stone floor at the bottom edge. Nothing that belongs to a
-treatment room: no rolled towels, no stacked linens, no bolsters, no uniform,
-no trolley, no bowls of petals, no candles, no plants, no signage.
+`reference/massage-bed-reference.jpg` is the canonical rendering of the bed.
+It is the only version signed off. Do not re-derive it from a written
+description and do not let a new generation reinterpret it — pass that file
+to the image model as an image reference on every shot, and say in the prompt
+that the reference governs the bed and nothing else.
 
-The wall colour is chosen per service, to complement the therapy without
-competing with it. The treatment stays the subject; the room only has to have
-a personality:
+What it shows, for the record: a portable folding massage table with a black
+padded top and an **attached black padded face-cradle headrest**; **two
+separate** disposable paper sheets, one over the main table top and a second
+smaller one over the headrest pad; the paper thin, matte, lightly crinkled
+non-woven stock, porous enough to be semi-translucent, so the black padding
+reads through it as soft irregular dark grey patches — darker where the paper
+is pressed flat, paler where it lifts; cut edges hanging loose over the sides
+with the black upholstery edge and black frame visible beneath.
+
+Earlier passes described the bed in words and got three different beds across
+three banners. Two of them were wrong. The reference exists so that cannot
+happen again.
+
+**The room does the work of saying "home", because the bed cannot.** And the
+home is an **upmarket urban Indian apartment** — a well-off metro family in
+Mumbai or Gurgaon. Smooth, flat, putty-finished walls in matte emulsion,
+evenly painted and immaculately kept. A large window with a **slim** modern
+frame and a floor-length sheer white curtain. A sliver of pale large-format
+vitrified tile or light marble floor.
+
+Not rustic and not heritage. No hand-plastered patina, no water stains, no
+lime-wash mottling, no chunky wooden window, no iron grille, no red-oxide
+floor — an earlier pass used all of those and the rooms read as South Indian
+courtyard houses rather than city apartments. And nothing from a treatment
+room either: no rolled towels, no stacked linens, no bolsters, no uniform, no
+trolley, no bowls of petals, no candles, no plants, no signage.
+
+Walls are **muted pastels** — neither bright nor dull, and never beige or
+ivory. The colour is chosen per service to complement the therapy without
+competing with it; the treatment stays the subject and the room only has to
+have a personality:
 
 | Service | Cast | Wall | Why that colour |
 |---|---|---|---|
-| Cupping therapy | male therapist, male client | deep geru red-ochre terracotta | Cupping is decompression and deep ache. Geru is a genuinely Indian wall finish; the warm clay picks up the glass cups and rhymes with the pink cup marks. Deepest of the three, so it carries cream type with the least scrim. |
-| Herbal potli massage | female therapist, female client | turmeric-ochre | Matches the turmeric-stained muslin. **One** poultice, never two, and a visible wisp of steam — placed so it rises into empty wall rather than behind the type. |
-| Korean body scrub | female therapist, female client | dusty blush pink | Pastel pink, and it does double duty: blush walls are as Indian as they are Korean. Worked with **bare hands** — no mitt, no cloth — with the scrub cream visibly spread on the back. |
+| Cupping therapy | male therapist, male client | muted eucalyptus teal | The only cool room in the set, and the only cool-vs-warm play: teal is the complement of warm brown skin, so it makes the back, the glass cups and the pink cup marks come forward. Cool also reads as relief, which is what cupping sells. Deepest of the three, so it needs the least scrim. |
+| Herbal potli massage | female therapist, female client | muted apricot-clay | A warm dusty peach that carries the turmeric of the muslin. **One** poultice, never two, on the shoulder blade rather than the neck, with a visible steam plume placed to rise into empty wall. (A muted mustard was tried first and came out olive-drab.) |
+| Korean body scrub | female therapist, female client | muted blush pink | Pastel pink, doing double duty: blush walls are as Indian as they are Korean. Worked with **bare hands** — no mitt, no cloth — with the scrub cream visibly spread on the back. |
 
 The Korean note on the scrub is deliberately small: the blush palette, a
-translucent hanji-like glow through the window, and **one** celadon-green
-ceramic bowl holding the cream at the edge of frame. Celadon reads as Korean
-to anyone who knows it and as a nice bowl to anyone who doesn't, which is the
-right weight. No screens, no hanbok, no Seoul-spa dressing — the environment
-must never pull attention off the treatment.
+hanji-like glow through the sheer curtain, and **one** celadon-green ceramic
+bowl holding the cream. Celadon reads as Korean to anyone who knows it and as
+a nice bowl to anyone who doesn't, which is the right weight. No screens, no
+hanbok, no Seoul-spa dressing — the environment must never pull attention off
+the treatment.
+
+Therapist enters from the right on all three, and the window sits right on all
+three. That, plus the identical bed, is what holds the set together — more
+than the cream or the grain does.
 
 ### The photography
 
-Generated in Magnific with Seedream 5 Pro at 3:4, then composited under each
+Generated in Magnific with Seedream 5 Pro at 3:4, **with
+`reference/massage-bed-reference.jpg` passed as an image reference on every
+shot** so the bed is identical across the set, then composited under each
 hierarchy and judged as a finished banner rather than as a loose photograph.
 The chosen three are committed in `assets/`, so no CDN fetch is needed to
 render.
 
 | Service | Chosen | Notes |
 |---|---|---|
-| Cupping therapy | `5337297109` | The sheet mottling reads best of the set — big soft blotches through the paper on the table, and the headrest under the client's head carries its own sheet. Geru wall with real lime patina. |
-| Herbal potli massage | `5337335659` | One poultice, steam rising into the empty wall between the type and the window. Window pushed to the far right so the left-ranged type has clean plaster. |
-| Korean body scrub | `5337304669` | Bare hands, cream on the fingers, cream worked into the back. Celadon bowl just in frame at the bottom. Therapist enters from the right, matching the other two. |
-
-Therapist enters from the right on all three, and the window sits right on all
-three. That plus the identical bed is what holds the set together now — more
-than the cream or the grain does.
-
-Two rounds were needed for potli. The first put the window at the left, which
-is where the left-ranged headline starts — the type landed on the grille. Same
-frame with the window moved right solved it.
+| Cupping therapy | `5337408681` | Lighter, dustier teal than the alternate, and the therapist's second hand rests on the back rather than the client's head. |
+| Herbal potli massage | `5337452358` | Strongest steam plume of any version, rising into the gap between the type and the curtain. Warmer apricot than the alternate, which sat too close to the scrub's pink. |
+| Korean body scrub | `5337415785` | Bare hands, cream on the fingers, celadon bowl in frame. The bed reference came from this service, so it matches by construction. |
 
 If the photographs are ever missing, each banner falls back to an on-theme wall
 gradient so the type and copy can still be reviewed. Generating or re-fetching

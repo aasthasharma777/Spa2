@@ -34,21 +34,22 @@
    to carry. Both are per-service, because each hierarchy sets its
    headline at a different depth and each wall is a different value:
 
-   These are deliberately light. The walls are deep Indian distemper —
-   geru, turmeric-ochre, blush — and they carry cream type on their own;
-   a heavy scrim would grey out the wall colour, which is the one thing
-   giving each room its character. So each value is the least that keeps
-   the thinnest type on that banner above ~3.2:1, and no more:
+   Each value is the least that keeps the thinnest type on that banner
+   above ~3.6:1, and no more. The walls are muted pastel emulsion and
+   the pastel IS the art direction, so over-scrimming would grey out the
+   one thing giving each room its character:
 
-     cupping  deep geru, the darkest of the three — needs least
-     potli    turmeric-ochre, and the type sits lower, so the scrim has
-              to reach further down before it fades
-     scrub    blush pink, the lightest wall, and the hairline script
-              needs the most help of any of them                       */
+     cupping  muted eucalyptus teal, the deepest of the three, and the
+              only cool wall — needs the least
+     potli    muted apricot-clay, light and warm, and the type sits
+              lower, so the scrim has to hold further down the wall
+              before it fades
+     scrub    muted blush pink, and the 336px hairline script is the
+              thinnest type in the set — needs the most                */
 
-.banner[data-theme='cupping'] { --scrim-a: .20; --scrim-h: 900px;  --scrim-hold: 56%; }
-.banner[data-theme='potli']   { --scrim-a: .22; --scrim-h: 1000px; --scrim-hold: 70%; }
-.banner[data-theme='scrub']   { --scrim-a: .34; --scrim-h: 820px;  --scrim-hold: 58%; }
+.banner[data-theme='cupping'] { --scrim-a: .24; --scrim-h: 900px;  --scrim-hold: 56%; }
+.banner[data-theme='potli']   { --scrim-a: .33; --scrim-h: 1000px; --scrim-hold: 70%; }
+.banner[data-theme='scrub']   { --scrim-a: .38; --scrim-h: 820px;  --scrim-hold: 58%; }
 
 /* --- canvas --------------------------------------------------------- */
 

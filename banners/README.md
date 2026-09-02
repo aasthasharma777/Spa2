@@ -73,24 +73,33 @@ project there:
 
 ### Which candidate was chosen
 
-Two candidates per service were downloaded and compared. The IDs below are the
-Magnific render IDs from the asset URLs, which is what identifies each file;
-the creation links in the table above are listed in the same order, but that
-pairing wasn't independently confirmed.
+Both candidates per service were composited under their own hierarchy and
+judged as finished banners rather than as loose photographs. The chosen three
+are committed in `assets/`, so no CDN fetch is needed to render.
 
 | Service | Chosen | Why |
 |---|---|---|
-| Cupping therapy | **A** — `5336696934` | Cleanest top: wall runs clear to 57% of frame height, and the therapist's arm only clips the extreme right edge at 36%, outboard of the centred type. B put the same arm at 27%. |
-| Herbal potli massage | **B** — `5336698804` | The only one of the pair with the subject genuinely in the right half. A placed the client's head at 41% from the left — directly under the script line. B also carries a wider linen-curtain sliver. |
-| Korean body scrub | **B** — `5336699356` | A little more top clearance (40% vs 37.5%), a slightly less blown-out headline zone, the head fully inside the frame rather than cropped at the left, and the mitt reads unmistakably as a scrub mitt (A's reads as a folded flannel). |
+| Cupping therapy | **A** (`5336696934`) | Clear wall to 57% of the frame, so the whole top block sits on plaster. B pushed the therapist's arm up to 27%, into the type. A is also darker through the type zone, which the 142px script tail needs. |
+| Herbal potli massage | **B** (`5336698804`) | The only one of the pair with the subject genuinely in the right half, per the composition rule above — A puts the client's head at 41% from the left. B also carries a wider linen-curtain sliver and a cleaner bottom edge. |
+| Korean body scrub | **B** (`5336699356`) | Same clear space as A, but more trowel texture, a crisper window shadow, the head fully in frame rather than cropped at the left, and a mitt that reads unmistakably as a scrub mitt (A's reads as a folded flannel). |
 
-The chosen renders are committed in `assets/`, so nothing needs downloading to
-render the set. To fetch new candidates from Magnific, the session's environment
-must allow the asset CDN: claude.ai/code -> the cloud icon above the message box
--> hover the environment -> gear -> **Network access: Custom**, with
-`pikaso.cdnpk.net` and `*.cdnpk.net` in **Allowed domains** and **"Also include
-default list of common package managers"** checked. The policy is fixed when a
-session's VM starts, so it applies to new sessions, not a running one.
+On the potli, either photo forces a choice as long as the headline sits at its
+original `top: 520px`: `sinks in` sets ~590px wide, 59% of the canvas, so the
+script's tail runs into the subject on both — onto dark hair in A, onto pale
+potli cloth in B, where the last letter dissolved. Lifting the block to
+`top: 316px` removes the choice instead of making it: the wall's clear wedge
+runs diagonally, so higher up the script clears hair, bundle and hand alike and
+lands on plain plaster. With that fixed, the pick comes down to which photo
+matches the brief, and that is B.
+
+The A/B labels are download order, not the Magnific slugs listed above; the IDs
+in the table are the CDN production IDs.
+
+If the photographs are ever missing, each banner falls back to an on-theme wall
+gradient so the type and copy can still be reviewed. Re-fetching them needs the
+Magnific asset CDN (`pikaso.cdnpk.net`, `*.cdnpk.net`) on the environment's
+**Network access: Custom** allowed-domains list; on the default **Trusted**
+level the fetch fails with a proxy 403.
 
 ## Rendering
 

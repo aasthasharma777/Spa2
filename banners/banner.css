@@ -29,6 +29,22 @@
 .banner[data-theme='potli']   { --tone-lift: #A9763A; --tone-mid: #7A5426; --tone-deep: #33200D; }
 .banner[data-theme='scrub']   { --tone-lift: #A7B29C; --tone-mid: #79866F; --tone-deep: #2F3828; }
 
+/* --- per-service scrim ----------------------------------------------
+   How much scrim the cream type needs, and how far down the wall it has
+   to carry. Both are per-service, because each hierarchy sets its
+   headline at a different depth and each wall is a different value:
+
+     cupping  a warm mid wall, type in the top third — a light scrim,
+              carried far enough to hold the 142px script tail
+     potli    the headline sits high on a lit wall and the scrim has to
+              carry well past it, down into the bundles
+     scrub    a pale sage wall, the brightest of the three, and the
+              hairline script needs the most help of any of them       */
+
+.banner[data-theme='cupping'] { --scrim-a: .22; --scrim-h: 900px;  --scrim-hold: 40%; }
+.banner[data-theme='potli']   { --scrim-a: .24; --scrim-h: 1000px; --scrim-hold: 55%; }
+.banner[data-theme='scrub']   { --scrim-a: .34; --scrim-h: 820px;  --scrim-hold: 58%; }
+
 /* --- canvas --------------------------------------------------------- */
 
 .banner {
@@ -67,27 +83,18 @@
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Only as much scrim as the cream type needs. */
+/* Only as much scrim as the cream type needs — held flat behind the
+   headline, then eased away so it never reads as a band. Depth, reach
+   and hold come from the per-service block above. */
 .banner__topscrim {
   position: absolute;
   inset: 0 0 auto 0;
-  height: 640px;
-  background: linear-gradient(to bottom, rgba(0,0,0,.16), rgba(0,0,0,0));
-}
-
-/* The scrub's wall is a pale sage limewash — around twice as bright in the
-   headline zone as the terracotta and turmeric walls. At the shared .16 the
-   cream sat at ~1.4:1 against it, so this theme carries its own deeper,
-   longer scrim. Held to a plateau rather than a steep ramp, so the wall still
-   reads pale and the taper never shows as a band. */
-.banner[data-theme='scrub'] .banner__topscrim {
-  height: 820px;
+  height: var(--scrim-h, 640px);
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,.28) 0%,
-    rgba(0,0,0,.25) 38%,
-    rgba(0,0,0,.21) 60%,
-    rgba(0,0,0,0) 100%
+    rgba(0,0,0, var(--scrim-a, .16)) 0%,
+    rgba(0,0,0, var(--scrim-a, .16)) var(--scrim-hold, 34%),
+    rgba(0,0,0, 0) 100%
   );
 }
 
@@ -161,7 +168,9 @@
   height: 3px;
   margin-bottom: 38px;
   background: var(--cream);
-  opacity: .9;
+  /* At 3px over a lit wall a hairline needs the cream at full strength —
+     knocked back it reads as a smudge rather than a rule. */
+  opacity: 1;
 }
 
 .h-editorial__line {

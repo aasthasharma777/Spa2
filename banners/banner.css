@@ -34,16 +34,21 @@
    to carry. Both are per-service, because each hierarchy sets its
    headline at a different depth and each wall is a different value:
 
-     cupping  a bright putty wall — held flat well past the 142px
-              script tail, which is the thinnest type on the banner
-     potli    type sits lower, so the scrim has to reach further down
-              before it fades
-     scrub    the palest wall of the three, and the hairline script
+   These are deliberately light. The walls are deep Indian distemper —
+   geru, turmeric-ochre, blush — and they carry cream type on their own;
+   a heavy scrim would grey out the wall colour, which is the one thing
+   giving each room its character. So each value is the least that keeps
+   the thinnest type on that banner above ~3.2:1, and no more:
+
+     cupping  deep geru, the darkest of the three — needs least
+     potli    turmeric-ochre, and the type sits lower, so the scrim has
+              to reach further down before it fades
+     scrub    blush pink, the lightest wall, and the hairline script
               needs the most help of any of them                       */
 
-.banner[data-theme='cupping'] { --scrim-a: .28; --scrim-h: 900px;  --scrim-hold: 56%; }
-.banner[data-theme='potli']   { --scrim-a: .26; --scrim-h: 1000px; --scrim-hold: 70%; }
-.banner[data-theme='scrub']   { --scrim-a: .39; --scrim-h: 820px;  --scrim-hold: 58%; }
+.banner[data-theme='cupping'] { --scrim-a: .20; --scrim-h: 900px;  --scrim-hold: 56%; }
+.banner[data-theme='potli']   { --scrim-a: .22; --scrim-h: 1000px; --scrim-hold: 70%; }
+.banner[data-theme='scrub']   { --scrim-a: .34; --scrim-h: 820px;  --scrim-hold: 58%; }
 
 /* --- canvas --------------------------------------------------------- */
 

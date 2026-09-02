@@ -71,29 +71,32 @@ project there:
 | Potli massage | magnific.com/app/creation/lJ6zLNsgv9 · magnific.com/app/creation/gOinsicSXO |
 | Korean scrub | magnific.com/app/creation/WD8Cnf3cXe · magnific.com/app/creation/XmukekQBfo |
 
-### If Magnific downloads are blocked
+### Which candidate was chosen
 
-A Claude Code cloud session can only fetch the rendered images if its
-environment allows the Magnific asset CDN. On the default **Trusted** network
-access level it doesn't, and downloads fail with a proxy 403 — the Magnific MCP
-calls still work, because MCP traffic bypasses the allowlist, but the asset
-fetch doesn't.
+Both candidates per service were composited under their own hierarchy and
+judged as finished banners rather than as loose photographs. The chosen
+three are committed in `assets/`, so no CDN fetch is needed to render.
 
-To fix it: claude.ai/code -> the cloud icon above the message box -> hover the
-environment -> gear -> **Network access: Custom**, with these in **Allowed
-domains**, and **"Also include default list of common package managers"**
-checked so npm, `raw.githubusercontent.com` and Google Fonts keep working:
+| Service | Chosen | Why |
+|---|---|---|
+| Cupping therapy | **A** (`5336696934`) | Clear wall to 57% of the frame, so the whole top block sits on plaster. Darker through the type zone than B, which the 142px script tail needs. |
+| Herbal potli massage | **A** (`5336699017`) | Its script line ends over the subject's dark hair, where cream reads at full strength. In B the same line ended on bright potli cloth and the last letter dissolved. |
+| Korean body scrub | **B** (`5336699356`) | Same clear space as A, but more trowel texture, a crisper window shadow and cleaner hands — and it holds up better where the wall is brightest. |
 
-```
-pikaso.cdnpk.net
-*.cdnpk.net
-```
+Potli A was taken over the candidate that better matched the "clear left
+45%" rule above, because that rule is narrower than the type it has to
+hold: `sinks in` sets 591px wide, 59% of the canvas. On either photo the
+script's tail crosses into the subject, so what it crosses *onto* is what
+decides it — hair works, pale cloth does not.
 
-The policy is fixed when a session's VM starts, so it applies to new sessions,
-not one already running.
+Note the A/B labels are download order, not the Magnific slugs listed
+above; the IDs in the table are the CDN production IDs.
 
-Until then every banner falls back to an on-theme wall gradient, so the type and
-copy can still be reviewed.
+If the photographs are ever missing, each banner falls back to an on-theme
+wall gradient so the type and copy can still be reviewed. Re-fetching them
+needs the Magnific asset CDN (`pikaso.cdnpk.net`, `*.cdnpk.net`) on the
+environment's **Network access: Custom** allowed-domains list; on the
+default **Trusted** level the fetch fails with a proxy 403.
 
 ## Rendering
 

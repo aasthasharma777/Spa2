@@ -155,9 +155,11 @@
 
 .h-editorial {
   position: absolute;
-  /* Sits above the treatment, not across it: the poultice and the
-     therapist's hand come in low and right, so the block is anchored in
-     the upper middle of the empty wall with the action below it. */
+  /* Sits above the treatment, not across it. The wall's clear wedge runs
+     diagonally, so the higher the block sits the more room the script has:
+     at the original 520 its last letters ran onto the muslin bundle —
+     cream on cream, and the "n" disappeared. At 370 the whole line lands
+     on plain plaster, ~65px clear of the knot. */
   top: 370px;
   left: 54px;
   right: 300px;

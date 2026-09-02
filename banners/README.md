@@ -32,7 +32,7 @@ a template, so each service now leads with something different.
 | | Service | Class | Construction |
 |---|---|---|---|
 | A | Cupping | `.h-word` | 31px tracked kicker → **244px sans word** → 142px script tail |
-| B | Potli | `.h-editorial` | hairline rule → 88px sans line → **208px script**, ranged left, mid-frame |
+| B | Potli | `.h-editorial` | hairline rule → 88px sans line → **208px script**, ranged left, dropped clear of the top |
 | C | Korean scrub | `.h-script` | **336px script word** → 43px tracked micro-line |
 
 The footer — service, price, `Book now` pill — is identical on all three. That,

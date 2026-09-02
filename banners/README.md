@@ -1,42 +1,42 @@
 # Spa service banners
 
-Portrait promo banners for spa services, built to match the existing
+Portrait promo banners for at-home spa services, derived from the existing
 "Relax / Body & Mind" deep-tissue banner (`reference/deep-tissue-reference.png`).
 
-Draft 1 covers **cupping therapy**, **potli massage** and **Korean scrub**.
+Draft 2 covers **cupping therapy**, **potli massage** and **Korean scrub**, each
+with its own headline hierarchy.
 
 ```
 banners/
   index.html        all three banners, side by side — edit copy here
-  banner.css        the design system (canvas, type scale, themes, footer)
-  copy.md           copy options per service + the rules behind them
+  banner.css        the design system: canvas, grain, three hierarchies, footer
+  copy.md           the copy, the reasoning, and alternates per service
   render.mjs        export each banner to out/<name>.png at 2x
   fonts/            self-hosted Pinyon Script / Poppins / Outfit / Inter
-  assets/           the photography (see below)
+  assets/           the photography — see "Adding the photography"
   reference/        the banner this set is derived from
   out/              rendered PNGs
 ```
 
-## Canvas and anatomy
+## Canvas
 
-1000 × 1372, 44px radius — the reference's proportions.
+1000 × 1372, 44px radius — the reference's proportions. Every banner carries a
+fine SVG grain at 5.5% overlay so the plaster wall never goes flat, and the same
+cream, `#F8EED6`.
 
-| Layer | |
-|---|---|
-| `.banner__photo` | full-bleed photograph; a matching studio gradient stands in until one is set |
-| `.banner__headline` | Pinyon Script verb at 172px over a Poppins Medium stack at 178px (158px for 7+ character lines) |
-| `.banner__footer` | bottom scrim, service + price on the left, white `Book now` pill on the right |
+## The three hierarchies
 
-All headline type is one cream, `--cream: #F8EED6`, across every theme.
+The reference has one construction. Reusing it three times made the set read as
+a template, so each service now leads with something different.
 
-Each service has a theme that sets three backdrop tones (`--tone-lift`,
-`--tone-mid`, `--tone-deep`):
+| | Service | Class | Construction |
+|---|---|---|---|
+| A | Cupping | `.h-word` | 31px tracked kicker → **244px sans word** → 142px script tail |
+| B | Potli | `.h-editorial` | hairline rule → 88px sans line → **208px script**, ranged left, mid-frame |
+| C | Korean scrub | `.h-script` | **336px script word** → 43px tracked micro-line |
 
-| Theme | Backdrop |
-|---|---|
-| `cupping` | deep clay-terracotta, closest to the reference |
-| `potli` | amber / ochre — warm oil and turmeric |
-| `scrub` | sage-eucalyptus — cool and steamy, the one contrast in the set |
+The footer — service, price, `Book now` pill — is identical on all three. That,
+the canvas and the cream are what make it one campaign.
 
 ## Adding the photography
 
@@ -48,23 +48,36 @@ assets/potli-massage.jpg
 assets/korean-scrub.jpg
 ```
 
-They need the same shape as the reference shot: subject in the lower two
-thirds, a plain single-tone backdrop, and **clean empty space across the top
-45%** for the headline. Light rakes in from the upper right.
+Each hierarchy needs its negative space in a different place, so the three shots
+are **not** interchangeable:
 
-Two candidates per service were generated in Magnific and are waiting in the
-Personal project there:
+| Banner | Composition the photo must have |
+|---|---|
+| Cupping | subject in the lower half; clear wall across the **top 48%** |
+| Potli | subject in the **right half**; clear wall down the **left 45%**, mid-frame |
+| Korean scrub | clear wall across the **top 34%** only — subject can sit higher |
+
+All three share a brief: an at-home room, not a spa. A limewash plaster wall
+with faint trowel texture, a narrow sliver of linen curtain at one edge, and the
+soft diffused shadow of window light across the wall. No furniture, no decor, no
+plants, no candles. Light rakes in at 45°.
+
+Two candidates per service were generated in Magnific and are in the Personal
+project there:
 
 | Service | Candidates |
 |---|---|
-| Cupping therapy | magnific.com/app/creation/rgyRVIYxtc · magnific.com/app/creation/lJ6zdafgv9 |
-| Potli massage | magnific.com/app/creation/N2cdCxr6D9 · magnific.com/app/creation/TdmQLNhVNR |
-| Korean scrub | magnific.com/app/creation/8aHxyVJIrU · magnific.com/app/creation/xSPZMFvjfW |
+| Cupping therapy | magnific.com/app/creation/rgyRksAxtc · magnific.com/app/creation/lJ6zLwmgv9 |
+| Potli massage | magnific.com/app/creation/lJ6zLNsgv9 · magnific.com/app/creation/gOinsicSXO |
+| Korean scrub | magnific.com/app/creation/WD8Cnf3cXe · magnific.com/app/creation/XmukekQBfo |
 
-They could not be pulled into this repo automatically — the image CDN
+They could not be pulled into this repo automatically: the image CDN
 (`pikaso.cdnpk.net`) is blocked by the network egress policy in the environment
-these were generated from. Download the picks from Magnific and save them under
-the names above.
+they were generated from, and the MCP channel returns metadata only. Download
+the picks from Magnific and save them under the names above.
+
+Until then every banner falls back to an on-theme wall gradient, so the type and
+copy can still be reviewed.
 
 ## Rendering
 
@@ -76,10 +89,10 @@ node render.mjs cupping       # just one
 
 Exports at `deviceScaleFactor: 2`, so 2000 × 2744 PNGs.
 
-If Chromium is already on the machine and Playwright's own download was
-skipped, point at it: `CHROMIUM_PATH=/path/to/chrome node render.mjs`.
+If Chromium is already on the machine and Playwright's own download was skipped:
+`CHROMIUM_PATH=/path/to/chrome node render.mjs`.
 
 ## Changing copy
 
-Edit `index.html` — the three banners are plain markup, one block each.
-`copy.md` holds two alternate routes per service plus the naming rules.
+Edit `index.html` — three plain blocks, one per banner. `copy.md` holds the
+reasoning and two alternates per service.

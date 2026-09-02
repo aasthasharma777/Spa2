@@ -1,128 +1,116 @@
-# Massage banner copy — draft 1
+# Massage banner copy — draft 2
 
-The reference banner (`reference/deep-tissue-reference.png`) sets a four-slot
-structure. Everything below fills the same four slots, so the set reads as one
-campaign in a carousel.
+The reference banner (`reference/deep-tissue-reference.png`) uses one hierarchy:
+script verb, then a stacked sans pair, then service and price. Draft 1 reused it
+three times, which made the set look like one template filled in three ways.
 
-| Slot | Reference | Rule |
-|---|---|---|
-| Script verb | *Relax* | One word. A verb, in the imperative. What the customer gets to do. |
-| Headline stack | **Body & Mind** | Two lines, 2–3 words total, `X & Y` or `X to Y`. Never mentions the treatment. |
-| Service | Deep tissue massage | The catalogue name, verbatim. |
-| Price | Starting from ₹1,469 | `Starting from ₹X,XXX`. |
-| CTA | Book now | Fixed across the set. |
+Draft 2 gives each service **its own hierarchy**. What holds the campaign
+together is the canvas, the cream, the grain and the footer — not the headline
+construction.
 
-The script verb is the promise; the stack is what it lands on. Keep the stack
-concrete and bodily ("Knots & Aches") rather than abstract ("Peace & Calm") —
-the reference does this too, "Body & Mind" is physical, not a mood.
+| | Service | Hierarchy | What leads |
+|---|---|---|---|
+| A | Cupping therapy | word-dominant | one colossal sans word |
+| B | Potli massage | left-ranged editorial | a script line, mid-frame |
+| C | Korean scrub | script-led minimal | one enormous script word |
 
 ---
 
-## 1 · Cupping therapy
+## A · Cupping therapy — word-dominant
 
-**Option A — recommended** (in the draft)
+```
+CUPPING, AT HOME        31px  Inter 600, 0.3em tracking, uppercase
+UNDO                   244px  Poppins 600
+every ache             142px  Pinyon Script
+```
 
-> *Release*
-> **Knots**
-> **& Aches**
+> **CUPPING, AT HOME**
+> **UNDO**
+> *every ache*
 > Cupping therapy · Starting from ₹1,299
 
-Closest sibling to "Relax / Body & Mind" — same verb-then-noun-pair rhythm, and
-it names the actual reason people book cupping. No health claim to clear.
+Deliberately the inverse of the reference: the sans leads and the script is the
+footnote. "UNDO" is the strongest single word available to cupping — it is what
+the treatment does, in four letters, and it sets up "every ache" as the payoff.
+The kicker is where "at home" gets said, so the headline never has to.
 
-**Option B**
+**Alternates**
 
-> *Unwind*
-> **Deep**
-> **& Slow**
+- `RELIEF, AT HOME` / **UNKNOT** / *what the desk did* — more specific audience,
+  needs the hero dropped to ~195px to fit.
+- `CUPPING, AT HOME` / **LET GO** / *of the ache* — softer, less clinical.
 
-Sells the sensation rather than the outcome. Warmer, less problem-led.
-
-**Option C**
-
-> *Reset*
-> **Back**
-> **& Shoulders**
-
-Most literal — leads with the body part. Best if this banner runs against a
-back-pain search or a "desk job" audience.
-
-*Avoid:* "Detox", "Toxins", "Improves circulation" — therapeutic claims that
+*Avoid:* "detox", "toxins", "improves circulation" — therapeutic claims that
 need medical-marketing sign-off.
 
 ---
 
-## 2 · Potli massage
+## B · Potli massage — left-ranged editorial
 
-**Option A — recommended** (in the draft)
+```
+—                       76 x 3px rule
+Warmth that             88px  Poppins 300
+sinks in               208px  Pinyon Script
+```
 
-> *Soothe*
-> **Heat**
-> **& Herbs**
+> —
+> **Warmth that**
+> *sinks in*
 > Herbal potli massage · Starting from ₹1,599
 
-Describes the treatment in two words and alliterates. Reads instantly to
-someone who has never heard of a potli.
+Ranged left and anchored in the middle of the frame rather than the top, so the
+photograph carries the right half and the type occupies the empty wall. The
+sentence runs across two type styles instead of two lines of one style — the
+script is the loud half, which is the opposite of A.
 
-**Option B**
+The line sells the one thing a potli does that hands cannot: heat that travels.
+"Herbal potli massage" in the footer does the explaining, so the headline
+doesn't have to.
 
-> *Melt*
-> **Warmth**
-> **& Weight**
+**Alternates**
 
-Leans into the pressed, heavy, warm sensation of the poultice.
-
-**Option C**
-
-> *Restore*
-> **Herb**
-> **& Oil**
-
-Most Ayurvedic in tone — pair with a "traditional / authentic" push.
-
-Note on naming: "Herbal potli massage" in the service slot does the explaining,
-so the headline doesn't have to. If the catalogue name is just "Potli massage",
-the headline should carry "Heat & Herbs" — Option A already does.
+- — / **Herbs, oil** / *and steady heat* — more descriptive, less benefit-led.
+- — / **Pressed warm,** / *ache by ache* — slower, more ritual.
 
 ---
 
-## 3 · Korean scrub
+## C · Korean scrub — script-led minimal
 
-**Option A — recommended** (in the draft)
+```
+Glow                   336px  Pinyon Script
+HEAD TO TOE             43px  Inter 500, 0.34em tracking, uppercase
+```
 
 > *Glow*
-> **Head**
-> **to Toe**
+> **HEAD TO TOE**
 > Korean body scrub · Starting from ₹1,899
 
-"Glow" is the single word this category is bought on, and "Head to Toe" is the
-one thing that distinguishes a Korean scrub from a facial — it's full body.
+The most minimal of the three, and the only one where the script is the whole
+headline. "Glow" is the single word this category is bought on; "HEAD TO TOE"
+is the one fact that separates a Korean scrub from a facial — it is full body.
+Two elements, nothing else.
 
-**Option B**
+**Alternates**
 
-> *Renew*
-> **Skin**
-> **& Senses**
-
-Softer, more spa-ritual. Closest to the reference's register.
-
-**Option C**
-
-> *Reveal*
-> **Soft**
-> **& Smooth**
-
-Most texture-led. Strongest if the photo is a tight skin shot.
+- *Renew* / **SKIN AND SENSES** — softer, more spa-ritual.
+- *Glow* / **A FULL-BODY KOREAN SCRUB** — explains more, loses the poster feel.
 
 ---
+
+## Constant across the set
+
+| Slot | |
+|---|---|
+| Service | the catalogue name, verbatim, Inter 700 / 44px |
+| Price | `Starting from ₹X,XXX`, Inter 400 / 44px |
+| CTA | `Book now`, white pill, fixed |
+| Cream | `#F8EED6` on every banner |
 
 ## Open questions
 
-- **Prices are placeholders.** ₹1,299 / ₹1,599 / ₹1,899 were picked to sit in a
-  believable ladder around the reference's ₹1,469. Swap in the real starting
-  prices before anything ships.
-- **Service names** should be replaced with the exact catalogue strings.
-- The three Pinterest references couldn't be opened from this environment
-  (the network blocks `pin.it`), so this draft is written off the reference
-  banner alone. Paste the copy lines or screenshots and the tone can be
-  re-cut against them.
+- **Prices are placeholders.** ₹1,299 / ₹1,599 / ₹1,899 sit in a believable
+  ladder around the reference's ₹1,469. Swap in the real starting prices.
+- **Service names** should be the exact catalogue strings.
+- The three Pinterest references still can't be opened from this environment
+  (`pin.it` is blocked by the network policy). Paste the copy lines or
+  screenshots and the tone can be re-cut against them.

@@ -1,53 +1,35 @@
 /* ------------------------------------------------------------------
    Spa service banner — design system
-   Derived from the "Relax / Body & Mind" deep-tissue massage banner.
 
-   Canvas: 1000 x 1372 (3:4-ish portrait card, 44px radius)
-   Anatomy: script verb  ->  stacked sans headline  ->  photo
-            ->  bottom scrim with service + price + Book now pill
+   Canvas: 1000 x 1372, 44px radius.
+   One campaign, three hierarchies. What stays constant is the canvas,
+   the cream (#F8EED6), the grain, and the footer. What changes is how
+   the headline is built — see the three .h-* blocks below.
    ------------------------------------------------------------------ */
 
 @import url('./fonts/fonts.css');
 
 :root {
-  /* type */
   --font-script: 'Pinyon Script', 'Great Vibes', cursive;
   --font-display: 'Poppins', 'Outfit', system-ui, sans-serif;
   --font-ui: 'Inter', system-ui, sans-serif;
 
-  /* the cream that all headline type sits in, across every theme */
   --cream: #F8EED6;
 
-  /* canvas */
   --w: 1000px;
   --h: 1372px;
   --radius: 44px;
 }
 
-/* --- per-service themes -------------------------------------------
-   Each theme only sets the backdrop tones. They are used by the
-   placeholder gradient and by the scrim tint over the photo, so the
-   banner stays on-palette even before the photo is dropped in.       */
+/* --- per-service themes --------------------------------------------
+   Only the wall tones. Used by the stand-in gradient, so the banner is
+   on-palette before the photograph is dropped in.                     */
 
-.banner[data-theme='cupping'] {
-  --tone-lift: #8A5A46;   /* lit wall, upper right */
-  --tone-mid:  #63402F;
-  --tone-deep: #2E1B13;   /* shadow, lower left */
-}
+.banner[data-theme='cupping'] { --tone-lift: #8A5A46; --tone-mid: #63402F; --tone-deep: #2E1B13; }
+.banner[data-theme='potli']   { --tone-lift: #A9763A; --tone-mid: #7A5426; --tone-deep: #33200D; }
+.banner[data-theme='scrub']   { --tone-lift: #A7B29C; --tone-mid: #79866F; --tone-deep: #2F3828; }
 
-.banner[data-theme='potli'] {
-  --tone-lift: #A9763A;
-  --tone-mid:  #7A5426;
-  --tone-deep: #33200D;
-}
-
-.banner[data-theme='scrub'] {
-  --tone-lift: #91A188;
-  --tone-mid:  #66755E;
-  --tone-deep: #26301F;
-}
-
-/* --- canvas -------------------------------------------------------- */
+/* --- canvas --------------------------------------------------------- */
 
 .banner {
   position: relative;
@@ -57,67 +39,164 @@
   overflow: hidden;
   isolation: isolate;
   background: var(--tone-deep);
+  color: var(--cream);
   -webkit-font-smoothing: antialiased;
 }
 
-/* The photograph. Set --photo to url('assets/xxx.jpg') on the element.
-   Until then the tonal gradient below stands in for it.               */
+/* The photograph. Set --photo: url('assets/x.jpg') on the element.
+   Until then the on-theme wall gradient stands in.                     */
 .banner__photo {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
-  /* --photo wins when set; otherwise the on-theme studio gradient stands in */
   background-image: var(
     --photo,
     radial-gradient(120% 85% at 78% 12%, var(--tone-lift) 0%, transparent 62%)
   ), linear-gradient(200deg, var(--tone-mid) 0%, var(--tone-deep) 78%);
 }
 
-/* Very soft top scrim — only enough to hold the cream type on a
-   photo that turns out brighter than the reference backdrop. */
+/* Fine film grain over everything — ties the set together and keeps
+   the plaster wall from going flat. */
+.banner__grain {
+  position: absolute;
+  inset: 0;
+  opacity: .055;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Only as much scrim as the cream type needs. */
 .banner__topscrim {
   position: absolute;
   inset: 0 0 auto 0;
-  height: 620px;
-  background: linear-gradient(to bottom, rgba(0,0,0,.14), rgba(0,0,0,0));
+  height: 640px;
+  background: linear-gradient(to bottom, rgba(0,0,0,.16), rgba(0,0,0,0));
 }
 
-/* --- headline ------------------------------------------------------ */
+/* =====================================================================
+   HIERARCHY A — word-dominant.  Tiny tracked kicker, one colossal sans
+   word carrying the whole banner, script as an afterthought below it.
+   Inverts the reference: sans leads, script follows.
+   Needs: clear wall across the top ~48%.
+   ===================================================================== */
 
-.banner__headline {
+.h-word {
   position: absolute;
-  top: 58px;
-  left: 60px;
-  right: 60px;
+  top: 76px;
+  left: 56px;
+  right: 56px;
   text-align: center;
-  color: var(--cream);
 }
 
-.banner__script {
+.h-word__kicker {
+  display: block;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 31px;
+  letter-spacing: .3em;
+  text-indent: .3em;          /* balance the trailing letter-space */
+  text-transform: uppercase;
+  opacity: .82;
+}
+
+.h-word__hero {
+  display: block;
+  margin-top: 34px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 244px;
+  line-height: .84;
+  letter-spacing: -.045em;
+  text-indent: -.045em;
+}
+
+.h-word__tail {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-script);
+  font-size: 142px;
+  line-height: 1;
+}
+
+/* =====================================================================
+   HIERARCHY B — left-ranged editorial, anchored in the middle of the
+   frame rather than the top. A hairline rule opens it; the script line
+   is the largest thing and sits under a small sans line.
+   Needs: subject in the RIGHT half, clear wall down the LEFT ~45%.
+   ===================================================================== */
+
+.h-editorial {
+  position: absolute;
+  top: 520px;
+  left: 74px;
+  right: 300px;
+  text-align: left;
+}
+
+.h-editorial__rule {
+  display: block;
+  width: 76px;
+  height: 3px;
+  margin-bottom: 38px;
+  background: var(--cream);
+  opacity: .9;
+}
+
+.h-editorial__line {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 88px;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+
+.h-editorial__script {
+  display: block;
+  /* Pinyon's ascenders are tall — this clears the sans line's descenders. */
+  margin-top: 42px;
+  margin-left: -10px;         /* optically align the script's entry stroke */
+  font-family: var(--font-script);
+  font-size: 208px;
+  line-height: .86;
+}
+
+/* =====================================================================
+   HIERARCHY C — script-dominant. One enormous script word and a single
+   tracked micro-line. The most minimal of the three.
+   Needs: clear wall across the top ~34% only.
+   ===================================================================== */
+
+.h-script {
+  position: absolute;
+  top: 84px;
+  left: 56px;
+  right: 56px;
+  text-align: center;
+}
+
+.h-script__hero {
   display: block;
   font-family: var(--font-script);
-  font-weight: 400;
-  font-size: 172px;
-  line-height: 1;
-  letter-spacing: 0.01em;
+  font-size: 336px;
+  line-height: .95;
 }
 
-.banner__stack {
+.h-script__sub {
   display: block;
-  margin-top: -6px;
-  font-family: var(--font-display);
+  margin-top: 18px;
+  font-family: var(--font-ui);
   font-weight: 500;
-  font-size: 182px;
-  line-height: 0.95;
-  letter-spacing: -0.025em;
+  font-size: 43px;
+  letter-spacing: .34em;
+  text-indent: .34em;
+  text-transform: uppercase;
+  opacity: .92;
 }
 
-/* A 7+ character line needs a step down to keep the reference's air
-   in the left and right margins. */
-.banner__stack--tight { font-size: 158px; }
-
-/* --- footer -------------------------------------------------------- */
+/* --- footer (constant across all three) ------------------------------ */
 
 .banner__footer {
   position: absolute;
@@ -144,7 +223,7 @@
   font-weight: 700;
   font-size: 44px;
   line-height: 1.1;
-  letter-spacing: -0.015em;
+  letter-spacing: -.015em;
   color: #fff;
 }
 
@@ -154,7 +233,7 @@
   font-weight: 400;
   font-size: 44px;
   line-height: 1.1;
-  letter-spacing: -0.01em;
+  letter-spacing: -.01em;
   color: #fff;
 }
 
@@ -169,6 +248,6 @@
   font-weight: 700;
   font-size: 46px;
   line-height: 1;
-  letter-spacing: -0.015em;
+  letter-spacing: -.015em;
   white-space: nowrap;
 }

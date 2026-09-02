@@ -34,22 +34,21 @@
    to carry. Both are per-service, because each hierarchy sets its
    headline at a different depth and each wall is a different value:
 
-   Each value is the least that keeps the thinnest type on that banner
-   above ~3.6:1, and no more. The walls are muted pastel emulsion and
-   the pastel IS the art direction, so over-scrimming would grey out the
-   one thing giving each room its character:
+   Kept low enough that you cannot see it. A scrim you can read as a grey
+   veil over the photograph is worse than slightly softer type, so
+   contrast is bought in the photography instead: the light rakes in low
+   and falls off toward the top of the frame, which puts the headline on
+   a naturally darker wall. The scrim only takes up the remainder.
 
-     cupping  muted eucalyptus teal, the deepest of the three, and the
-              only cool wall — needs the least
-     potli    muted apricot-clay, light and warm, and the type sits
-              lower, so the scrim has to hold further down the wall
-              before it fades
-     scrub    muted blush pink, and the 336px hairline script is the
-              thinnest type in the set — needs the most                */
+   If type on a future photograph reads weak, relight the shot before
+   reaching for these numbers.                                          */
 
-.banner[data-theme='cupping'] { --scrim-a: .24; --scrim-h: 900px;  --scrim-hold: 56%; }
-.banner[data-theme='potli']   { --scrim-a: .33; --scrim-h: 1000px; --scrim-hold: 70%; }
-.banner[data-theme='scrub']   { --scrim-a: .38; --scrim-h: 820px;  --scrim-hold: 58%; }
+.banner[data-theme='cupping'] { --scrim-a: .13; --scrim-h: 780px;  --scrim-hold: 46%; }
+.banner[data-theme='potli']   { --scrim-a: .14; --scrim-h: 780px;  --scrim-hold: 46%; }
+/* Blush is the lightest wall in the set and the 336px hairline script is
+   the thinnest type, so this is the one banner where relighting alone
+   does not get there. Still low enough not to read as a veil. */
+.banner[data-theme='scrub']   { --scrim-a: .22; --scrim-h: 800px;  --scrim-hold: 50%; }
 
 /* --- canvas --------------------------------------------------------- */
 
@@ -150,24 +149,25 @@
 }
 
 /* =====================================================================
-   HIERARCHY B — left-ranged editorial, set below the top of the frame
-   rather than at it. A hairline rule opens it; the script line is the
-   largest thing and sits under a small sans line.
-   Needs: subject and treatment LOW and RIGHT; clear wall across the left
-   two thirds from the top down to ~55%. The script line sets 591px wide
-   — 59% of the canvas — so the photograph has to keep more than half the
+   HIERARCHY B — left-ranged editorial. A hairline rule opens it; the
+   script line is the largest thing and sits under a small sans line.
+   What separates it from A and C is that it is ranged LEFT, not that it
+   sits lower — all three start at the same height.
+   Needs: subject and treatment LOW; clear wall across the left two
+   thirds from the top down to ~45%. The script line sets 591px wide —
+   59% of the canvas — so the photograph has to keep more than half the
    frame clear. See README.
    ===================================================================== */
 
 .h-editorial {
   position: absolute;
-  /* Sits above the treatment, not across it. The wall's clear wedge runs
-     diagonally, so the higher the block sits the more room the script has:
-     at the original 520 its last letters ran onto the muslin bundle —
-     cream on cream, and the "n" disappeared. At 370 the whole line lands
-     on plain plaster, ~65px clear of the knot. */
-  top: 370px;
-  left: 54px;
+  /* Level with the other two hierarchies — A starts at 76, C at 84 — so
+     the three banners share a headline baseline even though this one is
+     ranged left instead of centred. Earlier drafts dropped it to
+     mid-frame and then to 370 to dodge the treatment; the treatment is
+     framed low now, so the type does not have to move for it. */
+  top: 84px;
+  left: 56px;
   right: 300px;
   text-align: left;
 }

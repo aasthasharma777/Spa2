@@ -32,7 +32,7 @@ a template, so each service now leads with something different.
 | | Service | Class | Construction |
 |---|---|---|---|
 | A | Cupping | `.h-word` | 31px tracked kicker → **244px sans word** → 142px script tail |
-| B | Potli | `.h-editorial` | hairline rule → 88px sans line → **208px script**, ranged left, dropped clear of the top |
+| B | Potli | `.h-editorial` | hairline rule → 88px sans line → **208px script**, ranged left |
 | C | Korean scrub | `.h-script` | **336px script word** → 43px tracked micro-line |
 
 The footer — service, price, `Book now` pill — is identical on all three. That,
@@ -53,9 +53,14 @@ are **not** interchangeable:
 
 | Banner | Composition the photo must have |
 |---|---|
-| Cupping | bed, subject and hands entirely in the **bottom 45%**; clear wall across the **top 50%** |
-| Potli | poultice, hand **and the steam** all inside the **right third**; clear wall across the **left two thirds** down to **60%**, and **no window or curtain** in that region |
+| Cupping | bed, subject and hands entirely in the **bottom 45%**; clear wall across the **top 50%**, with the window and curtain kept clear of the centred type |
+| Potli | clear wall across the **left two thirds** down to **40%**; treatment, hand and steam all below **45%** |
 | Korean scrub | bed and subject in the **bottom 55%**; clear wall across the **top 42%** |
+
+All three headlines now start at the same height (76–84px). Hierarchy B is
+distinguished by being ranged **left**, not by sitting lower — earlier drafts
+dropped it to mid-frame and then to `top: 370px` to dodge the treatment, which
+just made the set look misaligned. Framing the treatment low is the better fix.
 
 Type must never cross the treatment itself. The numbers above are the
 type blocks plus a margin, so a photo that meets them needs no nudging.
@@ -100,16 +105,28 @@ courtyard houses rather than city apartments. And nothing from a treatment
 room either: no rolled towels, no stacked linens, no bolsters, no uniform, no
 trolley, no bowls of petals, no candles, no plants, no signage.
 
-Walls are **muted pastels** — neither bright nor dull, and never beige or
-ivory. The colour is chosen per service to complement the therapy without
-competing with it; the treatment stays the subject and the room only has to
-have a personality:
+Walls are **muted pastels** — neither bright nor dull, never beige or ivory,
+and all three clearly different from one another. The colour is chosen per
+service to complement the therapy without competing with it; the treatment
+stays the subject and the room only has to have a personality:
 
 | Service | Cast | Wall | Why that colour |
 |---|---|---|---|
-| Cupping therapy | male therapist, male client | muted eucalyptus teal | The only cool room in the set, and the only cool-vs-warm play: teal is the complement of warm brown skin, so it makes the back, the glass cups and the pink cup marks come forward. Cool also reads as relief, which is what cupping sells. Deepest of the three, so it needs the least scrim. |
-| Herbal potli massage | female therapist, female client | muted apricot-clay | A warm dusty peach that carries the turmeric of the muslin. **One** poultice, never two, on the shoulder blade rather than the neck, with a visible steam plume placed to rise into empty wall. (A muted mustard was tried first and came out olive-drab.) |
-| Korean body scrub | female therapist, female client | muted blush pink | Pastel pink, doing double duty: blush walls are as Indian as they are Korean. Worked with **bare hands** — no mitt, no cloth — with the scrub cream visibly spread on the back. |
+| Cupping therapy | male therapist, male client | muted dusty sage-teal | The only cool room in the set, and the only cool-against-warm play: teal is the complement of warm brown skin, so the back, the glass cups and the pink cup marks all come forward. Cool also reads as relief, which is what cupping sells. Deepest wall, so it needs the least scrim. |
+| Herbal potli massage | female therapist, female client | muted honey-gold | A soft warm gold — marigold stirred into cream — carrying the turmeric of the muslin. **One** poultice, a neat sphere with a short twisted handle, on the shoulder blade rather than the neck, with a steam wisp rising into empty wall. |
+| Korean body scrub | female therapist, female client | muted blush pink | Pastel pink doing double duty: blush walls are as Indian as they are Korean. Worked with **bare hands** and the client's hair in a **bun**. |
+
+Two colour notes learned the hard way: a muted mustard came out olive-drab,
+and an apricot-clay sat so close to the scrub's blush that the two banners
+read as the same room. Honey-gold separates cleanly from both the teal and
+the pink.
+
+**Light does the work the scrim used to do.** In every shot the light rakes
+in low so the wall is brightest down near the bed and falls off into soft
+shadow toward the top of the frame. That puts the headline on a naturally
+darker wall, which is why the scrim can sit low enough to be invisible.
+Flat, evenly-lit walls force the scrim up until it reads as a grey veil over
+the photograph — relight the shot instead.
 
 The Korean note on the scrub is deliberately small: the blush palette, a
 hanji-like glow through the sheer curtain, and **one** celadon-green ceramic
@@ -133,9 +150,9 @@ render.
 
 | Service | Chosen | Notes |
 |---|---|---|
-| Cupping therapy | `5337408681` | Lighter, dustier teal than the alternate, and the therapist's second hand rests on the back rather than the client's head. |
-| Herbal potli massage | `5337452358` | Strongest steam plume of any version, rising into the gap between the type and the curtain. Warmer apricot than the alternate, which sat too close to the scrub's pink. |
-| Korean body scrub | `5337415785` | Bare hands, cream on the fingers, celadon bowl in frame. The bed reference came from this service, so it matches by construction. |
+| Cupping therapy | `5337590514` | Desaturated sage-teal, and the curtain finally sits clear of the centred headline. Best light falloff of the batch. |
+| Herbal potli massage | `5337599253` | Round poultice with a proper twisted handle. Honey-gold reads clearly apart from the blush. |
+| Korean body scrub | `5337643915` | Took a dedicated round for the gesture alone: cream banked up against the leading edge of the hand, drag furrows raked behind it, fingers dug in, second hand bracing the shoulder. Also the darkest wall of its batch behind the type, which is why it needs the least scrim. Hair in a bun. |
 
 If the photographs are ever missing, each banner falls back to an on-theme wall
 gradient so the type and copy can still be reviewed. Generating or re-fetching

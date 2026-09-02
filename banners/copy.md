@@ -58,10 +58,11 @@ sinks in               208px  Pinyon Script
 > *sinks in*
 > Herbal potli massage · Starting from ₹1,599
 
-Ranged left and set below the top of the frame rather than at it, so the
-photograph carries the lower right and the type occupies the empty wall above
-it. The sentence runs across two type styles instead of two lines of one style
-— the script is the loud half, which is the opposite of A.
+Ranged left where A and C are centred, which is what distinguishes it — all
+three headlines start at the same height. The photograph carries the lower
+half of the frame and the type occupies the empty wall above it. The sentence
+runs across two type styles instead of two lines of one style — the script is
+the loud half, which is the opposite of A.
 
 The line sells the one thing a potli does that hands cannot: heat that travels.
 "Herbal potli massage" in the footer does the explaining, so the headline

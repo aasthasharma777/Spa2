@@ -232,7 +232,15 @@ environment's **Network access: Custom** allowed-domains list; on the default
 npm install playwright        # once
 node render.mjs               # -> out/cupping.png, out/potli.png, out/scrub.png
 node render.mjs cupping       # just one
+NOTEXT=1 node render.mjs      # -> out/no-text/  (same plates, no lettering)
 ```
+
+`NOTEXT=1` hides the headline and the footer wording but keeps the canvas,
+the crop, the grain and both scrims, so the output registers with the
+lettered version pixel for pixel — use it as a drop-in plate for other
+copy, or for a version that has to carry no words at all. Note the scrims
+are still in it, since they exist to serve the type; for the untouched
+source frames at 1728 x 2304, use `assets/` directly.
 
 Exports at `deviceScaleFactor: 2`, so 2000 × 2744 PNGs.
 

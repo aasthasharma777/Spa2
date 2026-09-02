@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Spa banners — draft 1</title>
+<link rel="stylesheet" href="banner.css">
+<style>
+  body { margin: 0; padding: 60px; background: #101012; font-family: 'Inter', system-ui, sans-serif; }
+  .sheet { display: flex; gap: 60px; align-items: flex-start; }
+  .col { display: flex; flex-direction: column; gap: 20px; }
+  .cap { color: #8b8b90; font-size: 22px; letter-spacing: .02em; }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- ============================ 1. CUPPING THERAPY ============================ -->
+  <div class="col">
+    <div class="banner" data-theme="cupping" id="cupping">
+      <div class="banner__photo" style="--photo: url('assets/cupping-therapy.jpg')"></div>
+      <div class="banner__topscrim"></div>
+
+      <div class="banner__headline">
+        <span class="banner__script">Release</span>
+        <span class="banner__stack banner__stack--tight">Knots<br>&amp; Aches</span>
+      </div>
+
+      <div class="banner__footer">
+        <div>
+          <div class="banner__service">Cupping therapy</div>
+          <div class="banner__price">Starting from &#8377;1,299</div>
+        </div>
+        <div class="banner__cta">Book now</div>
+      </div>
+    </div>
+    <div class="cap">1 &middot; Cupping therapy</div>
+  </div>
+
+  <!-- ============================ 2. POTLI MASSAGE ============================== -->
+  <div class="col">
+    <div class="banner" data-theme="potli" id="potli">
+      <div class="banner__photo" style="--photo: url('assets/potli-massage.jpg')"></div>
+      <div class="banner__topscrim"></div>
+
+      <div class="banner__headline">
+        <span class="banner__script">Soothe</span>
+        <span class="banner__stack banner__stack--tight">Heat<br>&amp; Herbs</span>
+      </div>
+
+      <div class="banner__footer">
+        <div>
+          <div class="banner__service">Herbal potli massage</div>
+          <div class="banner__price">Starting from &#8377;1,599</div>
+        </div>
+        <div class="banner__cta">Book now</div>
+      </div>
+    </div>
+    <div class="cap">2 &middot; Potli massage</div>
+  </div>
+
+  <!-- ============================ 3. KOREAN SCRUB =============================== -->
+  <div class="col">
+    <div class="banner" data-theme="scrub" id="scrub">
+      <div class="banner__photo" style="--photo: url('assets/korean-scrub.jpg')"></div>
+      <div class="banner__topscrim"></div>
+
+      <div class="banner__headline">
+        <span class="banner__script">Glow</span>
+        <span class="banner__stack">Head<br>to Toe</span>
+      </div>
+
+      <div class="banner__footer">
+        <div>
+          <div class="banner__service">Korean body scrub</div>
+          <div class="banner__price">Starting from &#8377;1,899</div>
+        </div>
+        <div class="banner__cta">Book now</div>
+      </div>
+    </div>
+    <div class="cap">3 &middot; Korean scrub</div>
+  </div>
+
+</div>
+</body>
+</html>

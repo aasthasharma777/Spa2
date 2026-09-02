@@ -1,0 +1,174 @@
+/* ------------------------------------------------------------------
+   Spa service banner — design system
+   Derived from the "Relax / Body & Mind" deep-tissue massage banner.
+
+   Canvas: 1000 x 1372 (3:4-ish portrait card, 44px radius)
+   Anatomy: script verb  ->  stacked sans headline  ->  photo
+            ->  bottom scrim with service + price + Book now pill
+   ------------------------------------------------------------------ */
+
+@import url('./fonts/fonts.css');
+
+:root {
+  /* type */
+  --font-script: 'Pinyon Script', 'Great Vibes', cursive;
+  --font-display: 'Poppins', 'Outfit', system-ui, sans-serif;
+  --font-ui: 'Inter', system-ui, sans-serif;
+
+  /* the cream that all headline type sits in, across every theme */
+  --cream: #F8EED6;
+
+  /* canvas */
+  --w: 1000px;
+  --h: 1372px;
+  --radius: 44px;
+}
+
+/* --- per-service themes -------------------------------------------
+   Each theme only sets the backdrop tones. They are used by the
+   placeholder gradient and by the scrim tint over the photo, so the
+   banner stays on-palette even before the photo is dropped in.       */
+
+.banner[data-theme='cupping'] {
+  --tone-lift: #8A5A46;   /* lit wall, upper right */
+  --tone-mid:  #63402F;
+  --tone-deep: #2E1B13;   /* shadow, lower left */
+}
+
+.banner[data-theme='potli'] {
+  --tone-lift: #A9763A;
+  --tone-mid:  #7A5426;
+  --tone-deep: #33200D;
+}
+
+.banner[data-theme='scrub'] {
+  --tone-lift: #91A188;
+  --tone-mid:  #66755E;
+  --tone-deep: #26301F;
+}
+
+/* --- canvas -------------------------------------------------------- */
+
+.banner {
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+  border-radius: var(--radius);
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--tone-deep);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The photograph. Set --photo to url('assets/xxx.jpg') on the element.
+   Until then the tonal gradient below stands in for it.               */
+.banner__photo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  /* --photo wins when set; otherwise the on-theme studio gradient stands in */
+  background-image: var(
+    --photo,
+    radial-gradient(120% 85% at 78% 12%, var(--tone-lift) 0%, transparent 62%)
+  ), linear-gradient(200deg, var(--tone-mid) 0%, var(--tone-deep) 78%);
+}
+
+/* Very soft top scrim — only enough to hold the cream type on a
+   photo that turns out brighter than the reference backdrop. */
+.banner__topscrim {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 620px;
+  background: linear-gradient(to bottom, rgba(0,0,0,.14), rgba(0,0,0,0));
+}
+
+/* --- headline ------------------------------------------------------ */
+
+.banner__headline {
+  position: absolute;
+  top: 58px;
+  left: 60px;
+  right: 60px;
+  text-align: center;
+  color: var(--cream);
+}
+
+.banner__script {
+  display: block;
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: 172px;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+.banner__stack {
+  display: block;
+  margin-top: -6px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 182px;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+}
+
+/* A 7+ character line needs a step down to keep the reference's air
+   in the left and right margins. */
+.banner__stack--tight { font-size: 158px; }
+
+/* --- footer -------------------------------------------------------- */
+
+.banner__footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 430px;
+  padding: 0 54px 58px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.74) 0%,
+    rgba(0,0,0,.62) 26%,
+    rgba(0,0,0,.24) 60%,
+    rgba(0,0,0,0) 100%
+  );
+}
+
+.banner__service {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: #fff;
+}
+
+.banner__price {
+  margin-top: 16px;
+  font-family: var(--font-ui);
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+.banner__cta {
+  flex: none;
+  margin-bottom: 4px;
+  padding: 30px 52px;
+  border-radius: 999px;
+  background: #fff;
+  color: #101010;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  white-space: nowrap;
+}

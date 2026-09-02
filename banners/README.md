@@ -160,15 +160,26 @@ render.
 | Service | Chosen | Notes |
 |---|---|---|
 | Cupping therapy | `5338020102` | Client's arms along his sides on the table. Window a curtain sliver at the left, clear of the centred type. |
-| Herbal potli massage | `5338442099` | Poultice sized to a lemon and clearly smaller than the fist gripping its stalk. Best steam of the set. No window in frame. |
+| Herbal potli massage | `5338502663` | Poultice lemon-sized, tilted and pressed in mid-stroke, free hand braced on the back, turmeric trail behind it. No window in frame. |
 | Korean body scrub | `5338446791` | Full flat palm spreading the scrub in a broad sweep, fingers together. Hair in a bun. Window right and set back. |
 
 Three details took several rounds each and are worth not re-litigating:
 
-- **The poultice grip.** Held by the twisted stalk in a closed fist, ball
-  hanging below and pressed into the shoulder blade. Naming a familiar
-  object — "the way you hold a small mallet" — landed it where describing
-  finger positions did not.
+- **The poultice grip.** Held by the twisted stalk, fingers closed round
+  it, the ball below the hand and pressed into the shoulder blade. Naming a
+  familiar object — "the way you hold a small mallet" — landed it where
+  describing finger positions did not.
+- **But the grip is not the action.** With the grip correct the picture
+  still read as someone holding an object over a surface, because the pose
+  was wrong: straight horizontal arm, wrist cocked at a right angle, bundle
+  hanging vertically like a plumb bob, and nothing else touching the client.
+  What makes it read as a treatment is the body mechanics — therapist
+  leaning in, **elbow bent**, forearm angled down and in, the bundle
+  **tilted** the way the stroke travels and pressed in so the flesh gives,
+  caught **mid-stroke** along the muscle, a faint **turmeric trail** showing
+  where it has already been, and — the single biggest change — **the free
+  hand resting flat on the client's back**. A therapist always braces with
+  the other hand; one hand alone in frame always looks like a demonstration.
 - **The poultice size.** Lemon-sized, and explicitly *smaller than the fist
   holding it*. Given a free hand the model inflates it to a grapefruit.
 - **The scrub gesture.** The entire palm flat against the back, spreading,

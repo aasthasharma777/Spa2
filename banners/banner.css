@@ -44,7 +44,7 @@
    reaching for these numbers.                                          */
 
 .banner[data-theme='cupping'] { --scrim-a: .14; --scrim-h: 780px;  --scrim-hold: 46%; }
-.banner[data-theme='potli']   { --scrim-a: .24; --scrim-h: 780px;  --scrim-hold: 46%; }
+.banner[data-theme='potli']   { --scrim-a: .28; --scrim-h: 780px;  --scrim-hold: 46%; }
 /* Blush is the lightest wall in the set and the 336px hairline script is
    the thinnest type, so this is the one banner where relighting alone
    cannot get there. This value is visible if you look for it — the honest

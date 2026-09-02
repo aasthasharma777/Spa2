@@ -148,51 +148,53 @@ Therapist enters from the right on all three, and the window sits right on all
 three. That, plus the identical bed, is what holds the set together — more
 than the cream or the grain does.
 
-### The photography — three iterations
+### The photography
 
-Three complete sets exist for the same three layouts. The layouts, copy and
-type never change; only the photography and the per-photograph scrim do.
+Generated in Magnific with Seedream 5 Pro at 3:4, with
+`reference/massage-bed-reference.jpg` passed as an image reference on every
+shot so the bed is identical across the set, then composited under each
+hierarchy and judged as a finished banner rather than as a loose photograph.
+The chosen three are committed in `assets/`, so no CDN fetch is needed to
+render.
 
-```
-assets/                     iteration 1 — the primary set
-assets/iteration-2/         iteration 2
-assets/iteration-3/         iteration 3
-out/                        iteration 1 renders
-out/iteration-2/            "
-out/iteration-3/            "
-```
-
-**Iteration 1 — the house style.** Bright, airy, muted mid-tone pastels;
-therapist and treatment shot side-on at bed height. Sage-teal / honey-gold /
-blush. Window left on cupping, off-frame on potli, right and set back on
-scrub, so the three rooms don't read as one room.
-
-**Iteration 2 — same house style, re-blocked.** Every banner changes room
-feature, client orientation and camera angle: cupping puts the window
-*behind* the bed and shoots a three-quarter from the head end; potli drops
-the camera below bed height with the head at the right; scrub loses the
-window for a doorway edge and shoots from high above.
-
-**Iteration 3 — the experiment, and the most interesting result here.**
-Colour-drenched rooms — wall, skirting and reveal all one deep tone — plus a
-different camera language per service:
-
-| | Room | Camera |
+| Service | Chosen | Notes |
 |---|---|---|
-| Cupping | deep petrol teal | from the **head end**, looking down the length of the body in one-point perspective, cups marching away along the spine |
-| Potli | deep terracotta-rust | **near-macro**, the gripping fist and the turmeric ball filling the frame, muslin weave and string sharp, wall melting to a field of colour |
-| Korean scrub | deep mauve-plum | **wide and environmental**, bed at 45° in the room, floor and corner and window all visible, light pooling on the tile |
+| Cupping therapy | `5338020102` | Client's arms along his sides on the table. Window a curtain sliver at the left, clear of the centred type. |
+| Herbal potli massage | `5338023120` | Poultice sized to a lemon and clearly smaller than the fist gripping its stalk. Best steam of the set. No window in frame. |
+| Korean body scrub | `5338029749` | Full flat palm spreading the scrub in a broad sweep, fingers together. Hair in a bun. Window right and set back. |
 
-Iteration 3 also solves a problem the others can't. Cream type on a deep
-wall measures **6.4–13.9:1**; on a bright pale wall the same type cannot
-reach 3:1 without a scrim you can see. Deep colour is the honest fix for
-that, not more overlay.
+Three details took several rounds each and are worth not re-litigating:
 
-| Service | It. 1 | It. 2 | It. 3 |
-|---|---|---|---|
-| Cupping | `5337772094` | `5337814671` | `5337833620` |
-| Potli | `5337777711` | `5337900748` | `5337832948` |
-| Scrub | `5337782552` | `5337825121` | `5337836754` |
+- **The poultice grip.** Held by the twisted stalk in a closed fist, ball
+  hanging below and pressed into the shoulder blade. Naming a familiar
+  object — "the way you hold a small mallet" — landed it where describing
+  finger positions did not.
+- **The poultice size.** Lemon-sized, and explicitly *smaller than the fist
+  holding it*. Given a free hand the model inflates it to a grapefruit.
+- **The scrub gesture.** The entire palm flat against the back, spreading,
+  fingers together. Earlier attempts at making the work look effortful —
+  fingers dug in, a bank of product shoved ahead of the palm, furrows raked
+  behind — all read as sculpting clay rather than scrubbing. Flat palm,
+  thin granular layer.
+
+Also: the client's arms lie **along their sides on the table**, hands on the
+paper sheet. Left unspecified they hang off the edge toward the floor.
+
+#### Iterations that were tried and rejected
+
+Two alternate sets were generated and cut, recorded here so they aren't
+proposed again:
+
+- **Re-blocked rooms** — same palette, but window behind the bed with a
+  head-end three-quarter for cupping, a below-bed camera for potli, and a
+  doorway with a high angle for scrub. The rooms read wrong and the scrub
+  gesture regressed.
+- **Colour-drenched rooms** — deep petrol teal, terracotta-rust and
+  mauve-plum with a head-end perspective, a near-macro detail and a wide
+  environmental shot. Measured beautifully (6.4-13.9:1 cream contrast on
+  almost no scrim) but the angles and the wall colours were both wrong for
+  the brand. Worth knowing the measurement result: deep walls carry cream
+  type effortlessly, which is why the bright-room set needs a scrim at all.
 
 If the photographs are ever missing, each banner falls back to an on-theme wall
 gradient so the type and copy can still be reviewed. Generating or re-fetching
@@ -206,8 +208,6 @@ environment's **Network access: Custom** allowed-domains list; on the default
 npm install playwright        # once
 node render.mjs               # -> out/cupping.png, out/potli.png, out/scrub.png
 node render.mjs cupping       # just one
-ITERATION=2 node render.mjs   # -> out/iteration-2/
-ITERATION=3 node render.mjs   # -> out/iteration-3/
 ```
 
 Exports at `deviceScaleFactor: 2`, so 2000 × 2744 PNGs.

@@ -75,6 +75,22 @@
   background: linear-gradient(to bottom, rgba(0,0,0,.16), rgba(0,0,0,0));
 }
 
+/* The scrub's wall is a pale sage limewash — around twice as bright in the
+   headline zone as the terracotta and turmeric walls. At the shared .16 the
+   cream sat at ~1.4:1 against it, so this theme carries its own deeper,
+   longer scrim. Held to a plateau rather than a steep ramp, so the wall still
+   reads pale and the taper never shows as a band. */
+.banner[data-theme='scrub'] .banner__topscrim {
+  height: 820px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.28) 0%,
+    rgba(0,0,0,.25) 38%,
+    rgba(0,0,0,.21) 60%,
+    rgba(0,0,0,0) 100%
+  );
+}
+
 /* =====================================================================
    HIERARCHY A — word-dominant.  Tiny tracked kicker, one colossal sans
    word carrying the whole banner, script as an afterthought below it.
@@ -121,15 +137,19 @@
 }
 
 /* =====================================================================
-   HIERARCHY B — left-ranged editorial, anchored in the middle of the
-   frame rather than the top. A hairline rule opens it; the script line
-   is the largest thing and sits under a small sans line.
+   HIERARCHY B — left-ranged editorial, dropped clear of the top rather
+   than aligned to it. A hairline rule opens it; the script line is the
+   largest thing and sits under a small sans line.
    Needs: subject in the RIGHT half, clear wall down the LEFT ~45%.
    ===================================================================== */
 
 .h-editorial {
   position: absolute;
-  top: 520px;
+  /* The wall's clear wedge runs diagonally: the potli bundle and the
+     therapist's hand cut into it from about y=680. At the original 520 the
+     script's last letters ran over the muslin bundle — cream on cream, and
+     the "n" disappeared. Lifted so the script's descenders clear the knot. */
+  top: 316px;
   left: 74px;
   right: 300px;
   text-align: left;

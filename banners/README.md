@@ -32,7 +32,7 @@ a template, so each service now leads with something different.
 | | Service | Class | Construction |
 |---|---|---|---|
 | A | Cupping | `.h-word` | 31px tracked kicker → **244px sans word** → 142px script tail |
-| B | Potli | `.h-editorial` | hairline rule → 88px sans line → **208px script**, ranged left, mid-frame |
+| B | Potli | `.h-editorial` | hairline rule → 88px sans line → **208px script**, ranged left, dropped clear of the top |
 | C | Korean scrub | `.h-script` | **336px script word** → 43px tracked micro-line |
 
 The footer — service, price, `Book now` pill — is identical on all three. That,
@@ -71,29 +71,26 @@ project there:
 | Potli massage | magnific.com/app/creation/lJ6zLNsgv9 · magnific.com/app/creation/gOinsicSXO |
 | Korean scrub | magnific.com/app/creation/WD8Cnf3cXe · magnific.com/app/creation/XmukekQBfo |
 
-### If Magnific downloads are blocked
+### Which candidate was chosen
 
-A Claude Code cloud session can only fetch the rendered images if its
-environment allows the Magnific asset CDN. On the default **Trusted** network
-access level it doesn't, and downloads fail with a proxy 403 — the Magnific MCP
-calls still work, because MCP traffic bypasses the allowlist, but the asset
-fetch doesn't.
+Two candidates per service were downloaded and compared. The IDs below are the
+Magnific render IDs from the asset URLs, which is what identifies each file;
+the creation links in the table above are listed in the same order, but that
+pairing wasn't independently confirmed.
 
-To fix it: claude.ai/code -> the cloud icon above the message box -> hover the
-environment -> gear -> **Network access: Custom**, with these in **Allowed
-domains**, and **"Also include default list of common package managers"**
-checked so npm, `raw.githubusercontent.com` and Google Fonts keep working:
+| Service | Chosen | Why |
+|---|---|---|
+| Cupping therapy | **A** — `5336696934` | Cleanest top: wall runs clear to 57% of frame height, and the therapist's arm only clips the extreme right edge at 36%, outboard of the centred type. B put the same arm at 27%. |
+| Herbal potli massage | **B** — `5336698804` | The only one of the pair with the subject genuinely in the right half. A placed the client's head at 41% from the left — directly under the script line. B also carries a wider linen-curtain sliver. |
+| Korean body scrub | **B** — `5336699356` | A little more top clearance (40% vs 37.5%), a slightly less blown-out headline zone, the head fully inside the frame rather than cropped at the left, and the mitt reads unmistakably as a scrub mitt (A's reads as a folded flannel). |
 
-```
-pikaso.cdnpk.net
-*.cdnpk.net
-```
-
-The policy is fixed when a session's VM starts, so it applies to new sessions,
-not one already running.
-
-Until then every banner falls back to an on-theme wall gradient, so the type and
-copy can still be reviewed.
+The chosen renders are committed in `assets/`, so nothing needs downloading to
+render the set. To fetch new candidates from Magnific, the session's environment
+must allow the asset CDN: claude.ai/code -> the cloud icon above the message box
+-> hover the environment -> gear -> **Network access: Custom**, with
+`pikaso.cdnpk.net` and `*.cdnpk.net` in **Allowed domains** and **"Also include
+default list of common package managers"** checked. The policy is fixed when a
+session's VM starts, so it applies to new sessions, not a running one.
 
 ## Rendering
 

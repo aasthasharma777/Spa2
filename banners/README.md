@@ -53,50 +53,57 @@ are **not** interchangeable:
 
 | Banner | Composition the photo must have |
 |---|---|
-| Cupping | subject in the lower half; clear wall across the **top 48%** |
-| Potli | subject in the **right half**; clear wall down the **left 45%**, mid-frame |
-| Korean scrub | clear wall across the **top 34%** only — subject can sit higher |
+| Cupping | subject and hands entirely in the **bottom 45%**; clear wall across the **top 50%** |
+| Potli | treatment low and to the **right**; clear wall across the **left two thirds** down to **55%** |
+| Korean scrub | subject in the **bottom 55%**; clear wall across the **top 42%** |
 
-All three share a brief: an at-home room, not a spa. A limewash plaster wall
-with faint trowel texture, a narrow sliver of linen curtain at one edge, and the
-soft diffused shadow of window light across the wall. No furniture, no decor, no
-plants, no candles. Light rakes in at 45°.
+Type must never cross the treatment itself. The numbers above are the
+type blocks plus a margin, so a photo that meets them needs no nudging.
+Note the potli line is the tightest: `sinks in` sets 591px wide — 59% of
+the canvas — so that photo has to keep more than half the frame clear.
 
-Two candidates per service were generated in Magnific and are in the Personal
-project there:
+All three share a brief: a minimal, aesthetic **bedroom**, not a spa. The
+client lies on a low bed made up with rumpled natural linen — the bedding is
+what keeps it reading as a home. A limewash plaster wall with faint trowel
+texture, a narrow sliver of linen curtain at one edge, and the soft diffused
+shadow of window light across the wall. Light rakes in at 45°.
 
-| Service | Candidates |
-|---|---|
-| Cupping therapy | magnific.com/app/creation/rgyRksAxtc · magnific.com/app/creation/lJ6zLwmgv9 |
-| Potli massage | magnific.com/app/creation/lJ6zLNsgv9 · magnific.com/app/creation/gOinsicSXO |
-| Korean scrub | magnific.com/app/creation/WD8Cnf3cXe · magnific.com/app/creation/XmukekQBfo |
+Nothing that belongs to a treatment room: no massage table, no vinyl couch,
+no face-cradle headrest, no rolled towels, no stacked linens, no bolsters, no
+uniform, no trolley, no bowls, no candles, no plants, no petals.
 
-### Which candidate was chosen
+Casting and technique are fixed per service:
 
-Both candidates per service were composited under their own hierarchy and
-judged as finished banners rather than as loose photographs. The chosen
-three are committed in `assets/`, so no CDN fetch is needed to render.
-
-| Service | Chosen | Why |
+| Service | Cast | Technique |
 |---|---|---|
-| Cupping therapy | **A** (`5336696934`) | Clear wall to 57% of the frame, so the whole top block sits on plaster. Darker through the type zone than B, which the 142px script tail needs. |
-| Herbal potli massage | **A** (`5336699017`) | Its script line ends over the subject's dark hair, where cream reads at full strength. In B the same line ended on bright potli cloth and the last letter dissolved. |
-| Korean body scrub | **B** (`5336699356`) | Same clear space as A, but more trowel texture, a crisper window shadow and cleaner hands — and it holds up better where the wall is brightest. |
+| Cupping therapy | male therapist, male client | glass cups set in a row along the upper back |
+| Herbal potli massage | female therapist, female client | **one** poultice bundle, not two |
+| Korean body scrub | female therapist, female client | **bare hands**, no mitt or cloth, with the scrub cream visibly spread on the back |
 
-Potli A was taken over the candidate that better matched the "clear left
-45%" rule above, because that rule is narrower than the type it has to
-hold: `sinks in` sets 591px wide, 59% of the canvas. On either photo the
-script's tail crosses into the subject, so what it crosses *onto* is what
-decides it — hair works, pale cloth does not.
+### The photography
 
-Note the A/B labels are download order, not the Magnific slugs listed
-above; the IDs in the table are the CDN production IDs.
+Generated in Magnific with Seedream 5 Pro at 3:4, then composited under
+each hierarchy and judged as a finished banner rather than as a loose
+photograph. The chosen three are committed in `assets/`, so no CDN fetch
+is needed to render.
+
+| Service | Chosen | Notes |
+|---|---|---|
+| Cupping therapy | `5337111365` | Clearest bedroom read of the set — white pillows and duvet, not a couch. Five cups legible, both men, hands correct. Type clears the action by ~380px. |
+| Herbal potli massage | `5337113454` | One poultice, female therapist, warm plaster with a clean window shadow. The treatment sits low and right; the whole left two thirds is bare wall. |
+| Korean body scrub | `5337118648` | Bare hands with the cream visibly worked into the back, cream on the fingers and nails. Both women. Both hands resolve to four fingers and a thumb. |
+
+Two rounds were generated for potli. The first round's composition won:
+asking for the action to be confined to the right third pushed it right but
+never far enough, because the model frames on the shoulder blade. What
+actually solved it was moving the headline block up (`top: 520px -> 370px`)
+so the type sits above the treatment instead of beside it.
 
 If the photographs are ever missing, each banner falls back to an on-theme
-wall gradient so the type and copy can still be reviewed. Re-fetching them
-needs the Magnific asset CDN (`pikaso.cdnpk.net`, `*.cdnpk.net`) on the
-environment's **Network access: Custom** allowed-domains list; on the
-default **Trusted** level the fetch fails with a proxy 403.
+wall gradient so the type and copy can still be reviewed. Generating or
+re-fetching them needs the Magnific asset CDN (`pikaso.cdnpk.net`,
+`*.cdnpk.net`) on the environment's **Network access: Custom** allowed-domains
+list; on the default **Trusted** level the fetch fails with a proxy 403.
 
 ## Rendering
 

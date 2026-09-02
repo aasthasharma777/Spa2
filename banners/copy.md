@@ -11,7 +11,7 @@ construction.
 | | Service | Hierarchy | What leads |
 |---|---|---|---|
 | A | Cupping therapy | word-dominant | one colossal sans word |
-| B | Potli massage | left-ranged editorial | a script line, mid-frame |
+| B | Potli massage | left-ranged editorial | a script line, ranged left |
 | C | Korean scrub | script-led minimal | one enormous script word |
 
 ---
@@ -58,10 +58,10 @@ sinks in               208px  Pinyon Script
 > *sinks in*
 > Herbal potli massage · Starting from ₹1,599
 
-Ranged left and anchored in the middle of the frame rather than the top, so the
-photograph carries the right half and the type occupies the empty wall. The
-sentence runs across two type styles instead of two lines of one style — the
-script is the loud half, which is the opposite of A.
+Ranged left and set below the top of the frame rather than at it, so the
+photograph carries the lower right and the type occupies the empty wall above
+it. The sentence runs across two type styles instead of two lines of one style
+— the script is the loud half, which is the opposite of A.
 
 The line sells the one thing a potli does that hands cannot: heat that travels.
 "Herbal potli massage" in the footer does the explaining, so the headline

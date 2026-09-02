@@ -34,16 +34,16 @@
    to carry. Both are per-service, because each hierarchy sets its
    headline at a different depth and each wall is a different value:
 
-     cupping  a warm mid wall, type in the top third — a light scrim,
-              carried far enough to hold the 142px script tail
-     potli    type mid-frame, so the scrim has to reach much further
-              down before it fades
-     scrub    a pale sage wall, the brightest of the three, and the
-              hairline script needs the most help of any of them       */
+     cupping  a bright putty wall — held flat well past the 142px
+              script tail, which is the thinnest type on the banner
+     potli    type sits lower, so the scrim has to reach further down
+              before it fades
+     scrub    the palest wall of the three, and the hairline script
+              needs the most help of any of them                       */
 
-.banner[data-theme='cupping'] { --scrim-a: .22; --scrim-h: 900px;  --scrim-hold: 40%; }
-.banner[data-theme='potli']   { --scrim-a: .24; --scrim-h: 1000px; --scrim-hold: 55%; }
-.banner[data-theme='scrub']   { --scrim-a: .34; --scrim-h: 820px;  --scrim-hold: 58%; }
+.banner[data-theme='cupping'] { --scrim-a: .28; --scrim-h: 900px;  --scrim-hold: 56%; }
+.banner[data-theme='potli']   { --scrim-a: .26; --scrim-h: 1000px; --scrim-hold: 70%; }
+.banner[data-theme='scrub']   { --scrim-a: .39; --scrim-h: 820px;  --scrim-hold: 58%; }
 
 /* --- canvas --------------------------------------------------------- */
 
@@ -144,16 +144,22 @@
 }
 
 /* =====================================================================
-   HIERARCHY B — left-ranged editorial, anchored in the middle of the
-   frame rather than the top. A hairline rule opens it; the script line
-   is the largest thing and sits under a small sans line.
-   Needs: subject in the RIGHT half, clear wall down the LEFT ~45%.
+   HIERARCHY B — left-ranged editorial, set below the top of the frame
+   rather than at it. A hairline rule opens it; the script line is the
+   largest thing and sits under a small sans line.
+   Needs: subject and treatment LOW and RIGHT; clear wall across the left
+   two thirds from the top down to ~55%. The script line sets 591px wide
+   — 59% of the canvas — so the photograph has to keep more than half the
+   frame clear. See README.
    ===================================================================== */
 
 .h-editorial {
   position: absolute;
-  top: 520px;
-  left: 74px;
+  /* Sits above the treatment, not across it: the poultice and the
+     therapist's hand come in low and right, so the block is anchored in
+     the upper middle of the empty wall with the action below it. */
+  top: 370px;
+  left: 54px;
   right: 300px;
   text-align: left;
 }

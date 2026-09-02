@@ -160,8 +160,8 @@ render.
 | Service | Chosen | Notes |
 |---|---|---|
 | Cupping therapy | `5338020102` | Client's arms along his sides on the table. Window a curtain sliver at the left, clear of the centred type. |
-| Herbal potli massage | `5338023120` | Poultice sized to a lemon and clearly smaller than the fist gripping its stalk. Best steam of the set. No window in frame. |
-| Korean body scrub | `5338029749` | Full flat palm spreading the scrub in a broad sweep, fingers together. Hair in a bun. Window right and set back. |
+| Herbal potli massage | `5338442099` | Poultice sized to a lemon and clearly smaller than the fist gripping its stalk. Best steam of the set. No window in frame. |
+| Korean body scrub | `5338446791` | Full flat palm spreading the scrub in a broad sweep, fingers together. Hair in a bun. Window right and set back. |
 
 Three details took several rounds each and are worth not re-litigating:
 
@@ -179,6 +179,19 @@ Three details took several rounds each and are worth not re-litigating:
 
 Also: the client's arms lie **along their sides on the table**, hands on the
 paper sheet. Left unspecified they hang off the edge toward the floor.
+
+- **Female therapists' hands.** Generic hand-realism prompting asks for
+  "visible tendons and veins on the backs of the hands" — good advice in
+  general, and wrong here: it gave both women ropey, muscular, masculine
+  hands. For the two female-therapist banners ask instead for slender
+  tapered fingers, a smooth even back of the hand, a fine wrist and neat
+  short nails, and negate veins, tendons, cords and sinew explicitly.
+  Keep the tendon language for the male therapist on cupping.
+- **But keep the skin tone anchored while you do it.** Removing the vein
+  detail without restating the tone made the model render pale, European
+  hands on Indian women. The therapist's hands need their own explicit
+  "warm medium-brown South Asian, same tone family as the client" line —
+  describing the client's skin alone is not enough.
 
 #### Iterations that were tried and rejected
 

@@ -672,6 +672,73 @@ spacing from ink bounds.** Scaling the numbers only works while the face is
 the same.
 
 
+#### The card headline spec — whole numbers on the 8pt grid
+
+Every headline value is now an integer, and everything is a multiple of 8
+except the hairline rule. The block sits at **x 16, y 24** inside the
+328 x 448 Main frame, which matches the card's own 16pt inset on the service
+name.
+
+| Hierarchy | Block | Line | y | size | line-height |
+|---|---|---|---|---|---|
+| Cupping | 296 x 152 | kicker | 0 | 10 | 16 |
+| | | hero | 24 | 73 | 72 |
+| | | script tail | 88 | 59 | 64 |
+| Potli | 208 x 120 | rule (24 x 2) | 0 | — | — |
+| | | sans line | 16 | 28 | 24 |
+| | | script | 56 | 86 | 64 |
+| Scrub | 296 x 120 | script hero | 0 | 140 | 96 |
+| | | tracked sub | 104 | 13 | 16 |
+
+**Explicit pixel line-heights are what makes the grid and the optical spacing
+compatible.** They are otherwise in direct conflict: ink positions are font
+metrics and land wherever they land, while the grid demands multiples of 8.
+Setting `lineHeight` to a pixel multiple of 8 makes the *box* the grid unit,
+and because Figma then centres the ink inside that box, every extra 8 of
+line-height buys exactly **4px of downward ink shift** — a half-grid nudge.
+
+So the values above are not chosen, they are solved. Font size comes from
+matching ink height to the scaled original; then line-height and box position
+are searched jointly over the grid to minimise ink-gap error. Result:
+
+| | target gap | achieved | error |
+|---|---|---|---|
+| Cupping kicker -> hero | 16.96 | 17.6 | +0.6 |
+| Cupping hero -> script | 4.49 | 5.8 | +1.3 |
+| Potli rule -> sans | 15.71 | 15.6 | -0.1 |
+| Potli sans -> script | 10.27 | 11.0 | +0.7 |
+| Scrub script -> sub | 35.03 | 33.9 | -1.1 |
+
+Snapping positions alone gave errors up to 3.4px; adding the line-height
+degree of freedom cut that to 1.3px worst case. **Position-only snapping
+leaves half a grid unit of unavoidable error — line-height is what recovers
+it.**
+
+Two deliberate exceptions:
+
+- **The hairline rule is 24 x 2, not a multiple of 8 in height.** An 8px rule
+  is a bar, not a hairline. Hairlines are the standard exception to a grid.
+- **The inherited component values are left alone.** `Blur overlay` at y 378,
+  `Bottom` at 70 tall, the Button at 94 x 36 — none are multiples of 8, but
+  they are the real Spotlight component's own numbers and matching it matters
+  more than the grid. Their sub-pixel *drift* was fixed though: the component
+  shipped with `Isolated` at y -49.00244, `Blur overlay` at 377.99756, `BG` at
+  -0.00244 and `Service name block` at 15.99756. Those are now whole.
+
+#### Dropping a photo creates a second rectangle
+
+Worth knowing, because it is invisible until something breaks: dragging an
+image onto a card in Figma does **not** always replace the existing image
+fill. It can add a *new* rectangle above the old one, at whatever size and
+sub-pixel offset the drop lands on. Two of the six cards ended up with
+stacked image rects, one with three.
+
+They are harmless — the topmost wins visually — but they are the source of
+every stray decimal, and they mean the layer named `Main Image` is not
+necessarily the image you are looking at. Nothing was deleted; the stacks are
+reported so they can be cleaned up by hand.
+
+
 One oddity in the section, left as found: it contains **two copies of the same
 potli banner**, so there are two identical potli cards. The second is suffixed
 `(dup)`.

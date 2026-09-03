@@ -562,6 +562,73 @@ walk down the layers panel. `figma-drop/README.txt` lists all fourteen in row
 order with the wall colour of each.
 
 
+### The Spotlight 3:4 card spec
+
+The section in the Figma file holds a `Spotlight 3:4` reference card, and the
+six banners in that section are now rebuilt to it. The card is a real product
+component, not a mock, so its spec is the authority — recorded here because it
+lives in Figma and nothing in this repo would otherwise capture it.
+
+**Frame** 360 x 480, white, horizontal auto-layout, clips content.
+**Main frame** 328 x 448 inset 16px all round, radius 12, on `#0F0F0F`, clips.
+
+| Layer | Spec |
+|---|---|
+| `Main Image` | rectangle, `scaleMode: FILL`. Resized to 328 x 448 at (0,0) so the photo fills the inner frame. |
+| `Isolated` | a **cut-out of the subject** above the type, `DROP_SHADOW` radius 16, so the body overlaps the lettering. **Hidden in our cards** — we have no cut-outs. |
+| headline | three text layers, centred, `#FFEDC8`. Script in **Kapakana Regular 72**; sans in **Open Sauce One Regular 56**, lh 100%, ls -2%. |
+| `Blur overlay` | 360 x 86. Two fills: a `#141110` gradient 0 -> 1 alpha at 50% opacity, plus solid black at 50%. `BACKGROUND_BLUR` 8. |
+| `Bottom` | frame 328 x 70, no clip. |
+| `Bottom / BG` | the same two fills and the same `BACKGROUND_BLUR` 8 as the overlay. |
+| `Service name` | **Open Sauce One Bold 12**, lh 16px, white, left. |
+| `Price block` | horizontal auto-layout; `per Unit` and a strikethrough price sit in it hidden. |
+| `Button` | **component instance**, 94 x 36, radius 8, white fill, `#E3E3E3` stroke. `Type=Secondary, Color=Default, Config=Text Only, Size=Default, isRounded=No, isDisabled=No`. Label Open Sauce One Bold 14/20 in `#0F0F0F`. |
+| `Divider` | vector, gradient stroke white 0.25 -> 1 -> 0.25, layer opacity 10%. |
+
+Two overlays, not one: the `Blur overlay` runs the full 360 width and bleeds
+past the rounded inner frame, while `Bottom / BG` is 328 and sits inside it.
+That is what stops the footer's edge cutting a visible line at the card's
+corner radius.
+
+#### How the six were built
+
+Cloning the reference card rather than rebuilding it is the whole trick — the
+Button stays a live component instance, and the overlay fills, blurs, radii
+and divider gradient come across exactly. Per card: swap `Main Image`'s fill
+for the banner's own image paint (same `imageHash`, so no upload), hide
+`Isolated`, delete the reference's three text layers, then clone the banner's
+`Text / headline` frame, `rescale(0.328)`, and drop it in at the scaled
+position.
+
+**The geometry transfers almost 1:1, which is luck worth naming.** The card's
+inner frame is 328 x 448 — an aspect of 0.732 — against the banner's
+1000 x 1372 at 0.729. So one `rescale` carries a hierarchy over with no
+re-layout, and all three survived: the headline blocks land at 33-35% of the
+card's height, none wrapped.
+
+Fonts are remapped on the way in — Pinyon Script to Kapakana Regular, and
+Inter and Poppins to the matching Open Sauce One weight (note Figma writes
+these without a space: `Semi Bold` becomes `SemiBold`). Colour goes to the
+card's `#FFEDC8` rather than our `#F8EED6`.
+
+Three decisions taken deliberately, in case they need revisiting:
+
+- **The brand faces win over ours.** Open Sauce One and Kapakana are what the
+  real component uses, so the cards drop into product surfaces unchanged. The
+  cost is that they no longer match the 1000 x 1372 banners typographically,
+  and Kapakana is a lighter, less editorial script than Pinyon.
+- **The three hierarchies survive.** Each card keeps its own arrangement
+  rather than adopting the reference's script-over-two-sans-lines, so the
+  campaign's variety and the signed-off copy order are intact.
+- **`Isolated` is hidden, not deleted.** The structure still matches the
+  component, so a cut-out can be dropped in later without a rebuild. Doing it
+  properly would mean a background-removal pass per photograph.
+
+One oddity in the section, left as found: it contains **two copies of the same
+potli banner**, so there are two identical potli cards. The second is suffixed
+`(dup)`.
+
+
 ### Card size — 360 x 480
 
 The file also holds twelve 360 x 480 copies, matching the "Spotlight 3:4"

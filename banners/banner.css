@@ -27,29 +27,47 @@
 
 .banner[data-theme='cupping'] { --tone-lift: #8A5A46; --tone-mid: #63402F; --tone-deep: #2E1B13; }
 .banner[data-theme='potli']   { --tone-lift: #A9763A; --tone-mid: #7A5426; --tone-deep: #33200D; }
-.banner[data-theme='scrub']   { --tone-lift: #A7B29C; --tone-mid: #79866F; --tone-deep: #2F3828; }
+.banner[data-theme='scrub']   { --tone-lift: #B5808D; --tone-mid: #8A5E69; --tone-deep: #332226; }
 
 /* --- per-service scrim ----------------------------------------------
-   How much scrim the cream type needs, and how far down the wall it has
-   to carry. Both are per-service, because each hierarchy sets its
-   headline at a different depth and each wall is a different value:
+   How much scrim the cream type needs. The answer is now: almost none.
 
-   Kept low enough that you cannot see it. A scrim you can read as a grey
-   veil over the photograph is worse than slightly softer type, so
-   contrast is bought in the photography instead: the light rakes in low
-   and falls off toward the top of the frame, which puts the headline on
-   a naturally darker wall. The scrim only takes up the remainder.
+   The scrim used to do the work the WALL should have been doing. Measured
+   on the old set, raw, with the scrim switched off:
 
-   If type on a future photograph reads weak, relight the shot before
-   reaching for these numbers.                                          */
+     cupping  #5f766c  deep sage   2.84-4.08:1   needed .14
+     potli    #c4b99a  pale oat    1.70:1        needed .28
+     scrub    #c8b3ad  pale rose   1.67:1        needed .30
+
+   One row explains the whole problem: cupping's wall was 2.4x darker in
+   luminance than the other two, so cupping needed a scrim you could not
+   see and the other two needed a grey veil over the photograph. Cream on
+   a pale pastel cannot reach 3:1 at any exposure -- it is not a grading
+   problem, it is a paint problem.
+
+   So potli and scrub were reshot onto MID-TONE walls in their own hues
+   (amber-caramel and dusty rose), lit the way the reference banner is lit:
+   bright sunlit room, the client's oiled back the brightest thing in the
+   frame, the wall one clear step down and easing half a stop deeper toward
+   the top. Bright picture, dark-enough type zone, no veil.
+
+   Contrast now comes from the wall's own value and hue instead of from
+   black at low opacity -- which is the real difference. A scrim
+   desaturates everything under it; a mid-tone wall keeps its chroma.
+
+   Potli and scrub are now at ZERO scrim. Cupping keeps .14 -- the value
+   it was signed off at. Its sage wall is the lightest of the three in the
+   tail zone (#6e817a), so it is now the weakest line in the set at
+   3.32:1, and dropping it to .10 bought nothing visible while costing
+   0.2:1. If cupping is ever reshot, its wall wants to come down to the
+   same band as the other two and this can go to zero as well.
+
+   If type on a future photograph reads weak, REPAINT THE WALL. Do not
+   reach for these numbers -- that is the mistake this block records.   */
 
 .banner[data-theme='cupping'] { --scrim-a: .14; --scrim-h: 780px;  --scrim-hold: 46%; }
-.banner[data-theme='potli']   { --scrim-a: .28; --scrim-h: 780px;  --scrim-hold: 46%; }
-/* Blush is the lightest wall in the set and the 336px hairline script is
-   the thinnest type, so this is the one banner where relighting alone
-   cannot get there. This value is visible if you look for it — the honest
-   fix is a deeper wall, which is what iteration 3 does. */
-.banner[data-theme='scrub']   { --scrim-a: .30; --scrim-h: 800px;  --scrim-hold: 50%; }
+.banner[data-theme='potli']   { --scrim-a: 0;   --scrim-h: 780px;  --scrim-hold: 46%; }
+.banner[data-theme='scrub']   { --scrim-a: 0;   --scrim-h: 800px;  --scrim-hold: 50%; }
 
 /* --- canvas --------------------------------------------------------- */
 
@@ -236,26 +254,48 @@
   opacity: .92;
 }
 
-/* --- footer (constant across all three) ------------------------------ */
+/* --- footer (constant across all three) ------------------------------
+   Frosted glass, not a dark gradient -- the reference banner does this and
+   it is why its footer reads as depth instead of as a black bar. A blur
+   keeps the photograph's own colour and only softens it, so the bottom of
+   the picture stays as bright as the top; a 430px gradient to 74% black
+   was greying out the lower third of every shot. The tint is only as much
+   as white type needs to hold, and the hairline is the glass edge.
+
+   One cost, for the record: backdrop-filter is a live effect, so it needs
+   the photograph behind it in the same stacking context. It survives a PNG
+   render fine. In Figma the equivalent is a rectangle with a Background
+   Blur effect plus this same fill -- not a gradient. */
 
 .banner__footer {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 430px;
+  height: 240px;
   padding: 0 54px 58px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 32px;
   background: linear-gradient(
-    to top,
-    rgba(0,0,0,.74) 0%,
-    rgba(0,0,0,.62) 26%,
-    rgba(0,0,0,.24) 60%,
-    rgba(0,0,0,0) 100%
+    to bottom,
+    rgba(26,19,15,.20) 0%,
+    rgba(26,19,15,.34) 46%,
+    rgba(26,19,15,.44) 100%
   );
+  backdrop-filter: blur(34px) saturate(1.15);
+  -webkit-backdrop-filter: blur(34px) saturate(1.15);
+}
+
+.banner__footer::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: rgba(255,255,255,.20);
 }
 
 .banner__service {

@@ -105,39 +105,88 @@ courtyard houses rather than city apartments. And nothing from a treatment
 room either: no rolled towels, no stacked linens, no bolsters, no uniform, no
 trolley, no bowls of petals, no candles, no plants, no signage.
 
-Walls are **muted pastels** — neither bright nor dull, never beige or ivory,
-and all three clearly different from one another. The colour is chosen per
-service to complement the therapy without competing with it; the treatment
-stays the subject and the room only has to have a personality:
+Walls are **mid-tones**, one per service, each in its own hue family and all
+three clearly different from one another. Mid-tone is not a style choice — it
+is what makes the type work. The colour is chosen per service to complement
+the therapy without competing with it; the treatment stays the subject and
+the room only has to have a personality:
 
 | Service | Cast | Wall | Why that colour |
 |---|---|---|---|
-| Cupping therapy | male therapist, male client | muted dusty sage-teal | The only cool room in the set, and the only cool-against-warm play: teal is the complement of warm brown skin, so the back, the glass cups and the pink cup marks all come forward. Cool also reads as relief, which is what cupping sells. Deepest wall, so it needs the least scrim. |
-| Herbal potli massage | female therapist, female client | muted honey-gold | A soft warm gold — marigold stirred into cream — carrying the turmeric of the muslin. **One** poultice, a neat sphere with a short twisted handle, on the shoulder blade rather than the neck, with a steam wisp rising into empty wall. |
-| Korean body scrub | female therapist, female client | muted blush pink | Pastel pink doing double duty: blush walls are as Indian as they are Korean. Worked with **bare hands** and the client's hair in a **bun**. |
+| Cupping therapy | male therapist, male client | dusty sage-teal, `#5f766c` in the type zone | The only cool room in the set, and the only cool-against-warm play: teal is the complement of warm brown skin, so the back, the glass cups and the pink cup marks all come forward. Cool also reads as relief, which is what cupping sells. This wall was a mid-tone from the first pass, which is the whole reason cupping worked while the other two did not. |
+| Herbal potli massage | female therapist, female client | caramel-amber, `#8d6b47` in the type zone | Strong masala chai rather than marigold-in-cream — the same honey hue two stops down, carrying the turmeric of the muslin. **One** poultice, a neat sphere with a short twisted handle, held in a cupped hand with a bent elbow, swept across the shoulder blade with a turmeric trail behind it and the free hand braced flat on the back. Steam wisp rising into empty wall. |
+| Korean body scrub | female therapist, female client | dusty old-rose, `#7c5b5c` in the type zone | The same pink two stops down — a dried-rose clay rather than a blush pastel. Still does the double duty: rose walls are as Indian as they are Korean. Worked with **bare hands**, whole flat palm gliding, and the client's hair in a **bun**. |
 
-Two colour notes learned the hard way: a muted mustard came out olive-drab,
-and an apricot-clay sat so close to the scrub's blush that the two banners
-read as the same room. Honey-gold separates cleanly from both the teal and
-the pink.
+Colour notes learned the hard way: a muted mustard came out olive-drab; an
+apricot-clay sat so close to the scrub's blush that the two banners read as
+the same room; and pushed toward mauve, the rose goes plum and stops reading
+as pink at all. Amber and old-rose separate cleanly from each other and from
+the teal.
 
-**Where the scrim is unavoidable.** Cream type on a brightly-lit pale wall
-cannot reach 3:1 on its own — measured across every candidate shot, the best
-bright-room frame tops out around 2.9:1 for cupping and 1.5-2:1 for the blush
-scrub. Bright rooms and an invisible scrim are in direct tension, and one of
-three things has to give: the wall goes deeper (iteration 3), the scrim goes
-up, or the type sits slightly under the legibility line. Iteration 1 takes the
-minimum scrim that clears 3:1 everywhere except the scrub's `HEAD TO TOE`,
-which sits at 2.8:1.
+### The scrim, and why there almost isn't one
 
-**Otherwise light does the work the scrim used to do.** In every shot the light rakes
-in low so the wall is brightest down near the bed and falls off into soft
-shadow toward the top of the frame. That puts the headline on a naturally
-darker wall, which is why the scrim can sit low enough to be invisible.
-Flat, evenly-lit walls force the scrim up until it reads as a grey veil over
-the photograph — relight the shot instead.
+The set used to carry a black scrim over the headline — 0.14 on cupping, 0.28
+on potli, 0.30 on scrub. It is now 0.14, **zero and zero**.
 
-The Korean note on the scrub is deliberately small: the blush palette, a
+The scrim was doing the work the wall should have been doing. Measured raw,
+with the scrim switched off, on the old set:
+
+| | wall behind the type | contrast, no scrim | scrim it needed |
+|---|---|---|---|
+| Cupping | `#5f766c` deep sage | 2.84 – 4.08 : 1 | 0.14 — invisible |
+| Potli | `#c4b99a` pale oat | **1.70 : 1** | 0.28 |
+| Scrub | `#c8b3ad` pale rose | **1.67 : 1** | 0.30 |
+
+One row explains it: cupping's wall was 2.4x darker in luminance than the
+other two. Cream on a pale pastel cannot reach 3:1 at any exposure — it is
+not a grading problem, it is a paint problem. So potli and scrub were reshot
+onto mid-tone walls and the scrim went to zero:
+
+| | wall behind the type | contrast, no scrim |
+|---|---|---|
+| Potli | `#7c6142` caramel | **4.91 : 1** (3.81 at the brightest 5%) |
+| Scrub | `#7d5c5d` old-rose | **4.24 : 1** (3.71 at the brightest 5%) |
+
+Cupping keeps its 0.14 — the value it was signed off at. Its sage wall is the
+lightest of the three in the tail zone (`#6e817a`), so it is now the weakest
+line in the set at 3.32:1, and dropping the scrim to 0.10 bought nothing
+visible while costing 0.2:1. If cupping is ever reshot, that wall wants to
+come down into the same band and the scrim can go to zero too.
+
+**The real point is not the number, it is where the number comes from.** The
+reference banner this set was measured against only reaches about 3.3–5.4:1
+itself — no more than ours. What makes it look good is that its contrast comes
+from a mid-tone backdrop rather than from black at low opacity. A scrim
+desaturates everything under it, which is exactly the dullness it was added to
+prevent. A mid-tone wall keeps its chroma.
+
+### Bright picture, dark-enough type zone
+
+Deepening the wall is only half of it — the picture still has to feel bright,
+and the naive read of "deeper wall" is a moody room. It took three passes to
+separate the two:
+
+| pass | wall asked for | what came back | result |
+|---|---|---|---|
+| 1 | `#8A6A42` plus "two stops darker, deep shade, no fill" | `#503b1d`, frame at 13% mean luminance | 9:1 contrast and a dim, low-key room — the opposite of the brief |
+| 2 | `#A8845A` plus "bright, airy, high-key" | `#997a58`, frame at 27% | bright, but only 3.4:1 — the target hex was simply too light |
+| 3 | `#8A6C48` as an exact paint spec, brightness moved onto the skin, sheet and floor | `#8d6b47`, frame at 26% | both: 5.02:1 and bright |
+
+The instruction that made it work is the split. Brightness is carried by the
+**subject** — the client's oiled back is the brightest thing in the frame,
+with the white paper sheet the brightest white and the sunlit tile floor
+bouncing light back up. The wall sits two clear steps below the skin and is
+lit flat and evenly. Measured, the final frames run **subject zone at 33%
+mean luminance against a type zone at 20%** — a 13-point spread, where the
+old bright-room shots ran the subject *darker* than the wall.
+
+Two prompt lessons worth keeping: "the wall is two stops darker" darkens the
+whole room, because the model has no way to darken one surface in isolation —
+say instead that the brightness comes from the skin and the sheet and never
+from lifting the wall. And a hex is worth more than an adjective, but only if
+it is checked: `#A8845A` sounds like a mid-tone caramel and measures 3.4:1.
+
+The Korean note on the scrub is deliberately small: the rose palette, a
 hanji-like glow through the sheer curtain, and **one** celadon-green ceramic
 bowl holding the cream. Celadon reads as Korean to anyone who knows it and as
 a nice bowl to anyone who doesn't, which is the right weight. No screens, no
@@ -160,8 +209,8 @@ render.
 | Service | Chosen | Notes |
 |---|---|---|
 | Cupping therapy | `5338020102` | Client's arms along his sides on the table. Window a curtain sliver at the left, clear of the centred type. |
-| Herbal potli massage | `5338502663` | Poultice lemon-sized, tilted and pressed in mid-stroke, free hand braced on the back, turmeric trail behind it. No window in frame. |
-| Korean body scrub | `5338446791` | Full flat palm spreading the scrub in a broad sweep, fingers together. Hair in a bun. Window right and set back. |
+| Herbal potli massage | `5340444681` | Caramel wall. Poultice cupped, elbow bent, tilted and pressed in mid-stroke, free hand braced flat on the back, turmeric trail behind it. Window a bright sheer sliver at the far right. |
+| Korean body scrub | `5340462104` | Old-rose wall. Full flat palm spreading the scrub in a broad sweep, fingers together. Hair in a neat low bun. Celadon bowl on the table. Window right and set back. |
 
 Three details took several rounds each and are worth not re-litigating:
 
@@ -254,21 +303,28 @@ A layered Figma version lives here, in **UC Design Team**:
 https://www.figma.com/design/6TTvUxKDWjXZdpCLsQuQyH
 
 Built to the same spec as `banner.css` — 1000 x 1372, 44px radius, real
-Pinyon Script / Poppins / Inter text layers, and the scrims as gradient
-fills. Image and text are separate layers in every banner:
+Pinyon Script / Poppins / Inter text layers. Image and text are separate
+layers in every banner:
 
 ```
 1 · Cupping therapy
     Image / photo            the photograph (image fill)
-    Image / scrim top        gradient that carries the headline
-    Image / scrim footer     gradient that carries the footer
+    Image / scrim top        gradient behind the headline — 14% on cupping,
+                             0% on potli and scrub
+    Image / footer glass     240px band, Background Blur + light tint
     Text / headline          one editable text layer per line
     Text / footer            service + price, and the Book now pill
 ```
 
-**The photographs were placed by hand.** Uploading image bytes from here
-needs a direct POST to `mcp.figma.com`, which this environment's network policy
-blocks — the same class of block as the Magnific CDN above. Adding
+`Image / footer glass` is the Figma equivalent of the CSS `backdrop-filter`:
+a rectangle with a **Background Blur** effect plus the same bottom-weighted
+tint, not a gradient. It replaced a 430px gradient to 74% black that was
+greying out the lower third of every shot.
+
+**The photographs are placed by hand, and two of them are pending.** The
+reshot potli and scrub frames are in `figma-drop/` but not in the Figma file:
+uploading image bytes needs a direct POST to `mcp.figma.com`, which this
+environment's network policy blocks — the same class of block as the Magnific CDN above. Adding
 `mcp.figma.com` to the environment's **Network access: Custom** allowed
 domains would let a future session push them automatically.
 
@@ -300,9 +356,14 @@ takes four chunked calls per image, twelve in all, and still lands at a
 re-encoded ~q0.78 rather than the full-resolution original. Dragging the file
 in is both faster and better quality.
 
-All twelve full-size frames and all twelve card copies are now filled. Any
-new frame starts with a flat mid-tone of its wall colour as a placeholder, so
-an unfilled banner still reads on-palette.
+All twenty-four frames are filled, but the potli and scrub columns still hold
+the **old pale-wall** photographs while their top scrims are already at 0%, so
+those headlines read weak until the two files in `figma-drop/` are dragged in.
+That is expected, and it fixes itself the moment the new photos land. The
+canvas README in the file says the same thing.
+
+Any new frame starts with a flat mid-tone of its wall colour as a placeholder,
+so an unfilled banner still reads on-palette.
 
 ### Colourways
 
@@ -338,9 +399,10 @@ A tint of a wall's *own* hue was tried and dropped: on a light wall it sits
 too close in value to work. Pale blush on the pink scrub wall measured
 2.82:1.
 
-**The footer stays white in every colourway.** It sits on the dark footer
-gradient over the photograph rather than on the wall, so it is unaffected by
-the headline colour.
+**The footer stays white in every colourway.** It sits on the footer glass
+over the photograph rather than on the wall, so it is unaffected by the
+headline colour. Measured on the glass it runs 4.8-6.8:1, dipping to 3.0:1
+over the brightest patches of the paper sheet — comfortable for 44px type.
 
 Not carried across: the 5.5% SVG grain overlay. It has no native Figma
 equivalent and would need a tiled noise PNG — which is blocked by the same

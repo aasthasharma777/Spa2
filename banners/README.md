@@ -628,6 +628,79 @@ Worth stating rather than discovering later:
   warm four are safer.
 
 
+## The autumn palette
+
+`autumn.html` -> `out/autumn/`. One palette across all three services, which
+is the fix for a specific failure: six banners in six unrelated hues read as a
+paint-brand advertisement rather than one campaign. The hue span is the whole
+story.
+
+| | hue span | luminance | reads as |
+|---|---|---|---|
+| the wild six | teal, terracotta, plum, olive, slate, ochre | **269 degrees** | 0.140-0.166 | a colour chart |
+| autumn three | russet, ochre, brick rose | **35 degrees** | 0.143-0.158 | one campaign |
+
+Both sets are equally consistent in *value* — that was never the problem.
+Cohesion lives in hue, and six evenly-spread hues at matched luminance is
+exactly what a paint swatch card looks like.
+
+| Service | Wall | Hue | Cast | Contrast |
+|---|---|---|---|---|
+| Cupping | russet chestnut `#8A604A` | 21 deg | man, 27, broad back, very short crop | 5.05 : 1 |
+| Herbal potli | ochre gold `#886A31` | 39 deg | woman, 26, thick coiled bun | 5.10 : 1 |
+| Korean scrub | brick rose `#8A5F5C` | 4 deg | woman, 28, low bun, freckled shoulders | 4.54 : 1 |
+
+Zero scrim on all three. Frame luminance runs 22.0-22.9%, the tightest the set
+has ever been.
+
+**The ink is unified too.** All three use the campaign cream `#F8EED6` rather
+than a per-service tint. Unifying the type is half of what stops a set reading
+as a chart — six walls in six hues each with its own tinted headline is two
+axes of variation where the campaign only wants one. `--ink` is still there for
+when a one-off genuinely needs it.
+
+Of the three the ochre is the most saturated and sits furthest from the other
+two; if the family needs to be tighter still, pulling it toward an amber-brown
+around `#8A6A42` closes the gap to about 20 degrees.
+
+### Copy: back to the approved lines
+
+The headlines are the signed-off set, unchanged:
+
+| Service | Hierarchy | Copy |
+|---|---|---|
+| Cupping | A | `CUPPING, AT HOME` / `UNDO` / *every ache* |
+| Herbal potli | B | `Warmth that` / *sinks in* |
+| Korean scrub | C | *Glow* / `HEAD TO TOE` |
+
+**No durations.** An earlier round put "at home, in an hour" and "ninety
+minutes, at home" in the kicker slots. Duration is a detail for the booking
+flow, not a headline — it dates the creative the moment a service time changes,
+and it spends the one line that should be carrying the proposition.
+
+One thing to flag rather than silently resolve: cupping's kicker is `CUPPING,
+AT HOME`, which does name the service. That sits against the "no service name
+in the headline" note further up. It is kept because it is the approved line
+and because the kicker is doing a different job from the hero — it states the
+proposition, where `HEAT, / HERBS, / HANDS` was trying to *be* the headline.
+Say the word if the kicker should lose it too.
+
+### The casting error worth recording
+
+An earlier cupping frame read as a woman. The cause was not the casting
+instruction — the prompt said "man aged 29" — it was a *variation* instruction
+sitting on top of it: "longer wavy hair pushed back off his face", added purely
+to make that banner differ from the other. With the face in a headrest and the
+therapist cropped out, hair is one of the only gender cues the picture has
+left, so a hair note quietly outvoted the casting note.
+
+The fix is to state the read rather than the attribute: "THE CLIENT IS
+UNMISTAKABLY MALE, immediately obvious at a glance — broad muscular back, wide
+shoulders tapering to the waist, VERY SHORT cropped hair, absolutely no long
+hair, no wavy hair falling loose, no bun, nothing that could read as a woman."
+And vary a male client on build, not on hair length.
+
+
 ## Changing copy
 
 Edit `index.html` — three plain blocks, one per banner. `copy.md` holds the

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Spa banners — autumn palette</title>
+<link rel="stylesheet" href="banner.css">
+<style>
+  body { margin: 0; padding: 60px; background: #101012; font-family: 'Inter', system-ui, sans-serif; }
+  .row { display: flex; gap: 60px; align-items: flex-start; }
+  .col { display: flex; flex-direction: column; gap: 20px; }
+  .cap { color: #8b8b90; font-size: 22px; }
+  .cap b { color: #d8d8dc; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- ONE autumn palette. The three walls sit inside a 35-degree hue band and
+     within 0.02 of each other in relative luminance, so they read as three
+     rooms in one campaign rather than three paint swatches. The ink is the
+     campaign cream on all three — unifying the type is half of what stops
+     the set looking like a colour chart.
+     Zero scrim throughout: the walls carry the type on their own. -->
+
+<div class="row">
+  <div class="col">
+    <div class="banner" data-theme="cupping" id="a1-cupping" style="--scrim-a: 0">
+      <div class="banner__photo" style="--photo: url('assets/autumn/cupping-therapy.jpg')"></div>
+      <div class="banner__topscrim"></div><div class="banner__grain"></div>
+      <div class="h-word">
+        <span class="h-word__kicker">Cupping, at home</span>
+        <span class="h-word__hero">UNDO</span>
+        <span class="h-word__tail">every ache</span>
+      </div>
+      <div class="banner__footer">
+        <div><div class="banner__service">Cupping therapy</div>
+        <div class="banner__price">Starting from &#8377;1,299</div></div>
+        <div class="banner__cta">Book now</div>
+      </div>
+    </div>
+    <div class="cap"><b>Russet chestnut</b> &middot; #8A604A &middot; man, 27</div>
+  </div>
+
+  <div class="col">
+    <div class="banner" data-theme="potli" id="a2-potli" style="--scrim-a: 0">
+      <div class="banner__photo" style="--photo: url('assets/autumn/potli-massage.jpg')"></div>
+      <div class="banner__topscrim"></div><div class="banner__grain"></div>
+      <div class="h-editorial">
+        <span class="h-editorial__rule"></span>
+        <span class="h-editorial__line">Warmth that</span>
+        <span class="h-editorial__script">sinks in</span>
+      </div>
+      <div class="banner__footer">
+        <div><div class="banner__service">Herbal potli massage</div>
+        <div class="banner__price">Starting from &#8377;1,599</div></div>
+        <div class="banner__cta">Book now</div>
+      </div>
+    </div>
+    <div class="cap"><b>Ochre gold</b> &middot; #886A31 &middot; woman, 26</div>
+  </div>
+
+  <div class="col">
+    <div class="banner" data-theme="scrub" id="a3-scrub" style="--scrim-a: 0">
+      <div class="banner__photo" style="--photo: url('assets/autumn/korean-scrub.jpg')"></div>
+      <div class="banner__topscrim"></div><div class="banner__grain"></div>
+      <div class="h-script">
+        <span class="h-script__hero">Glow</span>
+        <span class="h-script__sub">Head to toe</span>
+      </div>
+      <div class="banner__footer">
+        <div><div class="banner__service">Korean body scrub</div>
+        <div class="banner__price">Starting from &#8377;1,899</div></div>
+        <div class="banner__cta">Book now</div>
+      </div>
+    </div>
+    <div class="cap"><b>Brick rose</b> &middot; #8A5F5C &middot; woman, 28</div>
+  </div>
+</div>
+
+</body>
+</html>

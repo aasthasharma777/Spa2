@@ -860,7 +860,7 @@ where `fit.mjs`-style checking catches it. Keep the hero to one short word.
 
 | | V1 (current) | V2 | V3 |
 |---|---|---|---|
-| Cupping | A · `UNDO` / *every ache* | D · `TAKE / THE WEIGHT / OFF` | E · *Unknot* / `AT HOME` |
+| Cupping | A · `DEEPER` / *than hands reach* | D · `TAKE / THE WEIGHT / OFF` | E · *Unknot* / `AT HOME` |
 | Potli | B · `Warmth that` / *sinks in* | D · `HEAT, / HERBS, / HANDS` | B · `Heat that` / *melts it* |
 | Scrub | C · *Glow* / `HEAD TO TOE` | A · `SHED` / *the dull layer* | E · *Reborn* / `IN ONE HOUR` |
 
@@ -1181,11 +1181,11 @@ harder — gamma 1.11, against the 1.34 an earlier attempt needed.
 
 ### Copy: back to the approved lines
 
-The headlines are the signed-off set, unchanged:
+The headlines are the signed-off set, with one later change to cupping:
 
 | Service | Hierarchy | Copy |
 |---|---|---|
-| Cupping | A | `CUPPING, AT HOME` / `UNDO` / *every ache* |
+| Cupping | A | `CUPPING, AT HOME` / `DEEPER` / *than hands reach* |
 | Herbal potli | B | `Warmth that` / *sinks in* |
 | Korean scrub | C | *Glow* / `HEAD TO TOE` |
 
@@ -1200,6 +1200,20 @@ in the headline" note further up. It is kept because it is the approved line
 and because the kicker is doing a different job from the hero — it states the
 proposition, where `HEAT, / HERBS, / HANDS` was trying to *be* the headline.
 Say the word if the kicker should lose it too.
+
+**Cupping's hero changed.** It was `UNDO` / *every ache*, which was flagged as
+needing to go — "undo every ache" is a claim any massage could make, so it did
+not earn the banner. The replacement is `DEEPER` / *than hands reach*, and the
+reason it works is that it is the one thing that is literally only true of
+cupping: suction lifts the tissue instead of pressing it, so it reaches below
+the depth a therapist's hands can work at. It says the mechanism's *benefit*
+without naming the mechanism and without a therapeutic claim.
+
+At the locked sizes (hero 244px Poppins 600, tail 142px Pinyon) the two lines
+ink 803px and 852px in the 888px column — 85px and 36px of headroom. The tail
+is the constrained line; a longer replacement needs the size dropped, not the
+56px margins touched. In the Figma cards the same pair sits at 72px / 56px and
+needed no refit.
 
 ### The casting error worth recording
 

@@ -20,22 +20,31 @@ construction.
 
 ```
 CUPPING, AT HOME        31px  Inter 600, 0.3em tracking, uppercase
-UNDO                   244px  Poppins 600
-every ache             142px  Pinyon Script
+DEEPER                 244px  Poppins 600
+than hands reach       142px  Pinyon Script
 ```
 
 > **CUPPING, AT HOME**
-> **UNDO**
-> *every ache*
+> **DEEPER**
+> *than hands reach*
 > Cupping therapy · Starting from ₹1,299
 
 Deliberately the inverse of the reference: the sans leads and the script is the
-footnote. "UNDO" is the strongest single word available to cupping — it is what
-the treatment does, in four letters, and it sets up "every ache" as the payoff.
-The kicker is where "at home" gets said, so the headline never has to.
+footnote. The line says what is actually different about cupping — suction
+lifts the tissue instead of pressing it, so it works below the depth a
+therapist's hands can get to — without naming the mechanism or making a
+therapeutic claim. "DEEPER" carries it in one word and "than hands reach" is
+the payoff. The kicker is where "at home" gets said, so the headline never has
+to.
+
+Set at 244px / 142px the two lines ink 803px and 852px in an 888px column —
+85px and 36px of headroom. The tail is the tight one: any longer a line needs
+the size dropped, not the margins.
 
 **Alternates**
 
+- `CUPPING, AT HOME` / **BELOW** / *what hands can reach* — same idea, needs
+  the tail dropped to ~120px to fit.
 - `RELIEF, AT HOME` / **UNKNOT** / *what the desk did* — more specific audience,
   needs the hero dropped to ~195px to fit.
 - `CUPPING, AT HOME` / **LET GO** / *of the ache* — softer, less clinical.

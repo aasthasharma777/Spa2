@@ -672,58 +672,78 @@ spacing from ink bounds.** Scaling the numbers only works while the face is
 the same.
 
 
-#### The card headline spec — whole numbers on the 8pt grid
+#### The card headline spec — everything on multiples of 8
 
-Every headline value is now an integer, and everything is a multiple of 8
-except the hairline rule. The block sits at **x 16, y 24** inside the
-328 x 448 Main frame, which matches the card's own 16pt inset on the service
-name.
+Block at **x 16, y 24** inside the 328 x 448 Main frame. Every position,
+dimension, font size and line-height is a whole number and a multiple of 8 —
+the 2px hairline rule is the only exception.
 
-| Hierarchy | Block | Line | y | size | line-height |
-|---|---|---|---|---|---|
-| Cupping | 296 x 152 | kicker | 0 | 10 | 16 |
-| | | hero | 24 | 73 | 72 |
-| | | script tail | 88 | 59 | 64 |
-| Potli | 208 x 120 | rule (24 x 2) | 0 | — | — |
-| | | sans line | 16 | 28 | 24 |
-| | | script | 56 | 86 | 64 |
-| Scrub | 296 x 120 | script hero | 0 | 140 | 96 |
-| | | tracked sub | 104 | 13 | 16 |
+| Hierarchy | Block | Line | x | y | size | line-height |
+|---|---|---|---|---|---|---|
+| Cupping | 296 x 152 | kicker | 0 | 0 | 8 | 32 |
+| | | hero | 0 | 32 | 72 | 72 |
+| | | script tail | 0 | 96 | 56 | 56 |
+| Potli | 208 x 136 | rule (24 x 2) | 0 | 0 | — | — |
+| | | sans line | 0 | 16 | 32 | 32 |
+| | | script | 8 | 48 | 88 | 88 |
+| Scrub | 296 x 144 | script hero | 0 | 0 | 144 | 136 |
+| | | tracked sub | 0 | 128 | 16 | 16 |
 
-**Explicit pixel line-heights are what makes the grid and the optical spacing
-compatible.** They are otherwise in direct conflict: ink positions are font
-metrics and land wherever they land, while the grid demands multiples of 8.
-Setting `lineHeight` to a pixel multiple of 8 makes the *box* the grid unit,
-and because Figma then centres the ink inside that box, every extra 8 of
-line-height buys exactly **4px of downward ink shift** — a half-grid nudge.
+Sizes are the nearest multiple of 8 to the ink-matched value, chosen by which
+side lands closer: kicker 8 (not 16 — 16 would be 63% oversized), hero 72,
+script tail 56, potli sans 32, potli script 88, scrub hero 144, scrub sub 16.
 
-So the values above are not chosen, they are solved. Font size comes from
-matching ink height to the scaled original; then line-height and box position
-are searched jointly over the grid to minimise ink-gap error. Result:
+#### Why the type was sitting too close to the edge
 
-| | target gap | achieved | error |
-|---|---|---|---|
-| Cupping kicker -> hero | 16.96 | 17.6 | +0.6 |
-| Cupping hero -> script | 4.49 | 5.8 | +1.3 |
-| Potli rule -> sans | 15.71 | 15.6 | -0.1 |
-| Potli sans -> script | 10.27 | 11.0 | +0.7 |
-| Scrub script -> sub | 35.03 | 33.9 | -1.1 |
+Two separate faults, both invisible in the numbers.
 
-Snapping positions alone gave errors up to 3.4px; adding the line-height
-degree of freedom cut that to 1.3px worst case. **Position-only snapping
-leaves half a grid unit of unavoidable error — line-height is what recovers
-it.**
+**Kapakana's ink overhangs its text box.** Measured on "sinks in", the ink
+started **9.1px to the left of the box** — a first-glyph side bearing. So with
+the box dutifully at x 16, the *visible* type sat **7.1px** from the frame
+edge, not 16. Boxes were on the grid and the design still looked wrong.
 
-Two deliberate exceptions:
+**Line-heights were too tight to contain the ascenders.** The potli script's
+ink poked 5.8px above its box and the scrub hero's 13.1px above. Figma does
+not clip in that case, it just renders the glyph outside the box, so the type
+crept upward into the margin.
 
-- **The hairline rule is 24 x 2, not a multiple of 8 in height.** An 8px rule
-  is a bar, not a hairline. Hairlines are the standard exception to a grid.
-- **The inherited component values are left alone.** `Blur overlay` at y 378,
-  `Bottom` at 70 tall, the Button at 94 x 36 — none are multiples of 8, but
-  they are the real Spotlight component's own numbers and matching it matters
-  more than the grid. Their sub-pixel *drift* was fixed though: the component
-  shipped with `Isolated` at y -49.00244, `Blur overlay` at 377.99756, `BG` at
-  -0.00244 and `Service name block` at 15.99756. Those are now whole.
+The fixes, in order:
+
+1. **Grow line-height until the ink is contained.** Search upward in 8s from
+   the smallest value where `ink.y >= box.y` and `ink.bottom <= box.bottom`.
+   This is why the scrub hero's line-height is 136 for 88.6 of ink — Kapakana
+   needs that much box to hold its ascender and descender at 144.
+2. **Offset left-ranged lines by their own overhang.** The potli script sits
+   at x 8, not 0, so its ink lands at 14.9 from the frame edge instead of 7.1.
+   x 8 rather than the exact 9.1 because the grid wins; the residual 1.1px is
+   the quantisation and is not visible.
+3. **Re-solve positions** with line-height now constrained.
+
+Measured result: the minimum ink-to-edge distance is 14.9 on potli and 58+ on
+the centred hierarchies, against 7.1 before.
+
+**One thing is not fixable and should be known.** The potli script's ink still
+falls 9.1px outside its own bounding box on the left. That is a font side
+bearing, not a layout error — no geometry contains it, because the glyph's ink
+simply begins left of the text origin. What was corrected is where the ink
+sits relative to the *card*, which is what the eye reads. Selecting that layer
+in Figma will always show glyphs outside the selection rectangle.
+
+#### The three constraints fight each other
+
+Worth being explicit, because the errors are not sloppiness:
+
+| Constraint | What it fixes | What it costs |
+|---|---|---|
+| Font size on multiples of 8 | a clean type scale | ink height drifts up to 3px from the scaled original |
+| Line-height must contain the ink | glyphs clipping out of the box | removes the half-grid nudge that was tuning the gaps |
+| Positions on multiples of 8 | a clean inspector | up to 4px of gap quantisation |
+
+All three together leave a worst-case ink-gap error of **2.7px** (cupping),
+2.5px (potli) and 0.6px (scrub). Relaxing font sizes off the grid got that to
+1.3px earlier; the grid is worth the 1.4px. Both cards of each hierarchy share
+one canonical solution, solved once and copied, so a hierarchy never has two
+answers.
 
 #### Dropping a photo creates a second rectangle
 

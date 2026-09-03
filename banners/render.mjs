@@ -21,8 +21,16 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const only = process.argv.slice(2);
 const ids = only.length ? only : ['cupping', 'potli', 'scrub'];
 
+// NOTEXT=1   hides the headline and footer type, keeps scrim and glass
+// NOCHROME=1 hides everything except the photograph — no scrim, no footer
+//            glass, no type. The frame still crops to 1000x1372, so this is
+//            the photo exactly as the banner crops it, which is not the same
+//            as the raw 3:4 source file.
 const noText = !!process.env.NOTEXT;
-const outDir = noText ? path.join(here, 'out', 'no-text') : path.join(here, 'out');
+const noChrome = !!process.env.NOCHROME;
+const outDir = noChrome
+  ? path.join(here, 'out', 'photo-only')
+  : noText ? path.join(here, 'out', 'no-text') : path.join(here, 'out');
 await fs.mkdir(outDir, { recursive: true });
 
 // Use a preinstalled Chromium when the bundled build isn't downloaded
@@ -35,8 +43,14 @@ await page.goto(pathToFileURL(path.join(here, 'index.html')).href, { waitUntil: 
 await page.evaluate(() => document.fonts.ready);
 if (noText) {
   await page.addStyleTag({ content: `
-    .h-word, .h-editorial, .h-script,
+    .h-word, .h-editorial, .h-script, .h-stack, .h-rules,
     .banner__service, .banner__price, .banner__cta { visibility: hidden !important; }
+  ` });
+}
+if (noChrome) {
+  await page.addStyleTag({ content: `
+    .h-word, .h-editorial, .h-script, .h-stack, .h-rules,
+    .banner__topscrim, .banner__footer, .banner__grain { display: none !important; }
   ` });
 }
 

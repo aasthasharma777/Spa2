@@ -613,7 +613,27 @@ anything chosen here drops straight into the set:
 ```
 CHROMIUM_PATH=... node render-iterations.mjs iterations.html iterations
 CHROMIUM_PATH=... node render-iterations.mjs alternates.html alternates
+CHROMIUM_PATH=... node render-iterations.mjs autumn.html autumn
 ```
+
+### Three render modes
+
+`render.mjs` and `render-iterations.mjs` both take the same two switches:
+
+| | Shows | Writes to |
+|---|---|---|
+| *(default)* | the finished banner | `out/` |
+| `NOTEXT=1` | photo, scrim and footer glass; **type hidden** | `out/no-text/` |
+| `NOCHROME=1` | **photograph only** — no scrim, no footer glass, no grain, no type | `out/photo-only/` |
+
+`NOTEXT` exists for contrast measurement: the scrim and glass stay, so what
+gets sampled is exactly what sits under a glyph. `NOCHROME` exists for handing
+the picture over on its own.
+
+Note that `NOCHROME` is **not** the same as the raw source file. The frame
+still crops to 1000 x 1372 (0.729) while the source is a 3:4 (0.750), so a
+photo-only render is the photograph *as the banner crops it*. Use it when the
+crop matters; use `assets/<set>/*.jpg` when you want the full original frame.
 
 ### Two new hierarchies
 

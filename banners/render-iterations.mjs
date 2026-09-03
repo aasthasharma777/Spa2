@@ -17,6 +17,15 @@ await page.goto(pathToFileURL(path.join(here, page_)).href, { waitUntil: 'load' 
 await page.evaluate(() => document.fonts.ready);
 await page.waitForTimeout(500);
 
+// NOCHROME=1 strips everything but the photograph
+if (process.env.NOCHROME) {
+  await page.addStyleTag({ content: `
+    .h-word, .h-editorial, .h-script, .h-stack, .h-rules,
+    .banner__topscrim, .banner__footer, .banner__grain { display: none !important; }
+  ` });
+  await page.waitForTimeout(200);
+}
+
 const ids = await page.evaluate(() => [...document.querySelectorAll('.banner')].map(b => b.id));
 for (const id of ids) {
   const out = path.join(outDir, `${id}.png`);

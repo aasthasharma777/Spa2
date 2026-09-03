@@ -289,35 +289,39 @@ a placeholder, so an unfilled banner still reads on-palette.
 
 Four headline colourways sit in the file as a 4 x 3 grid — rows are
 colourways, columns are services. Each row is labelled on canvas with its
-hex values and its measured worst-case contrast.
+hex values and its measured worst-case contrast. **All four use light type,
+so the top scrim is on in every one.**
 
-| | Colourway | Cupping | Potli | Scrub | Top scrim | Worst contrast |
-|---|---|---|---|---|---|---|
-| A | Cream (approved) | `#F8EED6` | `#F8EED6` | `#F8EED6` | on | 3.53 / 3.09 / 3.00 |
-| B | Warm white | `#FBF7F0` | `#FBF7F0` | `#FBF7F0` | on | 3.82 / 3.34 / 3.24 |
-| C | Complement deep | `#2A1D10` | `#1E2E2B` | `#3B4A37` | **off** | 3.48 / 6.76 / 3.84 |
-| D | Tonal deep | `#1E2E2B` | `#2A1D10` | `#3E2130` | **off** | 3.01 / 7.81 / 5.82 |
+| | Colourway | Cupping | Potli | Scrub | Worst contrast |
+|---|---|---|---|---|---|
+| A | Cream (approved) | `#F8EED6` | `#F8EED6` | `#F8EED6` | 3.53 / 3.09 / 3.00 |
+| B | Warm white | `#FBF7F0` | `#FBF7F0` | `#FBF7F0` | 3.82 / 3.34 / 3.24 |
+| C | Complement tint | `#FCEBDD` peach | `#EAF2F4` sky | `#E9F2EA` mint | 3.51 / 3.14 / 3.03 |
+| D | Unified cool | `#EAF2F4` | `#EAF2F4` | `#EAF2F4` | 3.59 / 3.14 / 3.05 |
 
-C takes the opposite hue to each wall — umber against teal, petrol against
-gold, sage against pink. D takes each wall's own hue and darkens it.
+C is the real hue shift: a light tint of the hue opposite each wall — peach
+against teal, sky against gold, mint against pink. D is one cool tint across
+all three for campaign unity.
 
-**The dark colourways need no scrim at all**, which is the useful finding
-here. The scrim only ever existed to prop up cream type on a light wall, so
-on the two light walls dark type both removes the overlay and roughly
-doubles the contrast: potli goes from 3.09:1 to 7.81:1. If the faint
-darkening at the top of a banner ever bothers you, a dark headline removes
-it outright rather than trading it down.
+Two constraints found by measuring eight tints against the real backdrops:
 
-The exception is **cupping**, whose sage-teal wall is the darkest of the
-three and therefore the worst backdrop for dark type — D measures 3.01:1
-there, the weakest of all twelve, and the script tail visibly softens.
-Cupping wants a light headline; the other two are happy either way.
+- **The tints have to stay gentle.** Light type on a light wall must stay
+  high in lightness to hold contrast, and saturating a tint darkens it. So
+  the hue reads clearly on cupping, whose wall is the darkest of the three,
+  and much more softly on potli and scrub. There is no way to get a strongly
+  saturated light type over a light wall without losing legibility.
+- **Warm tints do not clear 3:1 on the pink scrub wall** — pale apricot,
+  peach, blush and butter all land between 2.82 and 2.98 there. That is why
+  there is no warm row, and why C uses a cool tint for scrub and potli while
+  only cupping takes the warm one.
+
+A tint of a wall's *own* hue was tried and dropped: on a light wall it sits
+too close in value to work. Pale blush on the pink scrub wall measured
+2.82:1.
 
 **The footer stays white in every colourway.** It sits on the dark footer
-gradient over the photograph rather than on the wall, so it needs light
-type even when the headline goes dark. A dark headline on the light upper
-wall plus a light footer on the darker lower photo is the intended pairing,
-not an inconsistency.
+gradient over the photograph rather than on the wall, so it is unaffected by
+the headline colour.
 
 Not carried across: the 5.5% SVG grain overlay. It has no native Figma
 equivalent and would need a tiled noise PNG — which is blocked by the same

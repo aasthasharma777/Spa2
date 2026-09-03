@@ -511,6 +511,84 @@ that a mean hides completely. Worth measuring the *brightest* patch of a type
 zone, not just its average.
 
 
+## The wild set
+
+`wild.html` -> `out/wild/`. Six directions that change the room, the casting
+and the type colour, not just the camera. An earlier round varied camera and
+window only and the result was fairly described as the same picture from a
+different tripod — variation has to come from the things the eye reads first.
+
+What is still locked in every one: the bed reference, the casting pairs (male
+on male for cupping, female on female for the other two), the technique, the
+bright-subject / darker-type-zone structure, the clear type zone, and the
+upmarket-urban-Indian-apartment brief. What moves: everything else.
+
+| | Wall | Casting | Type | Hierarchy | Copy | Measured |
+|---|---|---|---|---|---|---|
+| 1 | ink petrol `#52717B` | man in his early fifties, salt-and-pepper, fuller middle-aged back | ice blue `#E8F1F4` | A | `RESET` / *your back* | 4.45 : 1 |
+| 2 | burnt terracotta `#9A6450` | lean man, late twenties, shoulder tattoo | blush `#FBE9E4` | E | *Unclench* / `DEEP RELIEF` | 3.93 : 1 |
+| 3 | violet plum `#7C5E86` | woman in her mid-forties, silvering at the temples | butter gold `#FBF0CE` | B | `Old heat,` / *new ease* | 4.42 : 1 |
+| 4 | deep olive `#74743F` | young woman with a cropped buzz cut; therapist in her fifties | pale pink `#FCEDF0` | D | `THE HEAT / GETS IN / DEEPER` | 5.10 : 1 |
+| 5 | slate blue `#5F6E7C` | woman in her thirties, fuller build, large coiled bun | pale mint `#E6F2EC` | C | *Silk* / `IN AN HOUR` | 4.54 : 1 |
+| 6 | ochre gold `#8A6B2E` | woman in her late thirties, a deeper brown skin tone than the rest of the set | warm white `#FDF6EC` | A | `WASH` / *the week off* | 4.89 : 1 |
+
+Every one runs **zero scrim**. The figures are measured on the real render
+with each banner's own tint against its own wall, and none drops below 3.47:1
+even at the brightest 5% of a glyph box.
+
+### `--ink`
+
+Recolouring the type is now one declaration. `--ink` is the headline colour
+and defaults to `--cream`; the kicker, hero, script, rules and micro-lines all
+resolve through it, so `style="--ink: #E8F1F4"` on a banner recolours the whole
+headline including the hairlines. `--cream` stays the campaign constant.
+
+Two rules for choosing one. Keep the tint close to white — saturating a tint
+darkens it, and the wall is already doing the contrast work, so there is no
+headroom to spend. And pick the tint from the wall's *complement*, not its own
+hue: mint on slate and butter-gold on plum separate cleanly, while a tint of
+the wall's own hue sits too close in value to read as a decision.
+
+### The copy rule
+
+**No service name in the headline.** The footer already says "Herbal potli
+massage"; repeating it above is dead space, and the abbreviations get worse
+the harder you push them. An earlier attempt at `HEAT, / HERBS, / HANDS` was
+three fragments pretending to be a line.
+
+The fix for hierarchy D was to make the three lines one sentence broken across
+them — `THE HEAT / GETS IN / DEEPER` — so the stack reads as language rather
+than as a list. Everything else leads on the feeling or the outcome: *Unclench*,
+`Old heat, / new ease`, `WASH / the week off`.
+
+### Two character ceilings, both learned by overflowing
+
+The script heroes are set very large, so they hold far fewer characters than
+they look like they should. Both are now `white-space: nowrap` so an overrun
+shows up as an overflow a fit check catches, instead of silently wrapping and
+pushing the block down into the treatment.
+
+| Hierarchy | Hero size | Holds | Broke on |
+|---|---|---|---|
+| C `.h-script__hero` | 336px | ~4 characters | "Brighter" — overran the frame by 157px |
+| E `.h-rules__hero` | 240px | ~8 characters | "Brand new" — wrapped, pushing the block to 51.7% of frame height against a 42% clear zone |
+
+### Known flaws in the six
+
+Worth stating rather than discovering later:
+
+- **1 and 2.** The male therapist stands upright and his head enters the
+  top-right, so the centred type crosses it — `your back` in 1 and the last
+  stroke of *Unclench* in 2. The measured contrast survives it because the
+  head is dark, but the type is crossing the action, which the brief forbids.
+  Fixable by framing him lower or losing the head from frame.
+- **5 and 6.** No celadon bowl in shot, and the cream reads as a thick paste
+  patch rather than the thin granular film specified.
+- The three cool walls (ink, slate) sit at 19-25% frame luminance against
+  26-28% for the warm ones. Cool deep paint is simply darker at the same
+  chroma; if the set has to feel uniformly bright, the warm four are safer.
+
+
 ## Changing copy
 
 Edit `index.html` — three plain blocks, one per banner. `copy.md` holds the

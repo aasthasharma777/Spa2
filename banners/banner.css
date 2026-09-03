@@ -14,7 +14,17 @@
   --font-display: 'Poppins', 'Outfit', system-ui, sans-serif;
   --font-ui: 'Inter', system-ui, sans-serif;
 
+  /* The campaign constant. */
   --cream: #F8EED6;
+
+  /* The headline colour, and the only thing a banner should override to
+     recolour its type. Defaults to the cream. Set it per banner
+     (style="--ink: #E8F1F4") and the kicker, hero, script, rules and
+     micro-lines all follow, because they all resolve through here.
+     Anything set here must still clear ~4:1 against its wall — the
+     lighter a tint is the safer it is, and saturating a tint darkens it,
+     so keep these close to white. */
+  --ink: var(--cream);
 
   --w: 1000px;
   --h: 1372px;
@@ -79,7 +89,7 @@
   overflow: hidden;
   isolation: isolate;
   background: var(--tone-deep);
-  color: var(--cream);
+  color: var(--ink);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -196,7 +206,7 @@
   width: 76px;
   height: 3px;
   margin-bottom: 38px;
-  background: var(--cream);
+  background: var(--ink);
   /* At 3px over a lit wall a hairline needs the cream at full strength —
      knocked back it reads as a smudge rather than a rule. */
   opacity: 1;
@@ -235,8 +245,12 @@
   text-align: center;
 }
 
+/* Same nowrap guard as hierarchy E, and a tighter ceiling: at 336px this
+   hero holds about FOUR characters. "Glow" and "Silk" fit; "Brighter"
+   overran the frame by 157px. One short word only. */
 .h-script__hero {
   display: block;
+  white-space: nowrap;
   font-family: var(--font-script);
   font-size: 336px;
   line-height: .95;
@@ -395,7 +409,7 @@
   width: 132px;
   height: 2px;
   margin: 0 auto;
-  background: var(--cream);
+  background: var(--ink);
   opacity: 1;
 }
 

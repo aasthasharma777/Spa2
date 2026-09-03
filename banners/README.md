@@ -272,15 +272,32 @@ blocks — the same class of block as the Magnific CDN above. Adding
 `mcp.figma.com` to the environment's **Network access: Custom** allowed
 domains would let a future session push them automatically.
 
-Until then it is a 30-second job by hand: select the `Image / photo`
-rectangle in a banner and drag the matching JPG onto it. The rectangle is
-already sized and positioned, so the photo crops exactly as designed.
+Until then it is a 30-second job by hand. **`figma-drop/` holds the three
+photographs renamed to match the Figma frame names**, so there is nothing to
+work out — open a banner in the layers panel, click `Image / photo`, and drag
+the matching file onto it. The rectangle is already sized and positioned, so
+the photo crops exactly as designed.
+
+With four colourway rows per service, fill row A and then copy the fill down
+each column: select the filled rectangle, Cmd-C, select the other three in
+that column, Cmd-Shift-V.
+
+`figma-drop/` is the same three images as `assets/`, at full resolution; only
+the filenames differ.
 
 | File | Banner |
 |---|---|
-| `assets/cupping-therapy.jpg` | 1 · Cupping therapy |
-| `assets/potli-massage.jpg` | 2 · Herbal potli massage |
-| `assets/korean-scrub.jpg` | 3 · Korean body scrub |
+| `figma-drop/1-cupping-therapy.jpg` | 1 · Cupping therapy |
+| `figma-drop/2-herbal-potli-massage.jpg` | 2 · Herbal potli massage |
+| `figma-drop/3-korean-body-scrub.jpg` | 3 · Korean body scrub |
+
+Why not automated: two routes were tried. `upload_assets` needs a direct POST
+to `mcp.figma.com`, which the network policy blocks. Passing the bytes inside
+a `use_figma` script works — `figma.base64Decode` and `figma.createImage` are
+both available — but the script cap is 50,000 characters, so a frame-size JPEG
+takes four chunked calls per image, twelve in all, and still lands at a
+re-encoded ~q0.78 rather than the full-resolution original. Dragging the file
+in is both faster and better quality.
 
 Each photo rectangle currently holds a flat mid-tone of its wall colour as
 a placeholder, so an unfilled banner still reads on-palette.

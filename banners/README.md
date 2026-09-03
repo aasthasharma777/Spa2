@@ -446,6 +446,71 @@ targetPhoto.fills = [paint];
 All four colourway rows were filled this way from row A, and the card copies
 inherit the fill from the frame they were cloned from.
 
+## Iterations
+
+Two extra pages sit alongside `index.html`, both built from the same CSS so
+anything chosen here drops straight into the set:
+
+| Page | Renders to | What it holds |
+|---|---|---|
+| `iterations.html` | `out/iterations/` | 3 services x 3 copy-and-type variants |
+| `alternates.html` | `out/alternates/` | the same copy on new photography |
+
+```
+CHROMIUM_PATH=... node render-iterations.mjs iterations.html iterations
+CHROMIUM_PATH=... node render-iterations.mjs alternates.html alternates
+```
+
+### Two new hierarchies
+
+`banner.css` now carries five, not three. The two additions exist because A, B
+and C are all cream-script-editorial and start to read as one idea:
+
+- **D — caps stack.** No script at all: three short all-caps lines in mixed
+  weight, tight-leaded, ranged left. The contemporary-DTC outlier. Poppins 200
+  holds up as the thin line only because the walls are mid-tones now — on the
+  old pale walls a 200 weight vanished.
+- **E — ruled script.** A centred script hero framed by two hairline rules with
+  a tracked micro-line. The most formal of the five and the closest to the
+  reference banner.
+
+`.h-rules__hero` is `white-space: nowrap` on purpose. At 240px a two-word
+script hero wraps silently and pushes the block 235px deeper — straight into
+the treatment. "Brand new" did exactly that and ran the scrub block to 51.7%
+of the frame against a 42% clear zone. Better that it overflows the frame,
+where `fit.mjs`-style checking catches it. Keep the hero to one short word.
+
+### Copy options
+
+| | V1 (current) | V2 | V3 |
+|---|---|---|---|
+| Cupping | A · `UNDO` / *every ache* | D · `TAKE / THE WEIGHT / OFF` | E · *Unknot* / `AT HOME` |
+| Potli | B · `Warmth that` / *sinks in* | D · `HEAT, / HERBS, / HANDS` | B · `Heat that` / *melts it* |
+| Scrub | C · *Glow* / `HEAD TO TOE` | A · `SHED` / *the dull layer* | E · *Reborn* / `IN ONE HOUR` |
+
+Every variant is checked to fit inside its type block and to end above its
+photograph's clear zone — all nine land between 31.6% and 36.3% of frame
+height.
+
+### Image alternates
+
+`assets/alt/` holds one alternate per service, generated under the same locked
+rules — same bed reference, same casting, same wall hue band, same
+bright-subject / darker-type-zone structure — varying only camera and window:
+
+| Service | Variation | Contrast | Note |
+|---|---|---|---|
+| Cupping | low, close, along the back; window **left** | **5.12 : 1** | The teal wall is finally a true mid-tone, so this alternate needs **no scrim at all** — it fixes the one weak line left in the set. |
+| Potli | shot from the **head end**, looking down the body | **4.97 : 1** | Strongest angle of the three, but the braced hand shows more vein and tendon than the brief allows, and the therapist's arm reads a shade paler than the client's. |
+| Scrub | **high overhead**, bed as a diagonal band | **4.75 : 1** | Biggest clear type zone of the set. No celadon bowl in frame, and the cream is pastier than the thin film specified. |
+
+Two candidates were rejected on a measurement rather than a look: cupping `c1`
+and `c3` scored 4.58 and 4.72 on the mean but only 1.41 and 1.75 at the
+brightest 5% of the hierarchy-D type box — a bright intrusion at the top left
+that a mean hides completely. Worth measuring the *brightest* patch of a type
+zone, not just its average.
+
+
 ## Changing copy
 
 Edit `index.html` — three plain blocks, one per banner. `copy.md` holds the

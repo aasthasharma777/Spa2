@@ -331,3 +331,106 @@
   letter-spacing: -.015em;
   white-space: nowrap;
 }
+
+/* =====================================================================
+   HIERARCHY D — caps stack.  No script at all: three short all-caps
+   lines in mixed weight, tight-leaded, ranged left. The only hierarchy
+   that reads as contemporary DTC rather than editorial-luxury, so it is
+   the useful outlier when the other three start to feel like one idea.
+   Weight alternation carries the emphasis instead of size.
+   Needs: clear wall across the top ~34%.
+   ===================================================================== */
+
+.h-stack {
+  position: absolute;
+  top: 80px;
+  left: 56px;
+  right: 56px;
+  text-align: left;
+}
+
+.h-stack__kicker {
+  display: block;
+  margin-bottom: 30px;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 29px;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  opacity: .82;
+}
+
+.h-stack__line {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 120px;
+  line-height: .92;
+  letter-spacing: -.032em;
+  text-transform: uppercase;
+}
+
+/* The thin line is what stops the stack reading as a slab. Poppins 200
+   at this size holds up because the wall behind it is a mid-tone now —
+   on the old pale walls a 200 weight disappeared. */
+.h-stack__line--thin { font-weight: 200; letter-spacing: -.018em; }
+
+/* =====================================================================
+   HIERARCHY E — ruled script.  A centred script hero framed by two
+   hairline rules with a tracked micro-line between. The most formal of
+   the five, and the one that most resembles the reference banner.
+   Needs: clear wall across the top ~40%.
+   ===================================================================== */
+
+.h-rules {
+  position: absolute;
+  top: 88px;
+  left: 56px;
+  right: 56px;
+  text-align: center;
+}
+
+.h-rules__rule {
+  display: block;
+  width: 132px;
+  height: 2px;
+  margin: 0 auto;
+  background: var(--cream);
+  opacity: 1;
+}
+
+.h-rules__kicker {
+  display: block;
+  margin: 26px 0 10px;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 27px;
+  letter-spacing: .32em;
+  text-indent: .32em;
+  text-transform: uppercase;
+  opacity: .84;
+}
+
+/* nowrap on purpose: at 240px a two-word script hero can silently wrap and
+   push the block 235px deeper, straight into the treatment. Better that it
+   overflows the frame where a fit check catches it. Keep the hero to one
+   short word. */
+.h-rules__hero {
+  display: block;
+  white-space: nowrap;
+  font-family: var(--font-script);
+  font-size: 240px;
+  line-height: .98;
+}
+
+.h-rules__sub {
+  display: block;
+  margin: 6px 0 26px;
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 38px;
+  letter-spacing: .34em;
+  text-indent: .34em;
+  text-transform: uppercase;
+  opacity: .9;
+}

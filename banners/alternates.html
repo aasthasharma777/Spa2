@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Spa banners — image alternates</title>
+<link rel="stylesheet" href="banner.css">
+<style>
+  body { margin: 0; padding: 60px; background: #101012; font-family: 'Inter', system-ui, sans-serif; }
+  .row { display: flex; gap: 60px; align-items: flex-start; }
+  .col { display: flex; flex-direction: column; gap: 20px; }
+  .cap { color: #8b8b90; font-size: 22px; }
+  .cap b { color: #d8d8dc; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="col">
+    <!-- the alternate cupping wall is a mid-tone now, so this one needs no scrim either -->
+    <div class="banner" data-theme="cupping" id="alt-cupping" style="--scrim-a: 0">
+      <div class="banner__photo" style="--photo: url('assets/alt/cupping-therapy.jpg')"></div>
+      <div class="banner__topscrim"></div><div class="banner__grain"></div>
+      <div class="h-word">
+        <span class="h-word__kicker">Cupping, at home</span>
+        <span class="h-word__hero">UNDO</span>
+        <span class="h-word__tail">every ache</span>
+      </div>
+      <div class="banner__footer">
+        <div><div class="banner__service">Cupping therapy</div>
+        <div class="banner__price">Starting from &#8377;1,299</div></div>
+        <div class="banner__cta">Book now</div>
+      </div>
+    </div>
+    <div class="cap"><b>Cupping — alternate</b> — low close camera, window left</div>
+  </div>
+  <div class="col">
+    <div class="banner" data-theme="potli" id="alt-potli">
+      <div class="banner__photo" style="--photo: url('assets/alt/potli-massage.jpg')"></div>
+      <div class="banner__topscrim"></div><div class="banner__grain"></div>
+      <div class="h-editorial">
+        <span class="h-editorial__rule"></span>
+        <span class="h-editorial__line">Warmth that</span>
+        <span class="h-editorial__script">sinks in</span>
+      </div>
+      <div class="banner__footer">
+        <div><div class="banner__service">Herbal potli massage</div>
+        <div class="banner__price">Starting from &#8377;1,599</div></div>
+        <div class="banner__cta">Book now</div>
+      </div>
+    </div>
+    <div class="cap"><b>Potli — alternate</b> — shot from the head end</div>
+  </div>
+  <div class="col">
+    <div class="banner" data-theme="scrub" id="alt-scrub">
+      <div class="banner__photo" style="--photo: url('assets/alt/korean-scrub.jpg')"></div>
+      <div class="banner__topscrim"></div><div class="banner__grain"></div>
+      <div class="h-script">
+        <span class="h-script__hero">Glow</span>
+        <span class="h-script__sub">Head to toe</span>
+      </div>
+      <div class="banner__footer">
+        <div><div class="banner__service">Korean body scrub</div>
+        <div class="banner__price">Starting from &#8377;1,899</div></div>
+        <div class="banner__cta">Book now</div>
+      </div>
+    </div>
+    <div class="cap"><b>Scrub — alternate</b> — high overhead camera</div>
+  </div>
+</div>
+</body>
+</html>

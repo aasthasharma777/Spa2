@@ -748,6 +748,40 @@ person in it rather than a body: head turned out of the cradle, eyes closed,
 expression released. It carries the promise in a way a back cannot, and it is
 deliberately the *only* one — three calm faces would be a stock-photo set.
 
+### An empty room reads as a studio
+
+The potli frame was fixed twice and failed twice for opposite reasons, which
+is the most useful thing in this file.
+
+First it was a flat field of colour, so architecture was added — corner,
+skirting board, receding tile floor. That made it a *room*, and it still read
+as a **massage studio**. Architecturally correct and completely bare is exactly
+what a treatment room looks like: **emptiness is the institutional signal.**
+No amount of correct geometry fixes it.
+
+Home comes from evidence that somebody lives there. Four cheap domestic
+objects did it, all placed low and to the right, clear of the type zone:
+
+| | Why it works |
+|---|---|
+| An **open doorway** at the right onto a brighter hallway | The flat continues somewhere. A treatment room is a destination; a home is a route through. Strongest single cue. |
+| A plain white **light switch plate** on the wall | So mundane it cannot be read as styling. Nobody dresses a set with a switch. |
+| A pair of **sandals kicked off** on the tile, one askew | Somebody was here a moment ago and took their shoes off. Domestic, and specifically Indian. |
+| A **rug edge** under the near table legs | Soft flooring is domestic; bare hard floor is clinical. |
+
+Note the shape of the rule this replaces. The original brief banned everything
+— "no rolled towels, no linens, no bolsters, no trolley, no petals, no candles,
+no plants" — to keep spa dressing out, and that ban is still right about all of
+those. But it was silently also banning *domestic* objects, and that is what
+made three rooms feel like a clinic. The distinction is not
+object-versus-no-object, it is **whose object**: a folded-towel arrangement is
+the salon's, a switch plate and a kicked-off sandal are the customer's.
+
+The scrub frame was never accused of being a studio, and it is the one that
+always had a houseplant in it. That should have been the clue two rounds
+earlier.
+
+
 ### Making a wall read as a room
 
 Banning the window from the potli frame to differentiate it had a cost nobody
@@ -837,11 +871,11 @@ about two points darker than the other two, which is the honest cost of having
 asked for soft light. Fixing it properly means re-shooting brighter, not
 grading harder.
 
-Final: frame luminance 22.2 / 21.5 / 23.5%, contrast 4.91 / 4.38 / 5.15 : 1 at
-zero scrim, nothing below 3.43:1 at the brightest 5% of a glyph box. The potli
-frame is now within a point of the other two, which the previous round could
-not manage — because the room it was re-shot in is brighter to start with,
-rather than because it was graded harder.
+Final: frame luminance 22.2 / 22.0 / 23.5%, contrast 4.91 / 4.28 / 5.15 : 1 at
+zero scrim, nothing below 3.43:1 at the brightest 5% of a glyph box. All three
+frames are now within 1.5 points of each other on brightness, and the potli
+frame got there by being re-shot in a brighter room rather than by being graded
+harder — gamma 1.11, against the 1.34 an earlier attempt needed.
 
 
 ### Copy: back to the approved lines

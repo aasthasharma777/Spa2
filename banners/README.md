@@ -266,8 +266,8 @@ fills. Image and text are separate layers in every banner:
     Text / footer            service + price, and the Book now pill
 ```
 
-**The photographs are not in the Figma file.** Uploading image bytes needs a
-direct POST to `mcp.figma.com`, which this environment's network policy
+**The photographs were placed by hand.** Uploading image bytes from here
+needs a direct POST to `mcp.figma.com`, which this environment's network policy
 blocks — the same class of block as the Magnific CDN above. Adding
 `mcp.figma.com` to the environment's **Network access: Custom** allowed
 domains would let a future session push them automatically.
@@ -280,7 +280,8 @@ the photo crops exactly as designed.
 
 With four colourway rows per service, fill row A and then copy the fill down
 each column: select the filled rectangle, Cmd-C, select the other three in
-that column, Cmd-Shift-V.
+that column, Cmd-Shift-V. (See **Propagating a placed photo** below for the
+same move done in script.)
 
 `figma-drop/` is the same three images as `assets/`, at full resolution; only
 the filenames differ.
@@ -299,8 +300,9 @@ takes four chunked calls per image, twelve in all, and still lands at a
 re-encoded ~q0.78 rather than the full-resolution original. Dragging the file
 in is both faster and better quality.
 
-Each photo rectangle currently holds a flat mid-tone of its wall colour as
-a placeholder, so an unfilled banner still reads on-palette.
+All twelve full-size frames and all twelve card copies are now filled. Any
+new frame starts with a flat mid-tone of its wall colour as a placeholder, so
+an unfilled banner still reads on-palette.
 
 ### Colourways
 
@@ -343,6 +345,44 @@ the headline colour.
 Not carried across: the 5.5% SVG grain overlay. It has no native Figma
 equivalent and would need a tiled noise PNG — which is blocked by the same
 upload restriction. At 5.5% the difference is very hard to see.
+
+### Card size — 360 x 480
+
+The file also holds twelve 360 x 480 copies, matching the "Spotlight 3:4"
+reference card on the canvas. They sit in a 4 x 3 grid to the right of it, at
+x 4111 / 4511 / 4911 and y 200 / 740 / 1280 / 1820 — same rows and columns as
+the full-size grid, so colourway A card sits above colourway B card in each
+service column.
+
+Each copy is made by cloning the full-size frame, then:
+
+1. `rescale(480 / 1372)` — Figma scales children, type sizes and corner radius
+   together, so the whole banner comes down proportionally.
+2. `resize(360, 480)` — the card is a true 3:4 (0.750) while the banner is
+   0.729, so this widens the frame by ~10px.
+3. The photograph is resized to fill the new 360 x 480 and the two scrims are
+   stretched to the new width, so the **photo re-crops** into the wider frame
+   instead of the type stretching with it. The headline block and footer bar
+   are widened by the same delta and centred text is re-laid to the new width.
+
+That order matters: rescaling first and widening second keeps the type at its
+correct optical size for the card and absorbs the aspect difference in the
+photograph, where a 10px crop is invisible.
+
+### Propagating a placed photo
+
+Once a photo is dragged into one frame, it does not need to be dragged into
+the other three colourways of that service. Inside Figma the image paint can
+be copied straight across, reusing the same `imageHash` — no re-upload and no
+loss of quality:
+
+```js
+const paint = sourcePhoto.fills[0];   // the IMAGE paint
+targetPhoto.fills = [paint];
+```
+
+All four colourway rows were filled this way from row A, and the card copies
+inherit the fill from the frame they were cloned from.
 
 ## Changing copy
 

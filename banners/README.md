@@ -247,6 +247,48 @@ Exports at `deviceScaleFactor: 2`, so 2000 × 2744 PNGs.
 If Chromium is already on the machine and Playwright's own download was skipped:
 `CHROMIUM_PATH=/path/to/chrome node render.mjs`.
 
+## Figma
+
+A layered Figma version lives here, in **UC Design Team**:
+
+https://www.figma.com/design/6TTvUxKDWjXZdpCLsQuQyH
+
+Built to the same spec as `banner.css` — 1000 x 1372, 44px radius, real
+Pinyon Script / Poppins / Inter text layers, and the scrims as gradient
+fills. Image and text are separate layers in every banner:
+
+```
+1 · Cupping therapy
+    Image / photo            the photograph (image fill)
+    Image / scrim top        gradient that carries the headline
+    Image / scrim footer     gradient that carries the footer
+    Text / headline          one editable text layer per line
+    Text / footer            service + price, and the Book now pill
+```
+
+**The photographs are not in the Figma file.** Uploading image bytes needs a
+direct POST to `mcp.figma.com`, which this environment's network policy
+blocks — the same class of block as the Magnific CDN above. Adding
+`mcp.figma.com` to the environment's **Network access: Custom** allowed
+domains would let a future session push them automatically.
+
+Until then it is a 30-second job by hand: select the `Image / photo`
+rectangle in a banner and drag the matching JPG onto it. The rectangle is
+already sized and positioned, so the photo crops exactly as designed.
+
+| File | Banner |
+|---|---|
+| `assets/cupping-therapy.jpg` | 1 · Cupping therapy |
+| `assets/potli-massage.jpg` | 2 · Herbal potli massage |
+| `assets/korean-scrub.jpg` | 3 · Korean body scrub |
+
+Each photo rectangle currently holds a flat mid-tone of its wall colour as
+a placeholder, so an unfilled banner still reads on-palette.
+
+Not carried across: the 5.5% SVG grain overlay. It has no native Figma
+equivalent and would need a tiled noise PNG — which is blocked by the same
+upload restriction. At 5.5% the difference is very hard to see.
+
 ## Changing copy
 
 Edit `index.html` — three plain blocks, one per banner. `copy.md` holds the

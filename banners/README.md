@@ -624,6 +624,54 @@ Three decisions taken deliberately, in case they need revisiting:
   component, so a cut-out can be dropped in later without a rebuild. Doing it
   properly would mean a background-removal pass per photograph.
 
+#### Spacing across a font swap: measure ink, not boxes
+
+`rescale()` scaled the headline positions perfectly and the spacing still came
+out wrong, which is worth understanding because it will recur.
+
+`rescale` preserves **layout-box** relationships. But a text node's box is not
+its glyphs — it is the font's full ascent-to-descent metric, and how much of
+that box the ink actually fills varies enormously between faces. Swapping
+Pinyon for Kapakana therefore changed both the apparent size and every gap,
+while every number in the file stayed "correct".
+
+Measured on these exact strings:
+
+| Face | Ink height as a share of font size |
+|---|---|
+| Pinyon Script | **78%** |
+| Kapakana | **62%** |
+| Poppins (caps) | 71.5% |
+| Open Sauce One (caps) | 78.9% |
+| Inter (tracked caps) | 91.6% |
+| Open Sauce One (tracked caps) | 94% |
+
+Two consequences. Kapakana at a given size renders **21% smaller** than Pinyon,
+so every script line was undersized. And because a script face parks most of
+its box above and below the glyphs, box-based gaps drift the moment the face
+changes — the potli and scrub script gaps were ~6.5px too loose at card scale,
+which at 480px tall is very visible.
+
+The fix is to stop using the layout box as the unit. `absoluteRenderBounds`
+gives the real ink bounds where `absoluteBoundingBox` gives the layout box, so:
+
+1. **Size by ink.** For each line, set `fontSize *= targetInkHeight /
+   currentInkHeight`, where the target is the signed-off full-size ink height
+   x 0.328. This makes the card's type *optically* the same size as the
+   banner's, regardless of face.
+2. **Position by ink.** Compute each node's `offsetInBox = ink.y - box.y`, then
+   stack the lines so the **ink-to-ink** gaps equal the scaled originals, and
+   set each node's `y = inkTop - offsetInBox`.
+
+Resulting sizes, all derived rather than chosen: cupping 9.9 / 72.6 / 59.1,
+potli 27.9 / 85.8, scrub 139.8 / 13.4. Every gap lands within 0.1px of target,
+and the widest ink is 202px inside a 328px frame.
+
+The general rule: **any time type crosses font families, re-derive size and
+spacing from ink bounds.** Scaling the numbers only works while the face is
+the same.
+
+
 One oddity in the section, left as found: it contains **two copies of the same
 potli banner**, so there are two identical potli cards. The second is suffixed
 `(dup)`.

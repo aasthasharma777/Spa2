@@ -70,6 +70,33 @@ the canvas — so that photo has to keep more than half the frame clear.
 All three share a brief: an **Indian home**, and an Urban Company therapist
 who has carried the bed in with them.
 
+**Two casting rules are LOCKED and override everything else.**
+
+1. **The client is 25 to 30 years old.** Always. No older casting — no grey at
+   the temples, no lines, no middle-aged build. An earlier round used a man in
+   his fifties and a woman in her mid-forties on the reasoning that they are
+   the people who actually book a bad-back treatment. That reasoning is not
+   available: the age band is the rule.
+
+2. **The therapist is not in the picture. Only their bare hands are visible.**
+   No head, no face, no hair, no neck, no shoulder, no upper arm, no torso, no
+   clothing, no sleeve. The hands enter from the right edge and are cropped by
+   that edge at the wrist or low forearm. Nobody is standing in the room.
+
+The second rule solves a problem as well as setting a look. When the therapist
+was in frame standing upright, their head landed in the top-right — exactly
+where the centred hierarchies set their type — so the headline crossed the
+head. Removing the body clears the type zone by construction rather than by
+hoping the framing behaves.
+
+It also changes what casting can vary. With the therapist gone and the age band
+fixed, the levers left are build, hair, skin tone and small details: a buzz
+cut, a large coiled bun, a fuller body, a deeper brown skin tone, freckles
+across the shoulders, a fine-line tattoo, a gold waist chain at the towel line.
+Gender still reads off the hands, so the service pairing holds — a man's hands
+on the male client for cupping, a woman's on the female client for the other
+two.
+
 **The bed is the same on every banner, for every service, and it is LOCKED.**
 
 `reference/massage-bed-reference.jpg` is the canonical rendering of the bed.
@@ -523,14 +550,17 @@ on male for cupping, female on female for the other two), the technique, the
 bright-subject / darker-type-zone structure, the clear type zone, and the
 upmarket-urban-Indian-apartment brief. What moves: everything else.
 
-| | Wall | Casting | Type | Hierarchy | Copy | Measured |
+| | Wall | Client | Type | Hierarchy | Copy | Measured |
 |---|---|---|---|---|---|---|
-| 1 | ink petrol `#52717B` | man in his early fifties, salt-and-pepper, fuller middle-aged back | ice blue `#E8F1F4` | A | `RESET` / *your back* | 4.45 : 1 |
-| 2 | burnt terracotta `#9A6450` | lean man, late twenties, shoulder tattoo | blush `#FBE9E4` | E | *Unclench* / `DEEP RELIEF` | 3.93 : 1 |
-| 3 | violet plum `#7C5E86` | woman in her mid-forties, silvering at the temples | butter gold `#FBF0CE` | B | `Old heat,` / *new ease* | 4.42 : 1 |
-| 4 | deep olive `#74743F` | young woman with a cropped buzz cut; therapist in her fifties | pale pink `#FCEDF0` | D | `THE HEAT / GETS IN / DEEPER` | 5.10 : 1 |
-| 5 | slate blue `#5F6E7C` | woman in her thirties, fuller build, large coiled bun | pale mint `#E6F2EC` | C | *Silk* / `IN AN HOUR` | 4.54 : 1 |
-| 6 | ochre gold `#8A6B2E` | woman in her late thirties, a deeper brown skin tone than the rest of the set | warm white `#FDF6EC` | A | `WASH` / *the week off* | 4.89 : 1 |
+| 1 | ink petrol `#52717B` | man, 27, slim, short crop | ice blue `#E8F1F4` | A | `RESET` / *your back* | 5.44 : 1 |
+| 2 | burnt terracotta `#9A6450` | man, 29, heavier build, longer wavy hair, fine-line shoulder tattoo | blush `#FBE9E4` | E | *Unclench* / `DEEP RELIEF` | 3.83 : 1 |
+| 3 | violet plum `#7C5E86` | woman, 26, thick coiled bun, gold waist chain | butter gold `#FBF0CE` | B | `Old heat,` / *new ease* | 4.82 : 1 |
+| 4 | deep olive `#74743F` | woman, 25, cropped buzz cut, gold ear stud | pale pink `#FCEDF0` | D | `THE HEAT / GETS IN / DEEPER` | 5.30 : 1 |
+| 5 | slate blue `#5F6E7C` | woman, 30, fuller build, large coiled low bun | pale mint `#E6F2EC` | C | *Silk* / `IN AN HOUR` | 4.32 : 1 |
+| 6 | ochre gold `#8A6B2E` | woman, 28, deeper brown skin tone, freckled shoulders | warm white `#FDF6EC` | A | `WASH` / *the week off* | 4.29 : 1 |
+
+In all six the therapist is absent — two bare hands enter from the right edge
+and are cropped there. Every client is 25 to 30.
 
 Every one runs **zero scrim**. The figures are measured on the real render
 with each banner's own tint against its own wall, and none drops below 3.47:1
@@ -573,20 +603,29 @@ pushing the block down into the treatment.
 | C `.h-script__hero` | 336px | ~4 characters | "Brighter" — overran the frame by 157px |
 | E `.h-rules__hero` | 240px | ~8 characters | "Brand new" — wrapped, pushing the block to 51.7% of frame height against a 42% clear zone |
 
+### What removing the therapist bought
+
+The first version of this set had the therapist standing in frame, and in the
+two centred hierarchies their head landed in the top-right — the headline
+crossed it. Cutting them to hands did more than satisfy the casting rule: it
+clears the type zone by construction instead of by hoping the framing behaves,
+and it pushed contrast up across the board, because a head and a t-shirt in
+the type zone were the brightest and darkest intrusions in it. Compare 1:
+4.45:1 with the therapist in shot, 5.44:1 with only hands.
+
 ### Known flaws in the six
 
 Worth stating rather than discovering later:
 
-- **1 and 2.** The male therapist stands upright and his head enters the
-  top-right, so the centred type crosses it — `your back` in 1 and the last
-  stroke of *Unclench* in 2. The measured contrast survives it because the
-  head is dark, but the type is crossing the action, which the brief forbids.
-  Fixable by framing him lower or losing the head from frame.
-- **5 and 6.** No celadon bowl in shot, and the cream reads as a thick paste
-  patch rather than the thin granular film specified.
-- The three cool walls (ink, slate) sit at 19-25% frame luminance against
-  26-28% for the warm ones. Cool deep paint is simply darker at the same
-  chroma; if the set has to feel uniformly bright, the warm four are safer.
+- **5 and 6.** No celadon bowl in shot, across two rounds of asking for it
+  "fully in shot, clearly visible and not cropped". The cream also still reads
+  patchier than the thin milky film specified, though better than the paste it
+  was. If the bowl matters it probably needs compositing rather than another
+  prompt.
+- The cool walls (ink, slate) sit at 19-25% frame luminance against 22-25% for
+  the warm ones — closer than in the first version, but deep cool paint is
+  still darker at the same chroma. If the set has to feel uniformly bright, the
+  warm four are safer.
 
 
 ## Changing copy

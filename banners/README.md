@@ -130,7 +130,14 @@ lime-wash mottling, no chunky wooden window, no iron grille, no red-oxide
 floor — an earlier pass used all of those and the rooms read as South Indian
 courtyard houses rather than city apartments. And nothing from a treatment
 room either: no rolled towels, no stacked linens, no bolsters, no uniform, no
-trolley, no bowls of petals, no candles, no plants, no signage.
+trolley, no bowls of petals, no candles, no signage.
+
+**Plants are now allowed, singly.** The original ban existed to keep spa
+dressing out, and it over-corrected: a single large-leaved houseplant in a
+plain terracotta pot is one of the strongest *home* signals available, which
+is exactly what this brief has always been short of. One ordinary living-room
+plant, cropped at a frame edge, softly out of focus. Still banned: a cluster of
+plants, an orchid, bamboo, ferns, anything arranged or styled.
 
 Walls are **mid-tones**, one per service, each in its own hue family and all
 three clearly different from one another. Mid-tone is not a style choice — it
@@ -662,6 +669,55 @@ when a one-off genuinely needs it.
 Of the three the ochre is the most saturated and sits furthest from the other
 two; if the family needs to be tighter still, pulling it toward an amber-brown
 around `#8A6A42` closes the gap to about 20 degrees.
+
+### Three rooms, not one room three times
+
+A palette that unifies can flatten. With the same bed, the same hands-only
+rule, the same window-right habit and the same arms-at-both-sides pose, the
+three banners came out reading as one room redressed — different massage
+action, different wall colour, nothing else.
+
+The fix is one distinct, deliberate choice per banner, in light, furniture and
+pose rather than in colour:
+
+| | Light | Room | Pose |
+|---|---|---|---|
+| Cupping | hard, low, direct sun with a crisp window-frame shadow — kept on the **lower** wall only | **no curtain anywhere**: bare black-framed window, clear glass, no fabric in the room at all | head **turned to camera**, cheek on the pad rather than in the cradle, **eyes closed**, brow smooth, jaw slack |
+| Herbal potli | **fully diffused** overcast: light wraps rather than strikes, no crisp shadow edge, no sun pool, no flare | **no window in frame at all** — just wall and bed, light from off-frame left | **one arm bent up above the head**, forearm flat on the table beyond the headrest, making a long diagonal down the whole back |
+| Korean scrub | **dappled** through leaves, broken shadow on the lower wall and floor | **a houseplant** — one rubber plant in a terracotta pot, cropped at the left edge, out of focus; curtain pushed fully aside | **knee drawn up** so the hip rolls and the body is an S-curve, head turned so the bun reads |
+
+The lighting one needed care. Diffused light removes the raking sun the
+bright-subject structure was built on, so the potli frame keeps its value
+structure a different way: the oil gives the back a broad soft **satin** sheen
+instead of sharp specular highlights, and the white paper sheet still holds the
+brightest white. It measures 5.19:1 — the highest of the three — so soft light
+costs nothing here, it just has to be asked for differently.
+
+**The face is the one real addition.** Cupping is now the only frame with a
+person in it rather than a body: head turned out of the cradle, eyes closed,
+expression released. It carries the promise in a way a back cannot, and it is
+deliberately the *only* one — three calm faces would be a stock-photo set.
+
+### Matching the three after the fact
+
+The new frames came back darker than the palette wanted — the "hard direct
+sun" instruction pulled overall exposure down with it, and the diffused frame
+came in flat and low. Rather than re-shoot, both were lifted with a **gamma
+1.08** curve, which is small enough to carry no risk of washing out:
+
+| | wall before | wall after | frame before | frame after |
+|---|---|---|---|---|
+| Cupping | `#775445` L 0.107 | `#7e5b4a` L 0.125 | 20.9% | 22.5% |
+| Potli | `#7d602a` L 0.130 | `#85672f` L 0.150 | 20.5% | 22.5% |
+| Scrub | `#876461` L 0.152 | unchanged | 23.7% | 23.7% |
+
+That is the argument for shooting with contrast headroom. At 5.5:1 against a
+4:1 target there was room to spend on brightness; at 4.1:1 there would have
+been none, and the only option would have been another round.
+
+Final: hues 19 / 39 / 6 degrees, frame luminance 22.2 / 22.3 / 23.7%, contrast
+4.91 / 5.19 / 4.16 : 1 at zero scrim.
+
 
 ### Copy: back to the approved lines
 

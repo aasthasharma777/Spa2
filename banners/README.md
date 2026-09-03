@@ -1,5 +1,9 @@
 # Spa service banners
 
+> **Picking this up in a new session?** Read `../HANDOVER.md` first — it maps the
+> repo, lists the locked rules, carries the Figma node map and names the open
+> items. This file is the full spec behind it.
+
 Portrait promo banners for at-home spa services, derived from the existing
 "Relax / Body & Mind" deep-tissue banner (`reference/deep-tissue-reference.png`).
 

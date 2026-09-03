@@ -1,0 +1,27 @@
+{
+  "name": "uc-spa-banners",
+  "private": true,
+  "version": "1.0.0",
+  "description": "At-home spa service banners for Urban Company. Static HTML/CSS rendered to PNG with Playwright.",
+  "type": "module",
+  "scripts": {
+    "render": "node render.mjs",
+    "render:notext": "NOTEXT=1 node render.mjs",
+    "render:photo": "NOCHROME=1 node render.mjs",
+    "autumn": "node render-iterations.mjs autumn.html autumn",
+    "iterations": "node render-iterations.mjs iterations.html iterations",
+    "alternates": "node render-iterations.mjs alternates.html alternates",
+    "wild": "node render-iterations.mjs wild.html wild",
+    "fit": "node tools/fit.mjs",
+    "contrast": "node tools/contrast.mjs",
+    "brightness": "node tools/brightness.mjs",
+    "check": "node tools/fit.mjs index.html && node tools/contrast.mjs index.html",
+    "postinstall": "playwright install chromium"
+  },
+  "devDependencies": {
+    "playwright": "1.55.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -70,6 +70,34 @@ the canvas — so that photo has to keep more than half the frame clear.
 All three share a brief: an **Indian home**, and an Urban Company therapist
 who has carried the bed in with them.
 
+**The light must fall naturally across the client's body. This is a
+must-have in every composition, not a preference.**
+
+It is the thing that reads as photography rather than as a render, and it is
+what the cupping and Korean scrub frames got right. The specification, so it
+can be asked for rather than hoped for:
+
+> Directional daylight comes in from one side and **rakes along the length**
+> of the back, so the light describes the anatomy — a bright band along the
+> ridge of the spine and over the shoulder blade, the far side of the ribs and
+> the small of the back falling gently into soft shade, a clearly lit side and
+> a clearly shaded side to the body. Oil or cream gives a broad soft specular
+> sheen where the light strikes. It must look like real daylight discovering a
+> real body, never like flat even studio fill, and never as if the body were
+> lit separately from the room.
+
+**Soft is not flat.** This is the trap. A diffused or overcast frame still has
+to be *directional* — large soft source, gradual shadow edges, no hard sun
+pool, but coming from one side and still modelling the body. An earlier potli
+frame read as fully diffused and lost the fall of light entirely, which is
+what made the set feel synthetic. Ask for both properties separately: soft
+edges AND a lit side.
+
+This rule also carries the whole contrast structure. The raking fall is what
+makes the client's back the brightest thing in the frame while the wall sits
+two steps below it — so it is not only how the pictures look right, it is how
+the type stays legible without a scrim.
+
 **Two casting rules are LOCKED and override everything else.**
 
 1. **The client is 25 to 30 years old.** Always. No older casting — no grey at
@@ -104,6 +132,19 @@ It is the only version signed off. Do not re-derive it from a written
 description and do not let a new generation reinterpret it — pass that file
 to the image model as an image reference on every shot, and say in the prompt
 that the reference governs the bed and nothing else.
+
+**The client lies flat, prone, face in the cradle.** Chest, ribs and hips all
+resting flat on the padded top, shoulders relaxed and low, forehead and
+cheekbones in the padded horseshoe. Never propped on the elbows, never with
+the torso raised or arched, never with the head lifted or the chest turned
+toward the camera. One earlier scrub frame had her elevated on her forearms
+and it is simply not how the treatment is given. A small natural bend in one
+knee is fine; a lift is not.
+
+**And the headrest must be visible and in use.** It disappeared once when a
+raised-arm pose was asked for — the arm displaced it. If a pose puts anything
+near the head end, say explicitly that the cradle, its paper sheet and the
+face in it must still read.
 
 What it shows, for the record: a portable folding massage table with a black
 padded top and an **attached black padded face-cradle headrest**; **two
@@ -683,20 +724,51 @@ pose rather than in colour:
 | | Light | Room | Pose |
 |---|---|---|---|
 | Cupping | hard, low, direct sun with a crisp window-frame shadow — kept on the **lower** wall only | **no curtain anywhere**: bare black-framed window, clear glass, no fabric in the room at all | head **turned to camera**, cheek on the pad rather than in the cradle, **eyes closed**, brow smooth, jaw slack |
-| Herbal potli | **fully diffused** overcast: light wraps rather than strikes, no crisp shadow edge, no sun pool, no flare | **no window in frame at all** — just wall and bed, light from off-frame left | **one arm bent up above the head**, forearm flat on the table beyond the headrest, making a long diagonal down the whole back |
-| Korean scrub | **dappled** through leaves, broken shadow on the lower wall and floor | **a houseplant** — one rubber plant in a terracotta pot, cropped at the left edge, out of focus; curtain pushed fully aside | **knee drawn up** so the hip rolls and the body is an S-curve, head turned so the bun reads |
+| Herbal potli | **soft but directional**: gradual shadow edges, no crisp sun pool, but still raking in from the left so it models the body | **no window in frame at all** — just wall and bed, light from off-frame left | **one arm bent flat beside the headrest**, forearm on the table alongside her head, the cradle still reading clearly |
+| Korean scrub | **dappled** through leaves, broken shadow on the lower wall and floor | **a Korean lattice window** — fine dark-wood mullions backed with translucent hanji-like paper, glowing as one soft panel — plus **a houseplant**, one rubber plant in a terracotta pot cropped at the left edge, out of focus | **flat and prone**, face in the cradle, wider 35mm crop |
 
-The lighting one needed care. Diffused light removes the raking sun the
-bright-subject structure was built on, so the potli frame keeps its value
-structure a different way: the oil gives the back a broad soft **satin** sheen
-instead of sharp specular highlights, and the white paper sheet still holds the
-brightest white. It measures 5.19:1 — the highest of the three — so soft light
-costs nothing here, it just has to be asked for differently.
+The lighting one needed two goes. Asked for as "fully diffused overcast" the
+potli frame came back genuinely flat and lost the fall of light across the body
+altogether — which is exactly the thing that reads as photography. Re-asked as
+**soft AND directional** — two properties, stated separately: gradual shadow
+edges and no sun pool, but still raking in from one side and still modelling
+the back — it keeps its own soft character while holding the locked light rule.
+
+**The Korean cue is now the window, not the bowl.** A slim wooden lattice grid
+backed with translucent hanji-like paper, glowing as one soft warm panel: a
+modern apartment's nod to a changhoji screen. It reads as Korean to anyone who
+knows it and as a nice window to anyone who doesn't, which is the right weight
+— and it does that job better than the celadon bowl, which took three rounds
+to get into frame and is a prop rather than architecture. Both are in the shot
+now. Explicitly out: carving, painted motifs, lacquer, ornament, anything
+museum-like or themed.
 
 **The face is the one real addition.** Cupping is now the only frame with a
 person in it rather than a body: head turned out of the cradle, eyes closed,
 expression released. It carries the promise in a way a back cannot, and it is
 deliberately the *only* one — three calm faces would be a stock-photo set.
+
+### Two technique corrections
+
+Both are now locked rules further up, but the failures are worth recording
+because neither was a casting or lighting mistake — each was a *side effect* of
+asking for variety.
+
+**The scrub client was elevated.** Asking for "a knee drawn up so the hip rolls
+toward the camera and the body is an S-curve" got her propped up on her
+forearms with her torso raised and her head out of the cradle. That is not how
+the treatment is given. The fix is to state the base position as an absolute
+before adding any variation — flat and prone, chest, ribs and hips all resting
+down, face in the cradle, nothing elevated — and then to keep the variation
+small enough that it cannot fight it.
+
+**The potli headrest vanished.** Asking for "one arm bent up above the head,
+forearm resting beyond the headrest" displaced the headrest entirely: the model
+resolved the conflict by removing the object. Re-specified as an arm bent
+*beside* the cradle, with an explicit instruction that the cradle, its paper
+sheet and the face in it must still read, and it came back correctly. When a
+pose puts anything near the head end, name the headrest as a requirement in the
+same breath.
 
 ### Matching the three after the fact
 
@@ -705,18 +777,24 @@ sun" instruction pulled overall exposure down with it, and the diffused frame
 came in flat and low. Rather than re-shoot, both were lifted with a **gamma
 1.08** curve, which is small enough to carry no risk of washing out:
 
-| | wall before | wall after | frame before | frame after |
+| | gamma | frame before | frame after | contrast after |
 |---|---|---|---|---|
-| Cupping | `#775445` L 0.107 | `#7e5b4a` L 0.125 | 20.9% | 22.5% |
-| Potli | `#7d602a` L 0.130 | `#85672f` L 0.150 | 20.5% | 22.5% |
-| Scrub | `#876461` L 0.152 | unchanged | 23.7% | 23.7% |
+| Cupping | 1.08 | 20.9% | 22.2% | 4.91 : 1 |
+| Potli | 1.21 | 15.3% | 19.5% | 4.17 : 1 |
+| Scrub | 1.09 | 19.7% | 21.5% | 4.15 : 1 |
 
-That is the argument for shooting with contrast headroom. At 5.5:1 against a
-4:1 target there was room to spend on brightness; at 4.1:1 there would have
-been none, and the only option would have been another round.
+That is the argument for shooting with contrast headroom, and also its limit.
+**A grade trades brightness against contrast; it cannot create both.** The
+potli frame came in at 15.3% and 5.47:1. Lifting it to the set's 22% needed
+gamma 1.34 and dropped it to 3.73:1, under target. Solving for *contrast*
+instead of brightness landed gamma 1.21, 19.5% and 4.17:1 — so that frame stays
+about two points darker than the other two, which is the honest cost of having
+asked for soft light. Fixing it properly means re-shooting brighter, not
+grading harder.
 
-Final: hues 19 / 39 / 6 degrees, frame luminance 22.2 / 22.3 / 23.7%, contrast
-4.91 / 5.19 / 4.16 : 1 at zero scrim.
+Final: hues 19 / 41 / 9 degrees, frame luminance 22.2 / 19.5 / 21.5%, contrast
+4.91 / 4.17 / 4.15 : 1 at zero scrim, nothing below 3.24:1 at the brightest 5%
+of a glyph box.
 
 
 ### Copy: back to the approved lines

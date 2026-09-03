@@ -748,6 +748,51 @@ person in it rather than a body: head turned out of the cradle, eyes closed,
 expression released. It carries the promise in a way a back cannot, and it is
 deliberately the *only* one — three calm faces would be a stock-photo set.
 
+### Making a wall read as a room
+
+Banning the window from the potli frame to differentiate it had a cost nobody
+asked for: with no window, no corner, no skirting and no floor line, the frame
+became a flat field of colour with a bed in front of it — a studio sweep, not
+a room. The differentiator was right; the consequence was not.
+
+A wall needs architecture to read as an interior, and it takes four cheap
+things, none of which is a window:
+
+1. **A corner.** One soft vertical edge where a second wall plane comes
+   forward, catching slightly more light. This is the single strongest cue.
+2. **A skirting board.** A slim modern white one along the base.
+3. **A floor with perspective.** A strip of tile with grout lines going away
+   from the camera, not a flat band.
+4. **Gentle falloff across the wall**, left to right, the way light in a real
+   room behaves rather than a perfectly uniform field.
+
+Put the corner on the side the type does *not* use — right, for the
+left-ranged hierarchy — so the vertical edge never lands in a glyph box.
+
+### Framing out what the model gets wrong
+
+The scrub frame had genuinely malformed anatomy below the towel: an extra
+torso and a limb that connected to nothing. Two lessons.
+
+**The wide lens invited it.** At 35mm, pulled back for "more room", the frame
+had space for her hips and legs, and that is the region the model resolved
+badly. Back at 50mm the body simply ends at the towel.
+
+**The cheapest fix for a region the model renders badly is to crop it out**,
+not to describe it harder. The instruction that worked was positional, not
+anatomical: "her body runs out of the LEFT edge of the frame at the towel;
+nothing below the towel is in shot — no hips, no legs, no knees, no feet."
+An explicit anatomy negative is worth adding alongside it (one body, one head,
+two arms, no duplicated limbs, no second torso) but the crop is what actually
+guarantees it.
+
+The same round also cut the Korean window down to size. Asked for without a
+scale it came back as a floor-to-ceiling temple screen. Specified as "a
+normal, modest-sized window in the right-hand wall, sitting within a plain
+plastered reveal, roughly the size of an ordinary domestic window", it reads
+as an apartment.
+
+
 ### Two technique corrections
 
 Both are now locked rules further up, but the failures are worth recording
@@ -792,9 +837,11 @@ about two points darker than the other two, which is the honest cost of having
 asked for soft light. Fixing it properly means re-shooting brighter, not
 grading harder.
 
-Final: hues 19 / 41 / 9 degrees, frame luminance 22.2 / 19.5 / 21.5%, contrast
-4.91 / 4.17 / 4.15 : 1 at zero scrim, nothing below 3.24:1 at the brightest 5%
-of a glyph box.
+Final: frame luminance 22.2 / 21.5 / 23.5%, contrast 4.91 / 4.38 / 5.15 : 1 at
+zero scrim, nothing below 3.43:1 at the brightest 5% of a glyph box. The potli
+frame is now within a point of the other two, which the previous round could
+not manage — because the room it was re-shot in is brighter to start with,
+rather than because it was graded harder.
 
 
 ### Copy: back to the approved lines

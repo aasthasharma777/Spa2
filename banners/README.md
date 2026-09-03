@@ -527,6 +527,41 @@ Adding `mcp.figma.com` to the environment's **Network access: Custom** allowed
 domains removes the whole problem for future sessions.
 
 
+### The four rows, and the fourteen drops
+
+The Figma file now carries four rows built to the current system — zero scrim,
+approved copy, cream headline, frosted-glass footer — differing only in
+photography:
+
+| Row | y | What | Frames |
+|---|---|---|---|
+| **E** | 6608 | The autumn set — the current direction | 3 |
+| **F** | 8160 | The same three **ungraded**, before the gamma lift | 3 |
+| **G** | 9712 | The **wild six** — jewel walls, 269° of hue, two per service | 6 |
+| **H** | 11264 | The **first dark reshoot** — moodiest in the project | 2 |
+
+Row F is the useful one to sit next to E: identical rooms, poses and copy, so
+it isolates exposure as the only variable. 20.6 / 19.0 / 20.0% frame
+brightness against E's 22.2 / 22.0 / 23.5%, and 5.53 / 5.10 / 6.18:1 contrast
+against 4.91 / 4.28 / 5.15:1. If the moodier read wins, it wins on its own
+merits rather than on a different set of pictures.
+
+Row G is given the approved copy and the cream headline deliberately, even
+though those six shots were made with their own tinted inks. Two axes moving
+at once is what made them read as a paint chart in the first place; with the
+type held constant the row shows the colour thinking and nothing else. The
+tinted headlines are one `--ink` declaration away.
+
+**Row H breaks the casting brief and is labelled as such** — on the canvas and
+in `figma-drop/README.txt`. Both frames predate the hands-only rule and show
+the therapist in full. They are a lighting reference, not usable creative, and
+saying so in the file is cheaper than someone discovering it in a review.
+
+Every photo rectangle is renamed to name its own file, so the whole job is a
+walk down the layers panel. `figma-drop/README.txt` lists all fourteen in row
+order with the wall colour of each.
+
+
 ### Card size — 360 x 480
 
 The file also holds twelve 360 x 480 copies, matching the "Spotlight 3:4"

@@ -483,6 +483,50 @@ Not carried across: the 5.5% SVG grain overlay. It has no native Figma
 equivalent and would need a tiled noise PNG — which is blocked by the same
 upload restriction. At 5.5% the difference is very hard to see.
 
+### The autumn set in Figma
+
+Row **E** at the bottom of the canvas (y = 6608), labelled "E · Autumn palette
+— one family, three rooms". Three frames, cloned from row A so they inherit
+the whole layer structure, then:
+
+- top scrim set to **0% on all three** — the autumn walls carry the type
+- the campaign cream as the single headline colour
+- the approved copy, unchanged
+- the frosted-glass footer
+
+**The photographs are the one thing left, and they have to be dragged in.**
+Each photo rectangle is renamed to name its own file, so the layers panel
+says what to do:
+
+```
+Image / photo  ←  DROP autumn/1-cupping-therapy.jpg
+Image / photo  ←  DROP autumn/2-herbal-potli-massage.jpg
+Image / photo  ←  DROP autumn/3-korean-body-scrub.jpg
+```
+
+The files are in `figma-drop/autumn/`. Until they land, each rectangle holds a
+flat mid-tone of its own wall colour, so the row reads on-palette rather than
+broken — and deliberately *not* the inherited row A photograph, which with the
+scrim at zero would have looked like a mistake.
+
+**Why this can't be automated from here**, checked rather than assumed:
+
+| Route | Result |
+|---|---|
+| `upload_assets` → POST `mcp.figma.com` | **403 on the CONNECT.** Network policy. Tested five times across the project. |
+| `fetch` / `XMLHttpRequest` in the plugin sandbox | **Both `undefined`.** So no in-Figma download either. |
+| `figma.base64Decode` + `figma.createImage` | Both exist and work — but the bytes have to arrive as text in the script, and the script cap is 50,000 characters. Three images at near-native size is ~590,000 characters of base64 over 13 calls. |
+
+That last row is why the answer is "drag them in" rather than "it's
+impossible". The API route genuinely works; what makes it unusable is that the
+base64 would have to be reproduced by hand, byte-perfect, and a single slip
+would yield a corrupt image with no way to tell which chunk broke it. A
+manual drag is thirty seconds and lossless.
+
+Adding `mcp.figma.com` to the environment's **Network access: Custom** allowed
+domains removes the whole problem for future sessions.
+
+
 ### Card size — 360 x 480
 
 The file also holds twelve 360 x 480 copies, matching the "Spotlight 3:4"
